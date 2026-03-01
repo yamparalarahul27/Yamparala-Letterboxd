@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "GeistPixelGrid";
+  src: url("/fonts/GeistPixelGrid.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* ============================================
+   YPM Design Tokens
+   ============================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds */
+  --bg:           #000000;
+  --surface:      #111111;
+  --surface-2:    #1B1B1B;
+
+  /* Borders */
+  --border:       #252525;
+  --border-card:  rgba(255, 255, 255, 0.10);
+
+  /* Accent — Fireplace Red */
+  --accent:       #FF4752;
+  --accent-hover: #FF2030;
+
+  /* Data colors */
+  --green:        #00C076;
+  --red:          #FF4752;
+
+  /* Text */
+  --text-primary: #EFEFEF;
+  --text-muted:   #666666;
+  --text-muted-2: #CACACA;
+
+  /* Radius */
+  --radius-chip:  6px;
+  --radius-badge: 4px;
+  --radius-card:  0px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--bg);
+  --color-foreground: var(--text-primary);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-card: var(--border-card);
+  --color-green: var(--green);
+  --color-red: var(--red);
+  --color-text-muted: var(--text-muted);
+  --color-text-muted-2: var(--text-muted-2);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-pixel: "GeistPixelGrid", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ============================================
+   Base
+   ============================================ */
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-geist-mono), monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================
+   Typography Scale — Headings (Geist Mono)
+   ============================================ */
+.text-heading-72 { font-size: 4.5rem;  line-height: 1.05;    letter-spacing: -0.03em;  font-weight: 700; font-family: var(--font-geist-mono), monospace; }
+.text-heading-64 { font-size: 4rem;    line-height: 1.0625;  letter-spacing: -0.03em;  font-weight: 700; font-family: var(--font-geist-mono), monospace; }
+.text-heading-48 { font-size: 3rem;    line-height: 1.08;    letter-spacing: -0.025em; font-weight: 700; font-family: var(--font-geist-mono), monospace; }
+.text-heading-40 { font-size: 2.5rem;  line-height: 1.1;     letter-spacing: -0.02em;  font-weight: 700; font-family: var(--font-geist-mono), monospace; }
+.text-heading-32 { font-size: 2rem;    line-height: 1.125;   letter-spacing: -0.015em; font-weight: 600; font-family: var(--font-geist-mono), monospace; }
+.text-heading-24 { font-size: 1.5rem;  line-height: 1.167;   letter-spacing: -0.01em;  font-weight: 600; font-family: var(--font-geist-mono), monospace; }
+.text-heading-20 { font-size: 1.25rem; line-height: 1.2;     letter-spacing: -0.005em; font-weight: 600; font-family: var(--font-geist-mono), monospace; }
+.text-heading-16 { font-size: 1rem;    line-height: 1.25;    letter-spacing: 0;         font-weight: 600; font-family: var(--font-geist-mono), monospace; }
+.text-heading-14 { font-size: 0.875rem;line-height: 1.286;   letter-spacing: 0;         font-weight: 600; font-family: var(--font-geist-mono), monospace; }
+
+/* Typography Scale — Labels */
+.text-label-16     { font-size: 1rem;    line-height: 1.5;   font-weight: 400; font-family: var(--font-geist-sans), sans-serif; }
+.text-label-14     { font-size: 0.875rem;line-height: 1.429; font-weight: 400; font-family: var(--font-geist-sans), sans-serif; }
+.text-label-13     { font-size: 0.8125rem;line-height:1.385; font-weight: 400; font-family: var(--font-geist-sans), sans-serif; }
+.text-label-12     { font-size: 0.75rem; line-height: 1.5;   font-weight: 400; font-family: var(--font-geist-sans), sans-serif; }
+.text-label-12-mono{ font-size: 0.75rem; line-height: 1.5;   font-weight: 400; font-family: var(--font-geist-mono), monospace; }
+
+/* Typography Scale — Pixel / Numeric (GeistPixelGrid) */
+.text-num-72 { font-family: "GeistPixelGrid", monospace; font-size: 4.5rem; line-height: 1; font-weight: 500; }
+.text-num-56 { font-family: "GeistPixelGrid", monospace; font-size: 3.5rem; line-height: 1; font-weight: 500; }
+.text-num-48 { font-family: "GeistPixelGrid", monospace; font-size: 3rem;   line-height: 1; font-weight: 500; }
+.text-num-40 { font-family: "GeistPixelGrid", monospace; font-size: 2.5rem; line-height: 1; font-weight: 500; }
+.text-num-32 { font-family: "GeistPixelGrid", monospace; font-size: 2rem;   line-height: 1; font-weight: 500; }
+
+/* ============================================
+   Glassmorphism utility
+   ============================================ */
+.glass {
+  background: rgba(0, 0, 0, 0.80);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-card);
 }
+
+/* ============================================
+   Spinner
+   ============================================ */
+.spinner {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
