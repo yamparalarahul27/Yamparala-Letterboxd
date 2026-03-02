@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "YPM — Prediction Markets",
   description:
     "YPM is an experimental project by Yamparala Rahul on making Prediction Markets simple and interesting.",
+  icons: {
+    icon: "/YPM Fav.png",
+  },
 };
 
 export default function RootLayout({

@@ -1,14 +1,13 @@
 "use client";
-
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Search, HelpCircle, User } from "lucide-react";
 
 const navLinks = [
-    { label: "Discover", href: "/" },
+    { label: "Dashboard", href: "/" },
+    { label: "Markets", href: "/markets" },
     { label: "Portfolio", href: "/portfolio" },
-    { label: "Leaderboard", href: "/leaderboard" },
-    { label: "About", href: "/about" },
+    { label: "Watchlist", href: "/watchlist" },
 ];
 
 export default function Navbar() {
@@ -62,71 +61,70 @@ export default function Navbar() {
                     }}
                 />
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-                    {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 group select-none">
-                        <span
-                            className="text-label-12-mono font-bold tracking-widest uppercase"
-                            style={{ color: "#FF4752" }}
-                        >
-                            YPM
-                        </span>
-                        <span
-                            className="text-label-12 text-[#666666] hidden sm:inline"
-                            style={{ fontFamily: "var(--font-geist-sans)" }}
-                        >
-                            Prediction Markets
-                        </span>
-                    </Link>
+                <div className="max-w-[1600px] mx-auto px-4 sm:px-6 h-16 flex items-center gap-8">
+                    {/* ── SECTION 1: LEFT (Logo + Nav) ── */}
+                    <div className="flex items-center gap-8">
+                        {/* Logo */}
+                        <Link href="/" className="flex items-center gap-2 group select-none flex-shrink-0">
+                            <img
+                                src="/YPM Logo.png"
+                                alt="YPM Logo"
+                                className="h-6 w-auto"
+                            />
+                        </Link>
 
-                    {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-0.5">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className="px-4 py-1.5 text-sm font-medium border-b-2 border-transparent transition-all duration-200"
-                                style={{
-                                    color: "#CACACA",
-                                    fontFamily: "var(--font-geist-mono)",
-                                }}
-                                onMouseEnter={(e) => {
-                                    (e.currentTarget as HTMLElement).style.color = "#EFEFEF";
-                                    (e.currentTarget as HTMLElement).style.borderBottomColor = "#FF4752";
-                                }}
-                                onMouseLeave={(e) => {
-                                    (e.currentTarget as HTMLElement).style.color = "#CACACA";
-                                    (e.currentTarget as HTMLElement).style.borderBottomColor = "transparent";
-                                }}
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
-                    </nav>
+                        {/* Desktop Nav Links */}
+                        <nav className="hidden lg:flex items-center gap-1">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    className={`px-3 py-1.5 text-xs font-medium border-b-2 border-transparent transition-all duration-200 ${link.label === "Portfolio" ? "text-white border-[#FF4752]" : "text-[#CACACA]"}`}
+                                    style={{
+                                        fontFamily: "var(--font-geist-mono)",
+                                    }}
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
+                        </nav>
+                    </div>
 
-                    {/* Right: CTA + Hamburger */}
-                    <div className="flex items-center gap-3">
-                        <button
-                            className="hidden md:flex items-center gap-2 px-4 py-1.5 text-sm font-medium transition-all duration-200 cursor-pointer"
-                            style={{
-                                background: "#FF4752",
-                                color: "#fff",
-                                borderRadius: "0px",
-                                fontFamily: "var(--font-geist-sans)",
-                            }}
-                            onMouseEnter={(e) =>
-                                ((e.currentTarget as HTMLElement).style.background = "#FF2030")
-                            }
-                            onMouseLeave={(e) =>
-                                ((e.currentTarget as HTMLElement).style.background = "#FF4752")
-                            }
-                        >
-                            Sign In
+                    {/* ── SECTION 2: CENTER (Search + Help) ── */}
+                    <div className="flex-1 flex justify-center items-center gap-6">
+                        <button className="flex items-center gap-2 text-[#666666] hover:text-white transition-colors duration-200">
+                            <Search size={18} />
+                            <span className="text-xs hidden xl:inline" style={{ fontFamily: "var(--font-geist-mono)" }}>Search (⌘K)</span>
                         </button>
+                        <button className="flex items-center text-[#666666] hover:text-white transition-colors duration-200">
+                            <HelpCircle size={18} />
+                        </button>
+                    </div>
+
+                    {/* ── SECTION 3: RIGHT (Account) ── */}
+                    <div className="hidden sm:flex items-center gap-6 px-4 py-1.5 border-x border-[#252525]">
+                        <div className="flex flex-col">
+                            <span className="text-[10px] uppercase tracking-wider text-[#666666]" style={{ fontFamily: "var(--font-geist-mono)" }}>Value</span>
+                            <span className="text-xs font-medium text-[#EFEFEF] tabular-nums" style={{ fontFamily: "var(--font-geist-mono)" }}>$100K - $150K</span>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-[10px] uppercase tracking-wider text-[#666666]" style={{ fontFamily: "var(--font-geist-mono)" }}>Cash</span>
+                            <span className="text-xs font-medium text-[#EFEFEF] tabular-nums" style={{ fontFamily: "var(--font-geist-mono)" }}>$600,000</span>
+                        </div>
+                    </div>
+
+                    {/* ── SECTION 4: PROFILE ── */}
+                    <div className="flex items-center gap-4">
+                        <div className="relative group cursor-pointer">
+                            <div className="w-8 h-8 rounded-full border border-[#252525] flex items-center justify-center bg-white/5 transition-all duration-200 group-hover:border-[#FF4752]">
+                                <User size={16} className="text-[#CACACA]" />
+                            </div>
+                            <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#4ADE80] border-2 border-black rounded-full shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
+                        </div>
 
                         {/* Hamburger (mobile) */}
                         <button
-                            className="md:hidden flex items-center justify-center w-9 h-9 transition-colors duration-200"
+                            className="lg:hidden flex items-center justify-center w-9 h-9 transition-colors duration-200"
                             onClick={() => setMenuOpen(!menuOpen)}
                             aria-label="Toggle menu"
                             style={{ color: "#CACACA" }}
@@ -139,7 +137,7 @@ export default function Navbar() {
 
             {/* ── Mobile Menu Overlay ── */}
             {menuOpen && (
-                <div className="fixed inset-0 z-40 md:hidden">
+                <div className="fixed inset-0 z-40 lg:hidden">
                     {/* Backdrop */}
                     <div
                         className="absolute inset-0"
@@ -156,12 +154,6 @@ export default function Navbar() {
                         }}
                     >
                         <nav className="flex flex-col p-4 gap-1">
-                            <p
-                                className="text-label-12 uppercase tracking-wider mb-2"
-                                style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
-                            >
-                                Navigation
-                            </p>
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.href}
@@ -172,15 +164,6 @@ export default function Navbar() {
                                         color: "#CACACA",
                                         fontFamily: "var(--font-geist-mono)",
                                     }}
-                                    onMouseEnter={(e) => {
-                                        (e.currentTarget as HTMLElement).style.background =
-                                            "rgba(255,255,255,0.04)";
-                                        (e.currentTarget as HTMLElement).style.color = "#EFEFEF";
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        (e.currentTarget as HTMLElement).style.background = "transparent";
-                                        (e.currentTarget as HTMLElement).style.color = "#CACACA";
-                                    }}
                                 >
                                     <span
                                         className="w-1.5 h-1.5 rounded-full"
@@ -189,18 +172,15 @@ export default function Navbar() {
                                     {link.label}
                                 </Link>
                             ))}
-                            <div className="mt-4 pt-4 border-t border-[#252525]">
-                                <button
-                                    className="w-full py-2.5 text-sm font-medium"
-                                    style={{
-                                        background: "#FF4752",
-                                        color: "#fff",
-                                        borderRadius: "0px",
-                                        fontFamily: "var(--font-geist-sans)",
-                                    }}
-                                >
-                                    Sign In
-                                </button>
+                            <div className="mt-4 pt-4 border-t border-[#252525] flex flex-col gap-4 px-4">
+                                <div className="flex justify-between items-center">
+                                    <span className="text-xs text-[#666666]">Value</span>
+                                    <span className="text-xs text-[#EFEFEF] tabular-nums">$100K - $150K</span>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                    <span className="text-xs text-[#666666]">Cash</span>
+                                    <span className="text-xs text-[#EFEFEF] tabular-nums">$600,000</span>
+                                </div>
                             </div>
                         </nav>
                     </div>
