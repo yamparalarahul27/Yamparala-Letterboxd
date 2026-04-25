@@ -1,0 +1,59 @@
+name: Sync Beyblade data
+
+# Manual trigger only (and an optional weekly refresh — disabled by default).
+# To run from GitHub mobile / web: Actions tab → "Sync Beyblade data" → Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Bey ids to sync (space-separated). Leave empty for all."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run sync from Fandom
+        env:
+          IDS: ${{ github.event.inputs.ids }}
+        run: |
+          if [ -n "$IDS" ]; then
+            echo "Syncing: $IDS"
+            npm run sync:beys -- $IDS
+          else
+            echo "Syncing all entries"
+            npm run sync:beys
+          fi
+
+      - name: Commit and push if anything changed
+        env:
+          IDS: ${{ github.event.inputs.ids }}
+          RUN: ${{ github.run_number }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/beyblades.json
+          [ -d public/beys ] && git add public/beys/ || true
+          if git diff --staged --quiet; then
+            echo "::notice::No changes after sync."
+            exit 0
+          fi
+          git commit -m "data: sync beyblade data from Fandom (run #$RUN)" -m "IDs: ${IDS:-all}"
+          git push
