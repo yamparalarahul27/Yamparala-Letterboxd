@@ -3,10 +3,10 @@
 import Link from "next/link";
 
 const footerLinks = [
-    { label: "Docs", href: "#" },
-    { label: "GitHub", href: "#" },
-    { label: "Twitter / X", href: "#" },
-    { label: "Terms", href: "#" },
+    { label: "Collection", href: "#collection" },
+    { label: "Anatomy", href: "#anatomy" },
+    { label: "Types", href: "#types" },
+    { label: "About", href: "#about" },
 ];
 
 export default function Footer() {
@@ -25,13 +25,13 @@ export default function Footer() {
                         className="text-label-12-mono font-bold tracking-widest uppercase"
                         style={{ color: "#FF4752", fontFamily: "var(--font-geist-mono)" }}
                     >
-                        YPM
+                        Metal Fusion Codex
                     </span>
                     <span
                         className="text-label-12"
-                        style={{ color: "#666666", fontFamily: "var(--font-geist-sans)" }}
+                        style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
                     >
-                        Prediction Markets — Experimental
+                        A Beyblade Metal Fusion collection
                     </span>
                 </div>
 
@@ -60,10 +60,8 @@ export default function Footer() {
                     className="text-label-12"
                     style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
                 >
-                    by{" "}
-                    <span style={{ color: "#CACACA" }}>
-                        Yamparala Rahul
-                    </span>
+                    Fan project — not affiliated with{" "}
+                    <span style={{ color: "#CACACA" }}>Takara Tomy</span>
                 </p>
             </div>
         </footer>
