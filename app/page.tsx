@@ -2,204 +2,8 @@
 
 import { useMemo, useState } from "react";
 import CardWithCornerShine from "@/components/ui/CardWithCornerShine";
+import { BEYBLADES, type Beyblade, type BeybladeType } from "@/data/beyblades";
 
-// ──────────────────────────────────────────────────────────────────────
-// Types
-// ──────────────────────────────────────────────────────────────────────
-type BeybladeType = "Attack" | "Defense" | "Stamina" | "Balance";
-
-interface Beyblade {
-  id: string;
-  name: string;
-  code: string; // Takara Tomy product code, e.g. BB-28
-  combo: string; // Full combo string, e.g. "Storm Pegasus 105RF"
-  type: BeybladeType;
-  owner: string;
-  energyRing: string;
-  fusionWheel: string;
-  spinTrack: string;
-  performanceTip: string;
-  stats: { attack: number; defense: number; stamina: number }; // 0–10
-  weight: string;
-  debut: string;
-  description: string;
-}
-
-// ──────────────────────────────────────────────────────────────────────
-// Data — Curated Metal Fusion Collection
-// ──────────────────────────────────────────────────────────────────────
-const BEYBLADES: Beyblade[] = [
-  {
-    id: "storm-pegasus",
-    name: "Storm Pegasus",
-    code: "BB-28",
-    combo: "Storm Pegasus 105RF",
-    type: "Attack",
-    owner: "Gingka Hagane",
-    energyRing: "Pegasus I",
-    fusionWheel: "Storm",
-    spinTrack: "105",
-    performanceTip: "RF",
-    stats: { attack: 7, defense: 4, stamina: 3 },
-    weight: "37.4g",
-    debut: "2009",
-    description:
-      "Gingka's first Beyblade. The Rubber Flat tip drives explosive speed and aggressive smash attacks.",
-  },
-  {
-    id: "lightning-ldrago",
-    name: "Lightning L-Drago",
-    code: "BB-43",
-    combo: "Lightning L-Drago 100HF",
-    type: "Attack",
-    owner: "Ryuga",
-    energyRing: "L-Drago",
-    fusionWheel: "Lightning",
-    spinTrack: "100",
-    performanceTip: "HF",
-    stats: { attack: 8, defense: 2, stamina: 4 },
-    weight: "37.0g",
-    debut: "2009",
-    description:
-      "The forbidden left-spin top. Steals opponents' spin on contact and counters with brutal force.",
-  },
-  {
-    id: "rock-leone",
-    name: "Rock Leone",
-    code: "BB-30",
-    combo: "Rock Leone 145WB",
-    type: "Defense",
-    owner: "Kyoya Tategami",
-    energyRing: "Leone",
-    fusionWheel: "Rock",
-    spinTrack: "145",
-    performanceTip: "WB",
-    stats: { attack: 4, defense: 8, stamina: 5 },
-    weight: "44.5g",
-    debut: "2009",
-    description:
-      "Kyoya's signature top. Heavy Rock wheel and Wide Ball tip make it a defensive fortress.",
-  },
-  {
-    id: "flame-sagittario",
-    name: "Flame Sagittario",
-    code: "BB-35",
-    combo: "Flame Sagittario C145S",
-    type: "Stamina",
-    owner: "Yu Tendo",
-    energyRing: "Sagittario",
-    fusionWheel: "Flame",
-    spinTrack: "C145",
-    performanceTip: "S",
-    stats: { attack: 3, defense: 4, stamina: 8 },
-    weight: "33.8g",
-    debut: "2009",
-    description:
-      "Built around the Sharp tip's minimal friction. Outspins most attackers through patience.",
-  },
-  {
-    id: "earth-eagle",
-    name: "Earth Eagle",
-    code: "BB-47",
-    combo: "Earth Eagle 145WD",
-    type: "Balance",
-    owner: "Tsubasa Otori",
-    energyRing: "Eagle",
-    fusionWheel: "Earth",
-    spinTrack: "145",
-    performanceTip: "WD",
-    stats: { attack: 5, defense: 6, stamina: 6 },
-    weight: "39.0g",
-    debut: "2010",
-    description:
-      "Tsubasa's well-rounded top. Wide Defense tip absorbs attacks while preserving spin.",
-  },
-  {
-    id: "dark-bull",
-    name: "Dark Bull",
-    code: "BB-40",
-    combo: "Dark Bull H145SD",
-    type: "Defense",
-    owner: "Benkei Hanawa",
-    energyRing: "Bull",
-    fusionWheel: "Dark",
-    spinTrack: "H145",
-    performanceTip: "SD",
-    stats: { attack: 5, defense: 7, stamina: 5 },
-    weight: "37.7g",
-    debut: "2009",
-    description:
-      "Aggressive defense — Benkei's bull-rush style hits hard while soaking heavy damage.",
-  },
-  {
-    id: "burn-fireblaze",
-    name: "Burn Fireblaze",
-    code: "BB-59",
-    combo: "Burn Fireblaze 135MS",
-    type: "Stamina",
-    owner: "Tsubasa Otori",
-    energyRing: "Fireblaze",
-    fusionWheel: "Burn",
-    spinTrack: "135",
-    performanceTip: "MS",
-    stats: { attack: 4, defense: 5, stamina: 7 },
-    weight: "38.5g",
-    debut: "2010",
-    description:
-      "Heavy stamina top with a Metal Sharp tip — wears opponents down through endurance.",
-  },
-  {
-    id: "galaxy-pegasus",
-    name: "Galaxy Pegasus",
-    code: "BB-70",
-    combo: "Galaxy Pegasus W105R2F",
-    type: "Attack",
-    owner: "Gingka Hagane",
-    energyRing: "Pegasus II",
-    fusionWheel: "Galaxy",
-    spinTrack: "W105",
-    performanceTip: "R2F",
-    stats: { attack: 8, defense: 5, stamina: 4 },
-    weight: "39.6g",
-    debut: "2010",
-    description:
-      "Gingka's evolved blade. Galaxy wheel hits with precision while R2F drives fierce movement.",
-  },
-  {
-    id: "rock-aries",
-    name: "Rock Aries",
-    code: "BB-57",
-    combo: "Rock Aries ED145B",
-    type: "Defense",
-    owner: "Hyoma",
-    energyRing: "Aries",
-    fusionWheel: "Rock",
-    spinTrack: "ED145",
-    performanceTip: "B",
-    stats: { attack: 4, defense: 7, stamina: 5 },
-    weight: "39.2g",
-    debut: "2010",
-    description:
-      "Tall ED145 track and Ball tip keep Aries upright through heavy collisions.",
-  },
-  {
-    id: "cyber-pegasus",
-    name: "Cyber Pegasus",
-    code: "BB-46",
-    combo: "Cyber Pegasus 105F",
-    type: "Attack",
-    owner: "Hikaru Hasama",
-    energyRing: "Pegasus I",
-    fusionWheel: "Cyber",
-    spinTrack: "105",
-    performanceTip: "F",
-    stats: { attack: 6, defense: 4, stamina: 4 },
-    weight: "36.0g",
-    debut: "2009",
-    description:
-      "Lightweight attacker with a Flat tip — early MFB favorite among aggressive bladers.",
-  },
-];
 
 // ──────────────────────────────────────────────────────────────────────
 // Type → color mapping
@@ -316,6 +120,61 @@ function StatBar({ label, value, color }: { label: string; value: number; color:
       >
         {value}
       </span>
+    </div>
+  );
+}
+
+function BeyHero({ bey, accent }: { bey: Beyblade; accent: string }) {
+  const initial = bey.name.charAt(0);
+  return (
+    <div
+      className="relative w-full overflow-hidden"
+      style={{
+        height: "150px",
+        background:
+          "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.04) 0%, transparent 70%)",
+        border: "1px solid rgba(255,255,255,0.06)",
+      }}
+    >
+      {/* Faint accent glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(circle at 50% 60%, ${accent}1A 0%, transparent 60%)`,
+        }}
+      />
+      {bey.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={bey.image}
+          alt={bey.name}
+          className="absolute inset-0 w-full h-full object-contain"
+          style={{ padding: "12px" }}
+          loading="lazy"
+        />
+      ) : (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+          <div
+            className="flex items-center justify-center w-16 h-16"
+            style={{
+              border: `1px solid ${accent}40`,
+              color: accent,
+              fontFamily: "var(--font-geist-mono)",
+              fontSize: "28px",
+              fontWeight: 700,
+              letterSpacing: "-0.04em",
+            }}
+          >
+            {initial}
+          </div>
+          <span
+            className="text-[10px] uppercase tracking-widest"
+            style={{ color: "#444", fontFamily: "var(--font-geist-mono)" }}
+          >
+            no image · run sync
+          </span>
+        </div>
+      )}
     </div>
   );
 }
@@ -626,6 +485,9 @@ export default function HomePage() {
                     </p>
                   </div>
 
+                  {/* Hero image / placeholder */}
+                  <BeyHero bey={b} accent={c.fg} />
+
                   {/* Description */}
                   <p
                     className="text-label-13"
@@ -673,7 +535,7 @@ export default function HomePage() {
                         {b.owner}
                       </p>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right flex flex-col items-end">
                       <p className="text-label-12-mono" style={{ color: "#666666" }}>
                         Weight
                       </p>
@@ -683,6 +545,26 @@ export default function HomePage() {
                       >
                         {b.weight}
                       </p>
+                      {b.source && (
+                        <a
+                          href={b.source}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-[10px] mt-1 transition-colors duration-150"
+                          style={{
+                            color: "#666666",
+                            fontFamily: "var(--font-geist-mono)",
+                          }}
+                          onMouseEnter={(e) =>
+                            ((e.currentTarget as HTMLElement).style.color = "#FF4752")
+                          }
+                          onMouseLeave={(e) =>
+                            ((e.currentTarget as HTMLElement).style.color = "#666666")
+                          }
+                        >
+                          source ↗
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -13,6 +13,31 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Data
+
+The Beyblade catalog lives in [`data/beyblades.json`](./data/beyblades.json) and is consumed via the typed importer in [`data/beyblades.ts`](./data/beyblades.ts).
+
+Editorial fields (`stats.*`, `description`) are hand-curated. Canonical fields (`owner`, `weight`, `debut`, `code`, parts, `image`) can be refreshed from the [Beyblade Fandom Wiki](https://beyblade.fandom.com) using the sync script:
+
+```bash
+# Refresh all entries
+npm run sync:beys
+
+# Refresh a subset
+npm run sync:beys -- storm-pegasus rock-leone
+```
+
+What the script does:
+
+1. Reads [`data/sources.json`](./data/sources.json) — a mapping of `id` → Fandom page slug.
+2. For each entry, hits the MediaWiki `parse` API for that page's wikitext + image list.
+3. Parses the infobox (brace-depth-aware) and extracts canonical fields.
+4. Resolves the lead image's CDN URL via the `query/imageinfo` API.
+5. Downloads the image into `public/beys/{id}.{ext}`.
+6. Merges fetched fields into `data/beyblades.json` (preserving editorial fields).
+
+Adding a new Beyblade: add a stub entry to `data/beyblades.json` with editorial stats + description, add the `id` → page slug to `data/sources.json`, then run `npm run sync:beys -- new-id`.
+
 ## What's inside
 
 - **Hero** — sets the tone for the collection
@@ -23,4 +48,4 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Disclaimer
 
-This is a fan project. Not affiliated with Takara Tomy or Hasbro. All Beyblade names and characters are property of their respective owners.
+Fan project. Not affiliated with Takara Tomy or Hasbro. All Beyblade names, characters, and images sourced from the Fandom wiki are property of their respective owners.
