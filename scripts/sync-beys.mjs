@@ -134,21 +134,24 @@ function extractInfobox(wikitext) {
  * - [[link|text]] -> text     (or [[link]] -> link)
  * - {{template|x|y}} -> ""    (drop nested templates outright; values rarely matter)
  * - <ref>...</ref> -> ""
- * - HTML tags -> ""
+ * - <br>, <br/>, <br /> -> "\n" (so multi-value fields stay separable)
+ * - other HTML tags -> ""
  */
 function cleanWikitext(s) {
   if (!s) return "";
-  // Drop refs, comments, html tags
+  // Drop refs, comments
   s = s.replace(/<ref[^>]*?\/>/g, "");
   s = s.replace(/<ref[^>]*>[\s\S]*?<\/ref>/g, "");
   s = s.replace(/<!--[\s\S]*?-->/g, "");
+  // <br> variants → newline (BEFORE the generic HTML-tag stripper).
+  s = s.replace(/<br\s*\/?\s*>/gi, "\n");
   // Drop nested templates (lossy but predictable).
   for (let i = 0; i < 5; i++) {
     const next = s.replace(/\{\{[^{}]*\}\}/g, "");
     if (next === s) break;
     s = next;
   }
-  // [[File:...]] is dropped entirely (handled separately).
+  // [[File:...]] is dropped entirely (image extraction is done separately).
   s = s.replace(/\[\[(?:File|Image):[^\]]*\]\]/gi, "");
   // [[link|display]] -> display, [[link]] -> link
   s = s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2");
@@ -160,7 +163,54 @@ function cleanWikitext(s) {
   s = s.replace(/<\/?[a-zA-Z][^>]*>/g, "");
   // Bold/italic markup
   s = s.replace(/'''?/g, "");
-  return s.replace(/\s+/g, " ").trim();
+  // Collapse runs of spaces/tabs but preserve newlines.
+  s = s.replace(/[ \t]+/g, " ");
+  // Trim each line, drop empties.
+  s = s
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean)
+    .join("\n");
+  return s.trim();
+}
+
+/**
+ * For fields where the wiki may list multiple values separated by <br>
+ * (owners, product codes, etc.), take only the first non-empty line.
+ */
+function firstLine(s) {
+  if (!s) return "";
+  const idx = s.indexOf("\n");
+  return idx === -1 ? s : s.slice(0, idx).trim();
+}
+
+/**
+ * Extract a Beyblade image filename from raw infobox value or wikitext.
+ * Handles:
+ *   - Plain "Storm Pegasus.png"
+ *   - [[File:Storm Pegasus.png|right|frame|caption]]
+ *   - [[Image:Storm Pegasus.png|...]]
+ */
+function extractImageFilename(raw) {
+  if (!raw) return null;
+  const m = raw.match(/\[\[(?:File|Image):([^|\]]+)/i);
+  if (m) return m[1].trim();
+  const stripped = raw
+    .replace(/<[^>]+>/g, "")
+    .replace(/\{\{[^{}]*\}\}/g, "")
+    .trim();
+  if (/\.(png|jpe?g|gif|webp)$/i.test(stripped)) return stripped;
+  return null;
+}
+
+/**
+ * Last-resort image lookup: scan the full wikitext for the first
+ * [[File:Something.png|...]] or [[Image:...]] reference.
+ */
+function findFirstImageInWikitext(wikitext) {
+  if (!wikitext) return null;
+  const m = wikitext.match(/\[\[(?:File|Image):([^|\]\n]+\.(?:png|jpe?g|gif|webp))/i);
+  return m ? m[1].trim() : null;
 }
 
 // ── Field mapping ────────────────────────────────────────────────────────
@@ -244,9 +294,10 @@ async function fetchBeyData(pageSlug) {
 
 function mapInfobox(fields) {
   return {
-    owner: cleanWikitext(pickFirst(fields, ["owner", "bladers", "blader", "owners"])) || null,
+    // owner & code are commonly multi-valued (separated by <br>); take the first listed.
+    owner: firstLine(cleanWikitext(pickFirst(fields, ["owner", "bladers", "blader", "owners"]))) || null,
     type: pickType(pickFirst(fields, ["type", "performancetype", "battletype"])),
-    code: cleanWikitext(pickFirst(fields, ["productcode", "code", "productnumber"])) || null,
+    code: firstLine(cleanWikitext(pickFirst(fields, ["productcode", "code", "productnumber"]))) || null,
     weight: normalizeWeight(pickFirst(fields, ["weight", "totalweight"])),
     debut: normalizeDebut(pickFirst(fields, ["release", "released", "debut", "releasedate"])),
     facebolt: cleanWikitext(pickFirst(fields, ["facebolt", "face"])) || null,
@@ -254,7 +305,11 @@ function mapInfobox(fields) {
     fusionWheel: cleanWikitext(pickFirst(fields, ["fusionwheel", "metalwheel", "wheel"])) || null,
     spinTrack: cleanWikitext(pickFirst(fields, ["spintrack", "track"])) || null,
     performanceTip: cleanWikitext(pickFirst(fields, ["performancetip", "tip", "bottom"])) || null,
-    image: cleanWikitext(pickFirst(fields, ["image", "image1", "img"])) || null,
+    // Image: extract from [[File:...]] wikilink form OR plain filename. Don't run cleanWikitext —
+    // it strips [[File:...]] entirely and we need the filename out of it.
+    image: extractImageFilename(
+      pickFirst(fields, ["image", "image1", "img", "imagename", "mainimage", "pic", "photo"])
+    ),
   };
 }
 
@@ -300,8 +355,10 @@ async function main() {
       if (!fields) throw new Error("no infobox found");
       const parsed = mapInfobox(fields);
 
-      // Resolve image URL — prefer the infobox image= field, fall back to first listed image.
+      // Resolve image URL — prefer the infobox image= field, then a [[File:...]] match
+      // anywhere in the wikitext, then the first image in parse.images as a last resort.
       let imageFilename = parsed.image;
+      if (!imageFilename) imageFilename = findFirstImageInWikitext(wikitext);
       if (!imageFilename && images.length) imageFilename = images[0];
 
       let localPath = null;
