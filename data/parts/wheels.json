@@ -6,72 +6,72 @@
       "type": "wheel",
       "name": "Storm",
       "info": "Three protruding curved blades with widely spread mass. Smash-attack profile. Used by Storm Pegasus.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Storm_(Fusion_Wheel)"
+      "image": "/parts/wheel/storm.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Storm"
     },
     {
       "id": "lightning",
       "type": "wheel",
       "name": "Lightning",
       "info": "Aggressive sloped edges with sharp protrusions, built for left-spin smash. Used by Lightning L-Drago.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Lightning_(Fusion_Wheel)"
+      "image": "/parts/wheel/lightning.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Lightning"
     },
     {
       "id": "rock",
       "type": "wheel",
       "name": "Rock",
       "info": "Heavy wheel with serrated edges. Defensive mass with rebounding contact. Used by Rock Leone and Rock Aries.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Rock_(Fusion_Wheel)"
+      "image": "/parts/wheel/rock.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Rock"
     },
     {
       "id": "flame",
       "type": "wheel",
       "name": "Flame",
       "info": "Lightweight, evenly distributed mass. Favors stamina configurations. Used by Flame Sagittario.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Flame_(Fusion_Wheel)"
+      "image": "/parts/wheel/flame.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Flame"
     },
     {
       "id": "earth",
       "type": "wheel",
       "name": "Earth",
       "info": "Wide, evenly massed wheel. Versatile across balance and defense builds. Used by Earth Eagle and Earth Virgo.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Earth_(Fusion_Wheel)"
+      "image": "/parts/wheel/earth.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Earth"
     },
     {
       "id": "dark",
       "type": "wheel",
       "name": "Dark",
       "info": "Compact wheel with two long horns. Aggressive defense profile. Used by Dark Bull.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Dark_(Fusion_Wheel)"
+      "image": "/parts/wheel/dark.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Dark"
     },
     {
       "id": "burn",
       "type": "wheel",
       "name": "Burn",
       "info": "Heavy disc with thick walls. Stamina-leaning. Used by Burn Fireblaze.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Burn_(Fusion_Wheel)"
+      "image": "/parts/wheel/burn.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Burn"
     },
     {
       "id": "galaxy",
       "type": "wheel",
       "name": "Galaxy",
       "info": "Multi-layered wheel with sharp protrusions. High attack power. Used by Galaxy Pegasus.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Galaxy_(Fusion_Wheel)"
+      "image": "/parts/wheel/galaxy.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Galaxy"
     },
     {
       "id": "cyber",
       "type": "wheel",
       "name": "Cyber",
       "info": "Mid-weight wheel with mechanical-looking ridges. Attack-focused. Used by Cyber Pegasus.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Cyber_(Fusion_Wheel)"
+      "image": "/parts/wheel/cyber.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Cyber"
     },
     {
       "id": "counter",
@@ -79,71 +79,71 @@
       "name": "Counter",
       "info": "Curved-edge wheel with counter-attack geometry. Defense-attack hybrid. Used by Counter Leone.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Counter_(Fusion_Wheel)"
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Counter"
     },
     {
       "id": "meteo",
       "type": "wheel",
       "name": "Meteo",
       "info": "Reinforced left-spin wheel. Iconic for spin-stealing attacks. Used by Meteo L-Drago.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Meteo_(Fusion_Wheel)"
+      "image": "/parts/wheel/meteo.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Meteo"
     },
     {
       "id": "hades",
       "type": "wheel",
       "name": "Hades",
       "info": "Three-headed dog motif with massive mass. Defense-beast profile. Used by Hades Kerbecs (a.k.a. Hell Kerbecs).",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Hades_(Fusion_Wheel)"
+      "image": "/parts/wheel/hades.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Hades"
     },
     {
       "id": "ray",
       "type": "wheel",
       "name": "Ray",
       "info": "Compact, rounded wheel for balanced attack. Mid-tier attack profile. Used by Ray Striker.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Ray_(Fusion_Wheel)"
+      "image": "/parts/wheel/ray.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Ray"
     },
     {
       "id": "vulcan",
       "type": "wheel",
       "name": "Vulcan",
       "info": "Sharp-edged wheel with hammer-like protrusions. Strong defense. Used by Vulcan Horuseus.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Vulcan_(Fusion_Wheel)"
+      "image": "/parts/wheel/vulcan.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Vulcan"
     },
     {
       "id": "gravity",
       "type": "wheel",
       "name": "Gravity",
       "info": "Wide, dense wheel optimized for stable spin. Defense fortress. Used by Gravity Perseus.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Gravity_(Fusion_Wheel)"
+      "image": "/parts/wheel/gravity.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Gravity"
     },
     {
       "id": "poison",
       "type": "wheel",
       "name": "Poison",
       "info": "Coiled snake design with whip-edge for trick attacks. Stamina with menace. Used by Poison Serpent.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Poison_(Fusion_Wheel)"
+      "image": "/parts/wheel/poison.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Poison"
     },
     {
       "id": "cosmic",
       "type": "wheel",
       "name": "Cosmic",
       "info": "4D-era wheel with detachable layers — apex attack power. Used by Big Bang Pegasis.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Cosmic_(Fusion_Wheel)"
+      "image": "/parts/wheel/cosmic.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Cosmic"
     },
     {
       "id": "phantom",
       "type": "wheel",
       "name": "Phantom",
       "info": "4D-era wheel with smooth, low-friction shape. Apex stamina. Used by Phantom Orion.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Phantom_(Fusion_Wheel)"
+      "image": "/parts/wheel/phantom.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Phantom"
     },
     {
       "id": "diablo",
@@ -151,23 +151,23 @@
       "name": "Diablo",
       "info": "4D-era wheel — heaviest of MFB, capable of either spin direction. Used by Diablo Nemesis.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Diablo_(Fusion_Wheel)"
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Diablo"
     },
     {
       "id": "variares",
       "type": "wheel",
       "name": "Variares",
       "info": "4D-era wheel with shifting geometry mid-battle. Mode-change attacker. Used by Variares.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Variares_(Fusion_Wheel)"
+      "image": "/parts/wheel/variares.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Variares"
     },
     {
       "id": "fang",
       "type": "wheel",
       "name": "Fang",
       "info": "4D-era wheel with predator-fang protrusions. Maximum defense. Used by Fang Leone.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Fang_(Fusion_Wheel)"
+      "image": "/parts/wheel/fang.png",
+      "source": "https://beyblade.fandom.com/wiki/Fusion_Wheel_-_Fang"
     }
   ]
 }

@@ -7,8 +7,8 @@
       "name": "RF",
       "fullName": "Rubber Flat",
       "info": "Rubber tip with maximum friction. Drives explosive smash attacks but wears down quickly. The signature attack-type tip.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Rubber_Flat"
+      "image": "/parts/tip/rf.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Rubber_Flat"
     },
     {
       "id": "hf",
@@ -16,8 +16,8 @@
       "name": "HF",
       "fullName": "Hole Flat",
       "info": "Plastic flat tip with a center hole. Lighter and faster than RF, but with less grip and less raw smash power.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Hole_Flat"
+      "image": "/parts/tip/hf.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Hole_Flat"
     },
     {
       "id": "wb",
@@ -25,8 +25,8 @@
       "name": "WB",
       "fullName": "Wide Ball",
       "info": "Wide, rounded plastic tip. Excellent stability and balance — a defining defense-type tip.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Wide_Ball"
+      "image": "/parts/tip/wb.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Wide_Ball"
     },
     {
       "id": "s",
@@ -35,7 +35,7 @@
       "fullName": "Sharp",
       "info": "Pointed plastic tip with minimal contact area. Maximum stamina via low friction, but easily knocked off-balance.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Sharp"
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Sharp"
     },
     {
       "id": "wd",
@@ -44,7 +44,7 @@
       "fullName": "Wide Defense",
       "info": "Wide, rounded tip with a flat base. Solid balance between absorbing attacks and preserving spin.",
       "image": "/parts/tip/wd.png",
-      "source": "https://beyblade.fandom.com/wiki/Wide_Defense"
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Wide_Defense"
     },
     {
       "id": "sd",
@@ -53,7 +53,7 @@
       "fullName": "Semi-Defense",
       "info": "Plastic tip between flat and ball. Middle-ground stability and predictable movement.",
       "image": "/parts/tip/sd.png",
-      "source": "https://beyblade.fandom.com/wiki/Semi-Flat"
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Semi-Defense"
     },
     {
       "id": "ms",
@@ -61,8 +61,8 @@
       "name": "MS",
       "fullName": "Metal Sharp",
       "info": "Metal version of Sharp. Heavier and more stable than S, with similar low friction for endurance.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Metal_Sharp"
+      "image": "/parts/tip/ms.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Metal_Sharp"
     },
     {
       "id": "r2f",
@@ -71,7 +71,7 @@
       "fullName": "Rubber Flat v2",
       "info": "Refined RF with a sharper edge. More aggressive attack pattern than the original.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Rubber_Flat_v2"
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Rubber_Flat_v2"
     },
     {
       "id": "b",
@@ -79,8 +79,8 @@
       "name": "B",
       "fullName": "Ball",
       "info": "Plastic ball-shaped tip. Solid defensive option — narrower contact than Wide Ball but stable.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Ball"
+      "image": "/parts/tip/b.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Ball"
     },
     {
       "id": "f",
@@ -88,8 +88,8 @@
       "name": "F",
       "fullName": "Flat",
       "info": "Plain plastic flat tip. Basic attack movement — predictable and gentler than RF on rebound.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Flat"
+      "image": "/parts/tip/f.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Flat"
     },
     {
       "id": "bs",
@@ -98,7 +98,7 @@
       "fullName": "Ball Sharp",
       "info": "Ball-end tip transitioning to sharp. Stamina with a touch of balance.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Ball_Sharp"
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Ball_Sharp"
     },
     {
       "id": "hf-s",
@@ -107,7 +107,7 @@
       "fullName": "Hole Flat / Sharp",
       "info": "Dual-mode tip — Hole Flat for attack, Sharp for stamina. Swappable between modes.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Hole_Flat/Sharp"
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Hole_Flat___Sharp"
     },
     {
       "id": "lf",
@@ -116,7 +116,7 @@
       "fullName": "Low Flat",
       "info": "Lower-profile flat tip. Pairs with low spin tracks for ultra-aggressive attack builds.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Low_Flat"
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Low_Flat"
     },
     {
       "id": "defense",
@@ -124,8 +124,8 @@
       "name": "D",
       "fullName": "Defense",
       "info": "Wide-base defense tip designed for stable, low-friction defensive spin.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Defense_(Performance_Tip)"
+      "image": "/parts/tip/defense.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Defense"
     },
     {
       "id": "ds",
@@ -133,8 +133,8 @@
       "name": "DS",
       "fullName": "Defense Sharp",
       "info": "Defense ring around a sharp inner core — defensive shell with stamina-leaning contact.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Defense_Sharp"
+      "image": "/parts/tip/ds.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Defense_Sharp"
     },
     {
       "id": "cs",
@@ -142,8 +142,8 @@
       "name": "CS",
       "fullName": "Coat Sharp",
       "info": "Sharp tip with a friction coating — slightly more grip than MS, still stamina-leaning.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Coat_Sharp"
+      "image": "/parts/tip/cs.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Coat_Sharp"
     },
     {
       "id": "fd",
@@ -151,8 +151,8 @@
       "name": "F:D",
       "fullName": "Final Drive",
       "info": "Mode-change tip from the 4D era. Starts in stamina mode, drops into attack as spin decays.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Final_Drive"
+      "image": "/parts/tip/fd.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Final_Drive"
     },
     {
       "id": "bd",
@@ -160,8 +160,8 @@
       "name": "B:D",
       "fullName": "Bearing Drive",
       "info": "Internal bearings give near-frictionless rotation. The 4D apex stamina tip.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Bearing_Drive"
+      "image": "/parts/tip/bd.png",
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Bearing_Drive"
     },
     {
       "id": "xd",
@@ -170,7 +170,7 @@
       "fullName": "Xtreme Drive",
       "info": "Aggressive 4D mode-change tip with an earlier transition for attack reversal.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Xtreme_Drive"
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Xtreme_Drive"
     },
     {
       "id": "dd",
@@ -179,7 +179,7 @@
       "fullName": "Death Drive",
       "info": "4D mode-change tip alternating between defense and attack as spin slows.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Death_Drive"
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Death_Drive"
     },
     {
       "id": "w2d",
@@ -188,7 +188,7 @@
       "fullName": "Wide Defense v2",
       "info": "Refined WD with deeper grooves. Better counter-attack against aggressive smash.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Wide_Defense_v2"
+      "source": "https://beyblade.fandom.com/wiki/Performance_Tip_-_Wide_Defense_v2"
     }
   ]
 }
