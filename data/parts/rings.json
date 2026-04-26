@@ -7,7 +7,7 @@
       "name": "Pegasus I",
       "info": "Original Pegasus ring with five-wing motif. Right-spin balanced. Used by Storm and Cyber Pegasus.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Pegasus_(Energy_Ring)"
     },
     {
       "id": "pegasus-ii",
@@ -15,7 +15,7 @@
       "name": "Pegasus II",
       "info": "Refined Pegasus ring used in Galaxy Pegasus. Tighter wing design.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Pegasus_II_(Energy_Ring)"
     },
     {
       "id": "pegasus-iii",
@@ -23,7 +23,7 @@
       "name": "Pegasus III",
       "info": "4D-era Pegasus ring for Big Bang Pegasis. Largest, most aggressive of the series.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Pegasus_III_(Energy_Ring)"
     },
     {
       "id": "l-drago-i",
@@ -31,7 +31,7 @@
       "name": "L-Drago I",
       "info": "Original left-spin dragon ring. Used in Lightning L-Drago.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/L-Drago_(Energy_Ring)"
     },
     {
       "id": "l-drago-ii",
@@ -39,7 +39,7 @@
       "name": "L-Drago II",
       "info": "Refined left-spin dragon ring with more defensive scaling. Used in Meteo L-Drago.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/L-Drago_II_(Energy_Ring)"
     },
     {
       "id": "leone-i",
@@ -47,7 +47,7 @@
       "name": "Leone I",
       "info": "Original lion ring with crested mane shape. Used in Rock and Counter Leone.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Leone_(Energy_Ring)"
     },
     {
       "id": "leone-ii",
@@ -55,7 +55,7 @@
       "name": "Leone II",
       "info": "Refined lion ring with sharper mane edges. Used in Fang Leone.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Leone_II_(Energy_Ring)"
     },
     {
       "id": "sagittario",
@@ -63,7 +63,7 @@
       "name": "Sagittario",
       "info": "Centaur archer ring. Stamina-leaning shape. Used in Flame Sagittario.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Sagittario_(Energy_Ring)"
     },
     {
       "id": "eagle",
@@ -71,7 +71,7 @@
       "name": "Eagle",
       "info": "Spread-wing ring. Balance-type shape. Used in Earth Eagle.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Eagle_(Energy_Ring)"
     },
     {
       "id": "bull",
@@ -79,7 +79,7 @@
       "name": "Bull",
       "info": "Horned ring with aggressive defense profile. Used in Dark Bull.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Bull_(Energy_Ring)"
     },
     {
       "id": "fireblaze",
@@ -87,7 +87,7 @@
       "name": "Fireblaze",
       "info": "Phoenix-flame ring. Stamina shape. Used in Burn Fireblaze.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Fireblaze_(Energy_Ring)"
     },
     {
       "id": "aries",
@@ -95,7 +95,7 @@
       "name": "Aries",
       "info": "Ram ring with defensive horn pattern. Used in Rock Aries.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Aries_(Energy_Ring)"
     },
     {
       "id": "virgo",
@@ -103,7 +103,7 @@
       "name": "Virgo",
       "info": "Maiden ring with stamina-balance shape. Used in Earth Virgo.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Virgo_(Energy_Ring)"
     },
     {
       "id": "aquario",
@@ -111,7 +111,7 @@
       "name": "Aquario",
       "info": "Wave ring with defense profile. Used in Storm Aquario.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Aquario_(Energy_Ring)"
     },
     {
       "id": "kerbecs",
@@ -119,7 +119,7 @@
       "name": "Kerbecs",
       "info": "Three-headed dog ring with heavy defense profile. Used in Hades (Hell) Kerbecs.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Kerbecs_(Energy_Ring)"
     },
     {
       "id": "striker-i",
@@ -127,7 +127,7 @@
       "name": "Striker I",
       "info": "Bird-of-prey ring with attack profile. Used in Ray Striker.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Striker_(Energy_Ring)"
     },
     {
       "id": "horuseus",
@@ -135,7 +135,7 @@
       "name": "Horuseus",
       "info": "Egyptian-falcon ring with defense profile. Used in Vulcan Horuseus.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Horuseus_(Energy_Ring)"
     },
     {
       "id": "destroyer",
@@ -143,7 +143,7 @@
       "name": "Destroyer",
       "info": "Greek-warrior ring with defense-stamina profile. Used in Gravity Perseus (international name: Destroyer).",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Destroyer_(Energy_Ring)"
     },
     {
       "id": "serpent",
@@ -151,7 +151,7 @@
       "name": "Serpent",
       "info": "Coiled snake ring with stamina-trick shape. Used in Poison Serpent.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Serpent_(Energy_Ring)"
     },
     {
       "id": "orion",
@@ -159,7 +159,7 @@
       "name": "Orion",
       "info": "Constellation hunter ring with stamina shape. Used in Phantom Orion.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Orion_(Energy_Ring)"
     },
     {
       "id": "nemesis-a",
@@ -167,7 +167,7 @@
       "name": "Nemesis A",
       "info": "Final-villain ring designed for bidirectional spin. Used in Diablo Nemesis.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Nemesis_(Energy_Ring)"
     },
     {
       "id": "ares",
@@ -175,7 +175,7 @@
       "name": "Ares",
       "info": "War-god ring with mode-change geometry. Used in Variares.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Ares_(Energy_Ring)"
     }
   ]
 }
