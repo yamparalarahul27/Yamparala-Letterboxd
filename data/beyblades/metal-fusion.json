@@ -24,7 +24,7 @@
       "debut": "2009",
       "description": "Gingka's first Beyblade. The Rubber Flat tip drives explosive speed and aggressive smash attacks.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Storm_Pegasus_105RF"
+      "source": "https://beyblade.fandom.com/wiki/Storm_Pegasus"
     },
     {
       "id": "lightning-ldrago",
@@ -144,7 +144,7 @@
       "debut": "2009",
       "description": "Aggressive defense — Benkei's bull-rush style hits hard while soaking heavy damage.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Dark_Bull_H145SD"
+      "source": "https://beyblade.fandom.com/wiki/Dark_Bull"
     },
     {
       "id": "burn-fireblaze",
@@ -192,7 +192,7 @@
       "debut": "2010",
       "description": "Gingka's evolved blade. Galaxy wheel hits with precision while R2F drives fierce movement.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Galaxy_Pegasus_W105R2F"
+      "source": "https://beyblade.fandom.com/wiki/Galaxy_Pegasus"
     },
     {
       "id": "rock-aries",
@@ -336,7 +336,7 @@
       "debut": "2010",
       "description": "Tetsuya's evolved crab-themed Bey. Heavier and more stable than Storm Capricorne.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Killerken_100SF"
+      "source": "https://beyblade.fandom.com/wiki/Killerken"
     },
     {
       "id": "inferno-aquario",
@@ -360,7 +360,7 @@
       "debut": "2009",
       "description": "Hikaru's first Beyblade — a low-profile attacker before her later switch to Storm Aquario.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Inferno_Aquario_105F"
+      "source": "https://beyblade.fandom.com/wiki/Inferno_Aquario"
     },
     {
       "id": "dark-wolf",
@@ -413,16 +413,16 @@
     {
       "id": "wind-aquario",
       "name": "Wind Aquario",
-      "code": "BB-25",
+      "code": "BB-37",
       "combo": "Wind Aquario 100HF",
-      "type": "Defense",
+      "type": "Attack",
       "series": "Metal Fusion",
       "owner": "Hikaru Hasama",
       "ownerId": "hikaru-hasama",
       "energyRing": "Aquario",
       "fusionWheel": "Wind",
       "spinTrack": "100",
-      "performanceTip": "HF",
+      "performanceTip": "HF/S",
       "stats": {
         "attack": 4,
         "defense": 6,
@@ -431,8 +431,8 @@
       "weight": "—",
       "debut": "2009",
       "description": "Hikaru's first Bey before her transition to Storm Aquario. Wind wheel stalls attackers; the 100 track keeps it nimble.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Wind_Aquario_100HF"
+      "image": "/beys/wind-aquario.png",
+      "source": "https://beyblade.fandom.com/wiki/Wind_Aquario"
     },
     {
       "id": "dark-cancer",

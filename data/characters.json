@@ -115,8 +115,8 @@
       "role": "Rival",
       "team": "Wang Hu Zhong",
       "bio": "Calm, principled leader of China's team Wang Hu Zhong. Master defender — Vulcan Horuseus is one of the toughest walls in the trilogy.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Da_Xiang_Wang"
+      "image": "/bladers/da-xiang-wang.png",
+      "source": "https://beyblade.fandom.com/wiki/Dashan_Wang"
     },
     {
       "id": "julian-konzern",
@@ -169,8 +169,8 @@
       "role": "Antagonist",
       "team": "HD Academy",
       "bio": "The Spiral Force arc's mecha-blader. Twisted Tempo's relentless stamina is engineered, not earned — until the boy beneath the machine resurfaces.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Faust"
+      "image": "/bladers/faust.png",
+      "source": "https://beyblade.fandom.com/wiki/Toby"
     },
     {
       "id": "damure",
@@ -359,7 +359,7 @@
       "team": "Legendary Bladers",
       "bio": "Brash, friendly Legendary Blader of Mars (alongside Aguma's Saturn). Variares's mode-change wheel matches his flexible, improv-driven combat.",
       "image": null,
-      "source": "https://beyblade.fandom.com/wiki/King"
+      "source": "https://beyblade.fandom.com/wiki/King_(Beyblade)"
     },
     {
       "id": "zeo-abyss",
