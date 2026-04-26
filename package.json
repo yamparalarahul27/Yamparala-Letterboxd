@@ -7,9 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "check:lines": "node scripts/check-lines.mjs",
+    "check": "npm run lint && npm run check:lines",
     "sync:beys": "node scripts/sync-beys.mjs",
     "sync:characters": "node scripts/sync-characters.mjs",
-    "sync:all": "npm run sync:beys && npm run sync:characters"
+    "sync:parts": "node scripts/sync-parts.mjs",
+    "sync:all": "npm run sync:beys && npm run sync:characters && npm run sync:parts"
   },
   "dependencies": {
     "framer-motion": "^12.34.3",

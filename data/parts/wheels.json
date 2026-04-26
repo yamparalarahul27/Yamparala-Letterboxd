@@ -1,0 +1,173 @@
+{
+  "$schema": "Fusion Wheel catalog. May be enriched by scripts/sync-parts.mjs.",
+  "wheels": [
+    {
+      "id": "storm",
+      "type": "wheel",
+      "name": "Storm",
+      "info": "Three protruding curved blades with widely spread mass. Smash-attack profile. Used by Storm Pegasus.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "lightning",
+      "type": "wheel",
+      "name": "Lightning",
+      "info": "Aggressive sloped edges with sharp protrusions, built for left-spin smash. Used by Lightning L-Drago.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "rock",
+      "type": "wheel",
+      "name": "Rock",
+      "info": "Heavy wheel with serrated edges. Defensive mass with rebounding contact. Used by Rock Leone and Rock Aries.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "flame",
+      "type": "wheel",
+      "name": "Flame",
+      "info": "Lightweight, evenly distributed mass. Favors stamina configurations. Used by Flame Sagittario.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "earth",
+      "type": "wheel",
+      "name": "Earth",
+      "info": "Wide, evenly massed wheel. Versatile across balance and defense builds. Used by Earth Eagle and Earth Virgo.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "dark",
+      "type": "wheel",
+      "name": "Dark",
+      "info": "Compact wheel with two long horns. Aggressive defense profile. Used by Dark Bull.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "burn",
+      "type": "wheel",
+      "name": "Burn",
+      "info": "Heavy disc with thick walls. Stamina-leaning. Used by Burn Fireblaze.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "galaxy",
+      "type": "wheel",
+      "name": "Galaxy",
+      "info": "Multi-layered wheel with sharp protrusions. High attack power. Used by Galaxy Pegasus.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "cyber",
+      "type": "wheel",
+      "name": "Cyber",
+      "info": "Mid-weight wheel with mechanical-looking ridges. Attack-focused. Used by Cyber Pegasus.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "counter",
+      "type": "wheel",
+      "name": "Counter",
+      "info": "Curved-edge wheel with counter-attack geometry. Defense-attack hybrid. Used by Counter Leone.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "meteo",
+      "type": "wheel",
+      "name": "Meteo",
+      "info": "Reinforced left-spin wheel. Iconic for spin-stealing attacks. Used by Meteo L-Drago.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "hades",
+      "type": "wheel",
+      "name": "Hades",
+      "info": "Three-headed dog motif with massive mass. Defense-beast profile. Used by Hades Kerbecs (a.k.a. Hell Kerbecs).",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "ray",
+      "type": "wheel",
+      "name": "Ray",
+      "info": "Compact, rounded wheel for balanced attack. Mid-tier attack profile. Used by Ray Striker.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "vulcan",
+      "type": "wheel",
+      "name": "Vulcan",
+      "info": "Sharp-edged wheel with hammer-like protrusions. Strong defense. Used by Vulcan Horuseus.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "gravity",
+      "type": "wheel",
+      "name": "Gravity",
+      "info": "Wide, dense wheel optimized for stable spin. Defense fortress. Used by Gravity Perseus.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "poison",
+      "type": "wheel",
+      "name": "Poison",
+      "info": "Coiled snake design with whip-edge for trick attacks. Stamina with menace. Used by Poison Serpent.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "cosmic",
+      "type": "wheel",
+      "name": "Cosmic",
+      "info": "4D-era wheel with detachable layers — apex attack power. Used by Big Bang Pegasis.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "phantom",
+      "type": "wheel",
+      "name": "Phantom",
+      "info": "4D-era wheel with smooth, low-friction shape. Apex stamina. Used by Phantom Orion.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "diablo",
+      "type": "wheel",
+      "name": "Diablo",
+      "info": "4D-era wheel — heaviest of MFB, capable of either spin direction. Used by Diablo Nemesis.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "variares",
+      "type": "wheel",
+      "name": "Variares",
+      "info": "4D-era wheel with shifting geometry mid-battle. Mode-change attacker. Used by Variares.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "fang",
+      "type": "wheel",
+      "name": "Fang",
+      "info": "4D-era wheel with predator-fang protrusions. Maximum defense. Used by Fang Leone.",
+      "image": null,
+      "source": null
+    }
+  ]
+}

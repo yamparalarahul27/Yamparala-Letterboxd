@@ -1,0 +1,135 @@
+{
+  "$schema": "Spin Track catalog. May be enriched by scripts/sync-parts.mjs.",
+  "tracks": [
+    {
+      "id": "100",
+      "type": "track",
+      "name": "100",
+      "info": "10mm-tall plain track. Lowest standard height — extreme low profile for aggressive attack.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "105",
+      "type": "track",
+      "name": "105",
+      "info": "10.5mm plain track. The default low-profile track for attack-focused builds.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "130",
+      "type": "track",
+      "name": "130",
+      "info": "13mm mid-low track. Used in Fang Leone — adds stability without losing attack potential.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "135",
+      "type": "track",
+      "name": "135",
+      "info": "13.5mm mid track. Balanced height for stamina and balance combos.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "145",
+      "type": "track",
+      "name": "145",
+      "info": "14.5mm standard mid track. The most common height across the trilogy — defense-leaning.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "c145",
+      "type": "track",
+      "name": "C145",
+      "fullName": "Claw 145",
+      "info": "14.5mm with retractable claws. Limits rebound angle — niche pick for stamina under pressure.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "ed145",
+      "type": "track",
+      "name": "ED145",
+      "fullName": "Eternal Defense 145",
+      "info": "14.5mm with a free-spinning ring on top. Deflects descending attacks. Pure defense.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "gb145",
+      "type": "track",
+      "name": "GB145",
+      "fullName": "Gravity Ball 145",
+      "info": "14.5mm with built-in ball weights that shift mass outward. Stamina booster.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "w105",
+      "type": "track",
+      "name": "W105",
+      "fullName": "Wing 105",
+      "info": "10.5mm with downward-angled wings. Adds aerodynamic stamina to a low-profile build.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "lw105",
+      "type": "track",
+      "name": "LW105",
+      "fullName": "Lightning Wing 105",
+      "info": "10.5mm with sharper wing protrusions for left-spin smash. Used in Meteo L-Drago.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "d125",
+      "type": "track",
+      "name": "D125",
+      "fullName": "Defense 125",
+      "info": "12.5mm with side-shield armor. Adds stability and lateral defense.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "ad145",
+      "type": "track",
+      "name": "AD145",
+      "fullName": "Armor Defense 145",
+      "info": "14.5mm with armored side ring. Heavy-defense pick.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "bd145",
+      "type": "track",
+      "name": "BD145",
+      "fullName": "Boost Disk 145",
+      "info": "14.5mm with a detachable boost disk. Adds mass when locked in.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "sw145",
+      "type": "track",
+      "name": "SW145",
+      "fullName": "Switch 145",
+      "info": "14.5mm with switchable height modes. Versatile across builds.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "h145",
+      "type": "track",
+      "name": "Horn 145",
+      "fullName": "Horn 145",
+      "info": "14.5mm with bull-horn protrusions. Aggressive defense — rebounds attackers.",
+      "image": null,
+      "source": null
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "$schema": "Energy Ring catalog. May be enriched by scripts/sync-parts.mjs.",
+  "rings": [
+    {
+      "id": "pegasus-i",
+      "type": "ring",
+      "name": "Pegasus I",
+      "info": "Original Pegasus ring with five-wing motif. Right-spin balanced. Used by Storm and Cyber Pegasus.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "pegasus-ii",
+      "type": "ring",
+      "name": "Pegasus II",
+      "info": "Refined Pegasus ring used in Galaxy Pegasus. Tighter wing design.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "pegasus-iii",
+      "type": "ring",
+      "name": "Pegasus III",
+      "info": "4D-era Pegasus ring for Big Bang Pegasis. Largest, most aggressive of the series.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "l-drago-i",
+      "type": "ring",
+      "name": "L-Drago I",
+      "info": "Original left-spin dragon ring. Used in Lightning L-Drago.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "l-drago-ii",
+      "type": "ring",
+      "name": "L-Drago II",
+      "info": "Refined left-spin dragon ring with more defensive scaling. Used in Meteo L-Drago.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "leone-i",
+      "type": "ring",
+      "name": "Leone I",
+      "info": "Original lion ring with crested mane shape. Used in Rock and Counter Leone.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "leone-ii",
+      "type": "ring",
+      "name": "Leone II",
+      "info": "Refined lion ring with sharper mane edges. Used in Fang Leone.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "sagittario",
+      "type": "ring",
+      "name": "Sagittario",
+      "info": "Centaur archer ring. Stamina-leaning shape. Used in Flame Sagittario.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "eagle",
+      "type": "ring",
+      "name": "Eagle",
+      "info": "Spread-wing ring. Balance-type shape. Used in Earth Eagle.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "bull",
+      "type": "ring",
+      "name": "Bull",
+      "info": "Horned ring with aggressive defense profile. Used in Dark Bull.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "fireblaze",
+      "type": "ring",
+      "name": "Fireblaze",
+      "info": "Phoenix-flame ring. Stamina shape. Used in Burn Fireblaze.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "aries",
+      "type": "ring",
+      "name": "Aries",
+      "info": "Ram ring with defensive horn pattern. Used in Rock Aries.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "virgo",
+      "type": "ring",
+      "name": "Virgo",
+      "info": "Maiden ring with stamina-balance shape. Used in Earth Virgo.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "aquario",
+      "type": "ring",
+      "name": "Aquario",
+      "info": "Wave ring with defense profile. Used in Storm Aquario.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "kerbecs",
+      "type": "ring",
+      "name": "Kerbecs",
+      "info": "Three-headed dog ring with heavy defense profile. Used in Hades (Hell) Kerbecs.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "striker-i",
+      "type": "ring",
+      "name": "Striker I",
+      "info": "Bird-of-prey ring with attack profile. Used in Ray Striker.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "horuseus",
+      "type": "ring",
+      "name": "Horuseus",
+      "info": "Egyptian-falcon ring with defense profile. Used in Vulcan Horuseus.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "destroyer",
+      "type": "ring",
+      "name": "Destroyer",
+      "info": "Greek-warrior ring with defense-stamina profile. Used in Gravity Perseus (international name: Destroyer).",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "serpent",
+      "type": "ring",
+      "name": "Serpent",
+      "info": "Coiled snake ring with stamina-trick shape. Used in Poison Serpent.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "orion",
+      "type": "ring",
+      "name": "Orion",
+      "info": "Constellation hunter ring with stamina shape. Used in Phantom Orion.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "nemesis-a",
+      "type": "ring",
+      "name": "Nemesis A",
+      "info": "Final-villain ring designed for bidirectional spin. Used in Diablo Nemesis.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "ares",
+      "type": "ring",
+      "name": "Ares",
+      "info": "War-god ring with mode-change geometry. Used in Variares.",
+      "image": null,
+      "source": null
+    }
+  ]
+}
