@@ -8,6 +8,7 @@ import {
   getBeysOwnedBy,
   type BeybladeType,
 } from "@/data/beyblades";
+import { ROLE_COLORS } from "@/data/design-tokens";
 
 // ──────────────────────────────────────────────────────────────────────
 // Static params — pre-render every blader page at build time
@@ -29,13 +30,6 @@ export async function generateMetadata({
     description: c.bio,
   };
 }
-
-const ROLE_COLORS: Record<string, string> = {
-  Protagonist: "#FF4752",
-  Rival: "#E5B84B",
-  Antagonist: "#9D5DFF",
-  Supporting: "#4F9DFF",
-};
 
 const TYPE_COLORS: Record<BeybladeType, string> = {
   Attack: "#FF4752",
@@ -84,7 +78,7 @@ export default async function BladerDetailPage({
   if (!character) notFound();
 
   const beys = getBeysOwnedBy(character.id);
-  const roleColor = ROLE_COLORS[character.role] ?? "#CACACA";
+  const roleColor = ROLE_COLORS[character.role];
 
   return (
     <div className="min-h-screen" style={{ background: "#000", color: "#EFEFEF" }}>
