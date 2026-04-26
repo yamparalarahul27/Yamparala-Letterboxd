@@ -131,10 +131,6 @@
       "page": "Jade_Jupiter_S130RB"
     },
     {
-      "id": "bandid-goreim",
-      "page": "Bandid_Goreim_DF145BS"
-    },
-    {
       "id": "death-quetzalcoatl",
       "page": "Death_Quetzalcoatl_125RDF"
     },
@@ -157,6 +153,58 @@
     {
       "id": "flame-byxis",
       "page": "Flame_Byxis_230WD"
+    },
+    {
+      "id": "dark-wolf",
+      "page": "Dark_Wolf_DF145FS"
+    },
+    {
+      "id": "flame-libra",
+      "page": "Flame_Libra_T125ES"
+    },
+    {
+      "id": "wind-aquario",
+      "page": "Wind_Aquario_100HF"
+    },
+    {
+      "id": "dark-cancer",
+      "page": "Dark_Cancer_CH120SF"
+    },
+    {
+      "id": "bakushin-susanow",
+      "page": "Bakushin_Susanow_105F"
+    },
+    {
+      "id": "flame-serpent",
+      "page": "Flame_Serpent_SW145D"
+    },
+    {
+      "id": "burn-phoenix",
+      "page": "Burn_Phoenix_105F"
+    },
+    {
+      "id": "killer-beafowl",
+      "page": "Killer_Beafowl_UW145EWD"
+    },
+    {
+      "id": "poison-virgo",
+      "page": "Poison_Virgo_ED145ES"
+    },
+    {
+      "id": "thermal-lacerta",
+      "page": "Thermal_Lacerta_WA130HF"
+    },
+    {
+      "id": "grand-capricorn",
+      "page": "Grand_Capricorn_145D"
+    },
+    {
+      "id": "l-drago-destructor",
+      "page": "L-Drago_Destructor_F:S"
+    },
+    {
+      "id": "hades-crown",
+      "page": "Hades_Crown_130FB"
     }
   ]
 }
