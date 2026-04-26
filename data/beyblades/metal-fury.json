@@ -269,7 +269,7 @@
     {
       "id": "l-drago-destructor",
       "name": "L-Drago Destructor",
-      "code": "BB-108",
+      "code": "BB-108 (Takara Tomy, Legends)",
       "combo": "L-Drago Destructor F:S",
       "type": "Attack",
       "series": "Metal Fury",
@@ -287,8 +287,8 @@
       "weight": "—",
       "debut": "2012",
       "description": "Ryuga's final form — the most powerful left-spin Bey ever made. Final Survive tip swaps mid-battle for endgame finishes.",
-      "image": null,
-      "source": null
+      "image": "/beys/l-drago-destructor.png",
+      "source": "https://beyblade.fandom.com/wiki/L-Drago_Destructor_F:S"
     },
     {
       "id": "hades-crown",
@@ -312,7 +312,7 @@
       "debut": "2012",
       "description": "Bao's possessed Bey, corrupted by Nemesis's shadow. FB tip drives erratic, hard-to-read movement.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Hades_Crown_130FB"
     }
   ]
 }

@@ -232,8 +232,8 @@
       "role": "Antagonist",
       "team": "Dark Nebula",
       "bio": "Metal Fusion's main antagonist. Cold, calculating, theatrical. Wields Dark Wolf and orchestrates the Dark Nebula's hunt for L-Drago.",
-      "image": null,
-      "source": null
+      "image": "/bladers/doji.png",
+      "source": "https://beyblade.fandom.com/wiki/Doji"
     },
     {
       "id": "reiki-sodo",
@@ -241,8 +241,8 @@
       "role": "Antagonist",
       "team": "Dark Nebula",
       "bio": "Dark Nebula recruit and Cyber Pegasus's blader. Mechanical, methodical, designed to emulate Pegasus's strengths without the heart.",
-      "image": null,
-      "source": null
+      "image": "/bladers/reiki-sodo.png",
+      "source": "https://beyblade.fandom.com/wiki/Reiki_Sodo"
     },
     {
       "id": "teru-saotome",
@@ -250,8 +250,8 @@
       "role": "Antagonist",
       "team": "Dark Nebula",
       "bio": "Dark Nebula blader of Earth Virgo. Calm, fastidious, uses ED145's defense ring to outlast attackers.",
-      "image": null,
-      "source": null
+      "image": "/bladers/teru-saotome.png",
+      "source": "https://beyblade.fandom.com/wiki/Teru_Saotome"
     },
     {
       "id": "busujima",
@@ -259,8 +259,8 @@
       "role": "Antagonist",
       "team": "Bey Society",
       "bio": "Brute-force Metal Fusion antagonist. Bakushin Susanow's smash attacks fit his blunt, no-nonsense style.",
-      "image": null,
-      "source": null
+      "image": "/bladers/busujima.png",
+      "source": "https://beyblade.fandom.com/wiki/Busujima"
     },
     {
       "id": "sophie",
@@ -268,8 +268,8 @@
       "role": "Rival",
       "team": "Excalibur",
       "bio": "Team Excalibur's elegant tactician — France's representative. Tag-teams with Wales using Grand Cetus T125RS.",
-      "image": null,
-      "source": null
+      "image": "/bladers/sophie.png",
+      "source": "https://beyblade.fandom.com/wiki/Sophie"
     },
     {
       "id": "klaus",
@@ -277,8 +277,8 @@
       "role": "Rival",
       "team": "Excalibur",
       "bio": "Team Excalibur's German powerhouse. Wields Grand Capricorn 145D — known for the fastest launch in the World Championships.",
-      "image": null,
-      "source": null
+      "image": "/bladers/klaus.png",
+      "source": "https://beyblade.fandom.com/wiki/Klaus"
     },
     {
       "id": "argo-garcia",
@@ -286,8 +286,8 @@
       "role": "Antagonist",
       "team": "Garcia Family",
       "bio": "Eldest of the Garcia siblings. Wields Killer Beafowl with theatrical menace; rules his team through fear.",
-      "image": null,
-      "source": null
+      "image": "/bladers/argo-garcia.png",
+      "source": "https://beyblade.fandom.com/wiki/Argo_Garcia"
     },
     {
       "id": "chao-xin",
@@ -295,8 +295,8 @@
       "role": "Rival",
       "team": "Wang Hu Zhong",
       "bio": "Wang Hu Zhong's idol-blader and ladies' man. Poison Virgo's stamina build hides serious tournament chops.",
-      "image": null,
-      "source": null
+      "image": "/bladers/chao-xin.png",
+      "source": "https://beyblade.fandom.com/wiki/Chao_Xin"
     },
     {
       "id": "chiyun-li",
@@ -304,8 +304,8 @@
       "role": "Rival",
       "team": "Wang Hu Zhong",
       "bio": "Wang Hu Zhong's serious, principled blader. Thermal Lacerta's WA130 track suits his sharp, calculated style.",
-      "image": null,
-      "source": null
+      "image": "/bladers/chiyun-li.png",
+      "source": "https://beyblade.fandom.com/wiki/Chiyun_Li"
     },
     {
       "id": "nile",
@@ -313,8 +313,8 @@
       "role": "Rival",
       "team": "Wild Fang",
       "bio": "Africa's representative blader on Team Wild Fang. Egyptian-themed Vulcan Horuseus pairs falcon imagery with hammer-strike defense.",
-      "image": null,
-      "source": null
+      "image": "/bladers/nile.png",
+      "source": "https://beyblade.fandom.com/wiki/Nile"
     },
     {
       "id": "tithi",
@@ -322,8 +322,8 @@
       "role": "Supporting",
       "team": "Legendary Bladers",
       "bio": "Energetic Legendary Blader of Mars. Death Quetzalcoatl's mesoamerican-feathered serpent design matches his playful but lethal style.",
-      "image": null,
-      "source": null
+      "image": "/bladers/tithi.png",
+      "source": "https://beyblade.fandom.com/wiki/Tithi"
     },
     {
       "id": "dynamis",
@@ -331,8 +331,8 @@
       "role": "Supporting",
       "team": "Legendary Bladers",
       "bio": "Legendary Blader of Venus and keeper of the Mist Mountain shrine. Jade Jupiter's bidirectional design reflects his cosmic perspective.",
-      "image": null,
-      "source": null
+      "image": "/bladers/dynamis.png",
+      "source": "https://beyblade.fandom.com/wiki/Dynamis"
     },
     {
       "id": "johannes",
@@ -340,8 +340,8 @@
       "role": "Antagonist",
       "team": "Cat-themed Hades Inc.",
       "bio": "Lyra-themed Metal Fury antagonist. Wields Beat Lynx — a tall, agile stamina build that fits his feline persona.",
-      "image": null,
-      "source": null
+      "image": "/bladers/johannes.png",
+      "source": "https://beyblade.fandom.com/wiki/Johannes"
     },
     {
       "id": "bao",
@@ -349,8 +349,8 @@
       "role": "Antagonist",
       "team": "Beylin Fang (corrupted)",
       "bio": "Possessed Beylin Fang blader fighting under Nemesis's shadow. Hades Crown's FB tip mirrors his erratic, tortured rage.",
-      "image": null,
-      "source": null
+      "image": "/bladers/bao.png",
+      "source": "https://beyblade.fandom.com/wiki/Bao"
     },
     {
       "id": "king",
@@ -359,7 +359,7 @@
       "team": "Legendary Bladers",
       "bio": "Brash, friendly Legendary Blader of Mars (alongside Aguma's Saturn). Variares's mode-change wheel matches his flexible, improv-driven combat.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/King"
     },
     {
       "id": "zeo-abyss",
@@ -367,8 +367,8 @@
       "role": "Antagonist",
       "team": "Star Breakers",
       "bio": "Star Breaker recruit and former friend of Masamune & Toby. Flame Byxis's stamina build supports his calculated, manipulative style.",
-      "image": null,
-      "source": null
+      "image": "/bladers/zeo-abyss.png",
+      "source": "https://beyblade.fandom.com/wiki/Zeo_Abyss"
     }
   ]
 }

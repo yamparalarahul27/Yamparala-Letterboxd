@@ -367,7 +367,7 @@
       "name": "Dark Wolf",
       "code": "BB-29",
       "combo": "Dark Wolf DF145FS",
-      "type": "Defense",
+      "type": "Balance",
       "series": "Metal Fusion",
       "owner": "Doji",
       "ownerId": "doji",
@@ -383,8 +383,8 @@
       "weight": "—",
       "debut": "2009",
       "description": "Doji's signature Bey, the Dark Nebula's enforcer. Wolf-themed defense with the DF145 down-force track for stability.",
-      "image": null,
-      "source": null
+      "image": "/beys/dark-wolf.png",
+      "source": "https://beyblade.fandom.com/wiki/Dark_Wolf_DF145FS"
     },
     {
       "id": "flame-libra",
@@ -407,8 +407,8 @@
       "weight": "—",
       "debut": "2010",
       "description": "Yu's signature Bey. Sonic-attack stamina monster — Libra's scales pulse with destabilizing vibrations.",
-      "image": null,
-      "source": null
+      "image": "/beys/flame-libra.png",
+      "source": "https://beyblade.fandom.com/wiki/Flame_Libra_T125ES"
     },
     {
       "id": "wind-aquario",
@@ -432,14 +432,14 @@
       "debut": "2009",
       "description": "Hikaru's first Bey before her transition to Storm Aquario. Wind wheel stalls attackers; the 100 track keeps it nimble.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Wind_Aquario_100HF"
     },
     {
       "id": "dark-cancer",
       "name": "Dark Cancer",
-      "code": "BB-31",
+      "code": "BB-55",
       "combo": "Dark Cancer CH120SF",
-      "type": "Defense",
+      "type": "Balance",
       "series": "Metal Fusion",
       "owner": "Tetsuya Watarigani",
       "ownerId": "tetsuya-watarigani",
@@ -455,8 +455,8 @@
       "weight": "—",
       "debut": "2009",
       "description": "Tetsuya's main Bey. Crab-themed defense with the Change Height 120 track for tactical altitude shifts.",
-      "image": null,
-      "source": null
+      "image": "/beys/dark-cancer.png",
+      "source": "https://beyblade.fandom.com/wiki/Dark_Cancer_CH120SF"
     },
     {
       "id": "bakushin-susanow",
@@ -479,22 +479,22 @@
       "weight": "—",
       "debut": "2010",
       "description": "Busujima's brute-force attacker. Bakushin wheel's protrusions deliver punishing smash combos.",
-      "image": null,
-      "source": null
+      "image": "/beys/bakushin-susanow.png",
+      "source": "https://beyblade.fandom.com/wiki/Bakushin_Susanow_105F"
     },
     {
       "id": "flame-serpent",
       "name": "Flame Serpent",
-      "code": "BB-86",
+      "code": "B-120",
       "combo": "Flame Serpent SW145D",
-      "type": "Stamina",
+      "type": "Balance",
       "series": "Metal Fusion",
       "owner": "Salhan",
       "ownerId": "salhan",
       "energyRing": "Serpent",
       "fusionWheel": "Flame",
       "spinTrack": "SW145",
-      "performanceTip": "D",
+      "performanceTip": "F",
       "stats": {
         "attack": 4,
         "defense": 6,
@@ -503,8 +503,8 @@
       "weight": "—",
       "debut": "2010",
       "description": "Salhan's signature Bey for Team Chandora. Flame Serpent's slow, taunting pace earned its 'Burning Mirage' move.",
-      "image": null,
-      "source": null
+      "image": "/beys/flame-serpent.png",
+      "source": "https://beyblade.fandom.com/wiki/Flame_Serpent_SW145D"
     }
   ]
 }
