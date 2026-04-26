@@ -7,9 +7,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Metal Fusion Codex — A Beyblade MFB Collection",
+  title: "Beyblade Metal Fusion — Tops & Bladers",
   description:
-    "A curated showcase of Beyblade Metal Fusion tops — their parts, types, owners, and stats. A fan-made codex of the 2009–2010 MFB era.",
+    "A curated showcase of Beyblade Metal Fight tops across the trilogy (Metal Fusion, Metal Masters, Metal Fury) — components, types, stats, and the bladers who wield them.",
 };
 
 export default function RootLayout({

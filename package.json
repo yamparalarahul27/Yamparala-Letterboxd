@@ -1,5 +1,5 @@
 {
-  "name": "metal-fusion-codex",
+  "name": "beyblade-metal-fusion",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "sync:beys": "node scripts/sync-beys.mjs"
+    "sync:beys": "node scripts/sync-beys.mjs",
+    "sync:characters": "node scripts/sync-characters.mjs",
+    "sync:all": "npm run sync:beys && npm run sync:characters"
   },
   "dependencies": {
     "framer-motion": "^12.34.3",

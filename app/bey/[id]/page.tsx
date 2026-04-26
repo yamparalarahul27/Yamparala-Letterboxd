@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ChevronLeft } from "lucide-react";
 import CardWithCornerShine from "@/components/ui/CardWithCornerShine";
-import { BEYBLADES, type BeybladeType } from "@/data/beyblades";
+import { BEYBLADES, getCharacter, type BeybladeType } from "@/data/beyblades";
 
 // ──────────────────────────────────────────────────────────────────────
 // Static params — pre-render every detail page at build time
@@ -19,9 +19,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const bey = BEYBLADES.find((b) => b.id === id);
-  if (!bey) return { title: "Not found — Metal Fusion Codex" };
+  if (!bey) return { title: "Not found — Beyblade Metal Fusion" };
   return {
-    title: `${bey.combo} — Metal Fusion Codex`,
+    title: `${bey.combo} — Beyblade Metal Fusion`,
     description: bey.description,
   };
 }
@@ -102,12 +102,19 @@ function StatBar({
   );
 }
 
-function MetaPill({ label, value }: { label: string; value: string }) {
-  return (
-    <div
-      className="flex flex-col gap-1 px-4 py-3"
-      style={{ border: "1px solid #252525", background: "#0A0A0A" }}
-    >
+function MetaPill({
+  label,
+  value,
+  href,
+  accent,
+}: {
+  label: string;
+  value: string;
+  href?: string;
+  accent?: string;
+}) {
+  const inner = (
+    <>
       <span
         className="text-[10px] uppercase tracking-wider"
         style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
@@ -116,10 +123,30 @@ function MetaPill({ label, value }: { label: string; value: string }) {
       </span>
       <span
         className="text-[14px]"
-        style={{ color: "#EFEFEF", fontFamily: "var(--font-geist-mono)" }}
+        style={{
+          color: href ? accent ?? "#FF4752" : "#EFEFEF",
+          fontFamily: "var(--font-geist-mono)",
+        }}
       >
         {value}
+        {href && (
+          <span style={{ color: "#666", fontSize: "11px", marginLeft: "4px" }}>↗</span>
+        )}
       </span>
+    </>
+  );
+  const className = "flex flex-col gap-1 px-4 py-3 transition-colors duration-150";
+  const style = { border: "1px solid #252525", background: "#0A0A0A" } as const;
+  if (href) {
+    return (
+      <Link href={href} className={className} style={style}>
+        {inner}
+      </Link>
+    );
+  }
+  return (
+    <div className={className} style={style}>
+      {inner}
     </div>
   );
 }
@@ -191,6 +218,8 @@ export default async function BeyDetailPage({
   if (!bey) notFound();
 
   const accent = TYPE_COLORS[bey.type].fg;
+  const character = getCharacter(bey.ownerId);
+  const ownerDisplay = character?.name ?? bey.owner;
 
   // Related: same fusion wheel, same energy ring, or same owner — exclude self.
   const related = BEYBLADES.filter(
@@ -407,7 +436,12 @@ export default async function BeyDetailPage({
             At a glance
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <MetaPill label="Owner" value={bey.owner} />
+            <MetaPill
+              label="Owner"
+              value={ownerDisplay}
+              href={character ? `/blader/${character.id}` : undefined}
+              accent={accent}
+            />
             <MetaPill label="Weight" value={bey.weight} />
             <MetaPill label="Code" value={bey.code} />
             <MetaPill label="Debut" value={bey.debut} />

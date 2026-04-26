@@ -1,0 +1,158 @@
+{
+  "$schema": "Curated character/blader data. May be enriched by scripts/sync-characters.mjs.",
+  "characters": [
+    {
+      "id": "gingka-hagane",
+      "name": "Gingka Hagane",
+      "role": "Protagonist",
+      "team": "Gan Gan Galaxy",
+      "bio": "The fiery-headed protagonist of the Metal Fight trilogy. Inherits Pegasus from his father Ryo and battles to defend the world from the Dark Nebula and Nemesis.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "ryo-hagane",
+      "name": "Ryo Hagane",
+      "role": "Supporting",
+      "team": "WBBA",
+      "bio": "Gingka's father, the original Pegasus blader, and director of the WBBA. Also fights as the masked Phoenix wielding Burn Fireblaze.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "ryuga",
+      "name": "Ryuga",
+      "role": "Antagonist",
+      "team": "Dark Nebula (formerly)",
+      "bio": "The forbidden left-spin blader. Cold, ruthless, and overwhelmingly powerful. Wields the L-Drago line and eventually parts ways with Gingka as a respected enemy.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "kyoya-tategami",
+      "name": "Kyoya Tategami",
+      "role": "Rival",
+      "team": "Gan Gan Galaxy",
+      "bio": "Gingka's main rival. Former Face Hunters leader turned Gan Gan Galaxy ace. His Leone series channels the king of the savanna's pride and force.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "kenta-yumiya",
+      "name": "Kenta Yumiya",
+      "role": "Supporting",
+      "team": "Legendary Bladers",
+      "bio": "Gingka's first friend in town. Underdog who grows from cheering on the sidelines into a Legendary Blader by Metal Fury.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "tsubasa-otori",
+      "name": "Tsubasa Otori",
+      "role": "Supporting",
+      "team": "Gan Gan Galaxy",
+      "bio": "Stoic eagle blader and former WBBA spy. Quiet strategist who learns to balance his inner darkness through his bond with Eagle.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "benkei-hanawa",
+      "name": "Benkei Hanawa",
+      "role": "Supporting",
+      "team": "Gan Gan Galaxy",
+      "bio": "Loud, loyal, originally Kyoya's lieutenant in the Face Hunters. Builds a niche around his beloved Bull-themed Beys.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "hyoma",
+      "name": "Hyoma",
+      "role": "Supporting",
+      "team": "Koma Village",
+      "bio": "Gingka's childhood friend from Koma Village. Skilled traditional blader; mentors Gingka during the early Metal Fusion arc.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "hikaru-hasama",
+      "name": "Hikaru Hasama",
+      "role": "Supporting",
+      "team": "WBBA",
+      "bio": "Bey reporter and former competitive blader. Trains under the WBBA after a defining loss; calm, analytical, deeply loyal.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "yu-tendo",
+      "name": "Yu Tendo",
+      "role": "Supporting",
+      "team": "Gan Gan Galaxy",
+      "bio": "Pint-sized prodigy. Former Dark Nebula recruit who joins Gan Gan Galaxy in Metal Masters. Cocky, candy-loving, genuinely lethal.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "damian-hart",
+      "name": "Damian Hart",
+      "role": "Antagonist",
+      "team": "HD Academy",
+      "bio": "Sociopathic prodigy from the HD Academy. His three-headed Hell Kerbecs and theatrical battle style make him Metal Masters' breakout villain.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "masamune-kadoya",
+      "name": "Masamune Kadoya",
+      "role": "Rival",
+      "team": "Gan Gan Galaxy",
+      "bio": "Self-proclaimed \"Number One Blader.\" Loud, brash, instantly likeable. Joins Gan Gan Galaxy after challenging Gingka and never quite stops bragging.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "da-xiang-wang",
+      "name": "Da Xiang Wang",
+      "role": "Rival",
+      "team": "Wang Hu Zhong",
+      "bio": "Calm, principled leader of China's team Wang Hu Zhong. Master defender — Vulcan Horuseus is one of the toughest walls in the trilogy.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "julian-konzern",
+      "name": "Julian Konzern",
+      "role": "Rival",
+      "team": "Excalibur",
+      "bio": "European nobility and captain of Team Excalibur. Wields Gravity Perseus with the precision of a fencer — banned from many tournaments for sheer dominance.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "reiji-mizuchi",
+      "name": "Reiji Mizuchi",
+      "role": "Antagonist",
+      "team": "Beylin Temple",
+      "bio": "Sadistic Beylin Temple blader. Treats opponents like prey — Poison Serpent's slow, taunting style mirrors Reiji's menace.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "chris",
+      "name": "Chris",
+      "role": "Rival",
+      "team": "Star Breakers",
+      "bio": "Quiet mercenary blader of Metal Fury. A Legendary Blader who fights only for the highest bidder — until the threat of Nemesis forces a choice.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "rago",
+      "name": "Rago",
+      "role": "Antagonist",
+      "team": "Nemesis Cultists",
+      "bio": "The vessel of the dark god Nemesis and the trilogy's final antagonist. Wields Diablo Nemesis X:D — a Bey designed to break the rules of spin itself.",
+      "image": null,
+      "source": null
+    }
+  ]
+}

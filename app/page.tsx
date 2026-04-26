@@ -696,7 +696,7 @@ export default function HomePage() {
               About
             </p>
             <h3 className="text-heading-32" style={{ color: "#EFEFEF" }}>
-              Why a <br /> codex?
+              Why this <br /> collection?
             </h3>
           </div>
           <div className="md:w-2/3">
@@ -721,7 +721,7 @@ export default function HomePage() {
                 lineHeight: "1.8",
               }}
             >
-              This codex collects the icons of that era — the Beys you grew up with, organized by
+              This collection brings together the icons of that era — the Beys you grew up with, organized by
               type, owner, and stats. A small love letter to a simpler stadium. Fan project, no
               affiliation with Takara Tomy or Hasbro.
             </p>
