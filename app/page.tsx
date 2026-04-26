@@ -3,7 +3,13 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import CardWithCornerShine from "@/components/ui/CardWithCornerShine";
-import { BEYBLADES, type Beyblade, type BeybladeType } from "@/data/beyblades";
+import {
+  BEYBLADES,
+  SERIES,
+  type Beyblade,
+  type BeybladeType,
+  type BeybladeSeries,
+} from "@/data/beyblades";
 
 
 // ──────────────────────────────────────────────────────────────────────
@@ -17,6 +23,7 @@ const TYPE_COLORS: Record<BeybladeType, { fg: string; bg: string; border: string
 };
 
 const TYPES: ("All" | BeybladeType)[] = ["All", "Attack", "Defense", "Stamina", "Balance"];
+const SERIES_FILTERS: ("All" | BeybladeSeries)[] = ["All", ...SERIES];
 
 const TYPE_DEFINITIONS: { type: BeybladeType; tagline: string; description: string }[] = [
   {
@@ -207,28 +214,42 @@ function ComponentRow({ label, value }: { label: string; value: string }) {
 // ──────────────────────────────────────────────────────────────────────
 export default function HomePage() {
   const [filter, setFilter] = useState<(typeof TYPES)[number]>("All");
+  const [seriesFilter, setSeriesFilter] = useState<(typeof SERIES_FILTERS)[number]>("All");
 
   const filtered = useMemo(
-    () => (filter === "All" ? BEYBLADES : BEYBLADES.filter((b) => b.type === filter)),
-    [filter]
+    () =>
+      BEYBLADES.filter((b) => {
+        if (filter !== "All" && b.type !== filter) return false;
+        if (seriesFilter !== "All" && b.series !== seriesFilter) return false;
+        return true;
+      }),
+    [filter, seriesFilter]
   );
 
   const totals = useMemo(() => {
-    const counts: Record<BeybladeType, number> = {
+    const types: Record<BeybladeType, number> = {
       Attack: 0,
       Defense: 0,
       Stamina: 0,
       Balance: 0,
     };
-    BEYBLADES.forEach((b) => (counts[b.type] += 1));
-    return counts;
+    const seriesCounts: Record<BeybladeSeries, number> = {
+      "Metal Fusion": 0,
+      "Metal Masters": 0,
+      "Metal Fury": 0,
+    };
+    BEYBLADES.forEach((b) => {
+      types[b.type] += 1;
+      seriesCounts[b.series] += 1;
+    });
+    return { ...types, series: seriesCounts };
   }, []);
 
   const stats = [
     { label: "Tops Cataloged", value: BEYBLADES.length.toString(), unit: "" },
-    { label: "Attack Types", value: totals.Attack.toString(), unit: "" },
-    { label: "Defense Types", value: totals.Defense.toString(), unit: "" },
-    { label: "Series Span", value: "2009–10", unit: "" },
+    { label: "Metal Fusion", value: totals.series["Metal Fusion"].toString(), unit: "" },
+    { label: "Metal Masters", value: totals.series["Metal Masters"].toString(), unit: "" },
+    { label: "Metal Fury", value: totals.series["Metal Fury"].toString(), unit: "" },
   ];
 
   return (
@@ -253,7 +274,7 @@ export default function HomePage() {
               fontFamily: "var(--font-geist-mono)",
             }}
           >
-            Metal Fight Beyblade · 2009–2010
+            Metal Fight Beyblade · 2009–2012
           </span>
 
           <h1 className="text-heading-64 sm:text-heading-72 mb-6" style={{ color: "#EFEFEF" }}>
@@ -418,32 +439,64 @@ export default function HomePage() {
               style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
             >
               {filtered.length} {filtered.length === 1 ? "top" : "tops"}
-              {filter !== "All" && <> · filtered by {filter}</>}
+              {filter !== "All" && <> · {filter}</>}
+              {seriesFilter !== "All" && <> · {seriesFilter}</>}
             </p>
           </div>
 
-          <div className="flex items-center gap-2 flex-wrap">
-            {TYPES.map((t) => {
-              const active = filter === t;
-              const accent =
-                t === "All" ? "#FF4752" : TYPE_COLORS[t as BeybladeType].fg;
-              return (
-                <button
-                  key={t}
-                  onClick={() => setFilter(t)}
-                  className="px-3 py-1 text-[12px] font-medium transition-all duration-150"
-                  style={{
-                    borderRadius: "6px",
-                    border: `1px solid ${active ? accent : "#252525"}`,
-                    background: active ? accent : "transparent",
-                    color: active ? "#0A0A0A" : "#CACACA",
-                    fontFamily: "var(--font-geist-mono)",
-                  }}
-                >
-                  {t}
-                </button>
-              );
-            })}
+          <div className="flex flex-col gap-2 items-start sm:items-end">
+            {/* Type filter row */}
+            <div className="flex items-center gap-2 flex-wrap">
+              {TYPES.map((t) => {
+                const active = filter === t;
+                const accent =
+                  t === "All" ? "#FF4752" : TYPE_COLORS[t as BeybladeType].fg;
+                return (
+                  <button
+                    key={t}
+                    onClick={() => setFilter(t)}
+                    className="px-3 py-1 text-[12px] font-medium transition-all duration-150"
+                    style={{
+                      borderRadius: "6px",
+                      border: `1px solid ${active ? accent : "#252525"}`,
+                      background: active ? accent : "transparent",
+                      color: active ? "#0A0A0A" : "#CACACA",
+                      fontFamily: "var(--font-geist-mono)",
+                    }}
+                  >
+                    {t}
+                  </button>
+                );
+              })}
+            </div>
+            {/* Series filter row */}
+            <div className="flex items-center gap-2 flex-wrap">
+              <span
+                className="text-[10px] uppercase tracking-widest mr-1"
+                style={{ color: "#444", fontFamily: "var(--font-geist-mono)" }}
+              >
+                Series
+              </span>
+              {SERIES_FILTERS.map((s) => {
+                const active = seriesFilter === s;
+                return (
+                  <button
+                    key={s}
+                    onClick={() => setSeriesFilter(s)}
+                    className="px-3 py-1 text-[11px] font-medium transition-all duration-150"
+                    style={{
+                      borderRadius: "6px",
+                      border: `1px solid ${active ? "#CACACA" : "#252525"}`,
+                      background: active ? "#CACACA" : "transparent",
+                      color: active ? "#0A0A0A" : "#666666",
+                      fontFamily: "var(--font-geist-mono)",
+                    }}
+                  >
+                    {s === "All" ? "All series" : s}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 
