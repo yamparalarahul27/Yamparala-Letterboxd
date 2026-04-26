@@ -4,38 +4,46 @@
     {
       "id": "storm-pegasus",
       "name": "Storm Pegasus",
-      "code": "BB-28",
+      "code": "BB-28BB-28A (Pegasus Tornado Wing 2-Pack)BB-28B (Super Vortex Battle Set)",
       "combo": "Storm Pegasus 105RF",
       "type": "Attack",
-      "owner": "Gingka Hagane",
+      "owner": "Ryo HaganeGingka HaganeGold Ship (Umamusume: PisuPisu☆SupiSupi Golshi-chan)",
       "energyRing": "Pegasus I",
       "fusionWheel": "Storm",
       "spinTrack": "105",
       "performanceTip": "RF",
-      "stats": { "attack": 7, "defense": 4, "stamina": 3 },
+      "stats": {
+        "attack": 7,
+        "defense": 4,
+        "stamina": 3
+      },
       "weight": "37.4g",
       "debut": "2009",
       "description": "Gingka's first Beyblade. The Rubber Flat tip drives explosive speed and aggressive smash attacks.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Storm_Pegasus_105RF"
     },
     {
       "id": "lightning-ldrago",
       "name": "Lightning L-Drago",
-      "code": "BB-43",
+      "code": "BB-43BB-43B (Super Vortex Battle Set)BB-43C (Dragon Bite Strike 2-Pack)",
       "combo": "Lightning L-Drago 100HF",
       "type": "Attack",
-      "owner": "Ryuga",
-      "energyRing": "L-Drago",
+      "owner": "RyugaMoses (anime)Gold Ship (Umamusume: PisuPisu☆SupiSupi Golshi-chan)",
+      "energyRing": "L-Drago I",
       "fusionWheel": "Lightning",
       "spinTrack": "100",
       "performanceTip": "HF",
-      "stats": { "attack": 8, "defense": 2, "stamina": 4 },
+      "stats": {
+        "attack": 8,
+        "defense": 2,
+        "stamina": 4
+      },
       "weight": "37.0g",
       "debut": "2009",
       "description": "The forbidden left-spin top. Steals opponents' spin on contact and counters with brutal force.",
-      "image": null,
-      "source": null
+      "image": "/beys/lightning-ldrago.png",
+      "source": "https://beyblade.fandom.com/wiki/Lightning_L-Drago_100HF"
     },
     {
       "id": "rock-leone",
@@ -44,16 +52,20 @@
       "combo": "Rock Leone 145WB",
       "type": "Defense",
       "owner": "Kyoya Tategami",
-      "energyRing": "Leone",
+      "energyRing": "Leone I",
       "fusionWheel": "Rock",
       "spinTrack": "145",
       "performanceTip": "WB",
-      "stats": { "attack": 4, "defense": 8, "stamina": 5 },
+      "stats": {
+        "attack": 4,
+        "defense": 8,
+        "stamina": 5
+      },
       "weight": "44.5g",
       "debut": "2009",
       "description": "Kyoya's signature top. Heavy Rock wheel and Wide Ball tip make it a defensive fortress.",
-      "image": null,
-      "source": null
+      "image": "/beys/rock-leone.png",
+      "source": "https://beyblade.fandom.com/wiki/Rock_Leone_145WB"
     },
     {
       "id": "flame-sagittario",
@@ -61,17 +73,21 @@
       "code": "BB-35",
       "combo": "Flame Sagittario C145S",
       "type": "Stamina",
-      "owner": "Yu Tendo",
+      "owner": "Kenta YumiyaGingka Hagane (borrowed, video game)Mariko Shiratori (borrowed, video game)",
       "energyRing": "Sagittario",
       "fusionWheel": "Flame",
       "spinTrack": "C145",
       "performanceTip": "S",
-      "stats": { "attack": 3, "defense": 4, "stamina": 8 },
+      "stats": {
+        "attack": 3,
+        "defense": 4,
+        "stamina": 8
+      },
       "weight": "33.8g",
       "debut": "2009",
       "description": "Built around the Sharp tip's minimal friction. Outspins most attackers through patience.",
-      "image": null,
-      "source": null
+      "image": "/beys/flame-sagittario.png",
+      "source": "https://beyblade.fandom.com/wiki/Flame_Sagittario_C145S"
     },
     {
       "id": "earth-eagle",
@@ -79,58 +95,70 @@
       "code": "BB-47",
       "combo": "Earth Eagle 145WD",
       "type": "Balance",
-      "owner": "Tsubasa Otori",
+      "owner": "Tsubasa OtoriBlader DJ",
       "energyRing": "Eagle",
       "fusionWheel": "Earth",
       "spinTrack": "145",
       "performanceTip": "WD",
-      "stats": { "attack": 5, "defense": 6, "stamina": 6 },
+      "stats": {
+        "attack": 5,
+        "defense": 6,
+        "stamina": 6
+      },
       "weight": "39.0g",
       "debut": "2010",
       "description": "Tsubasa's well-rounded top. Wide Defense tip absorbs attacks while preserving spin.",
-      "image": null,
-      "source": null
+      "image": "/beys/earth-eagle.png",
+      "source": "https://beyblade.fandom.com/wiki/Earth_Eagle_145WD"
     },
     {
       "id": "dark-bull",
       "name": "Dark Bull",
       "code": "BB-40",
       "combo": "Dark Bull H145SD",
-      "type": "Defense",
+      "type": "Balance",
       "owner": "Benkei Hanawa",
       "energyRing": "Bull",
       "fusionWheel": "Dark",
-      "spinTrack": "H145",
+      "spinTrack": "Horn 145",
       "performanceTip": "SD",
-      "stats": { "attack": 5, "defense": 7, "stamina": 5 },
+      "stats": {
+        "attack": 5,
+        "defense": 7,
+        "stamina": 5
+      },
       "weight": "37.7g",
       "debut": "2009",
       "description": "Aggressive defense — Benkei's bull-rush style hits hard while soaking heavy damage.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Dark_Bull_H145SD"
     },
     {
       "id": "burn-fireblaze",
       "name": "Burn Fireblaze",
-      "code": "BB-59",
+      "code": "BB-59BB-59A (Burning Fire Strike 2-Pack)",
       "combo": "Burn Fireblaze 135MS",
       "type": "Stamina",
-      "owner": "Tsubasa Otori",
+      "owner": "Phoenix",
       "energyRing": "Fireblaze",
       "fusionWheel": "Burn",
       "spinTrack": "135",
       "performanceTip": "MS",
-      "stats": { "attack": 4, "defense": 5, "stamina": 7 },
+      "stats": {
+        "attack": 4,
+        "defense": 5,
+        "stamina": 7
+      },
       "weight": "38.5g",
       "debut": "2010",
       "description": "Heavy stamina top with a Metal Sharp tip — wears opponents down through endurance.",
-      "image": null,
-      "source": null
+      "image": "/beys/burn-fireblaze.png",
+      "source": "https://beyblade.fandom.com/wiki/Burn_Fireblaze_135MS"
     },
     {
       "id": "galaxy-pegasus",
       "name": "Galaxy Pegasus",
-      "code": "BB-70",
+      "code": "BB-70 (Starter)BB-70A (Triple Battle Set)BB-70B (Rapid Deploy Case)BB-70B (Starbooster Attack 2-Pack)BB-70B (Ultimate Gift Set)BB-70C (Metal Fury 3-Pack)BB-76 (Galaxy Pegasis DX Set)BB-92 (Booster)",
       "combo": "Galaxy Pegasus W105R2F",
       "type": "Attack",
       "owner": "Gingka Hagane",
@@ -138,35 +166,43 @@
       "fusionWheel": "Galaxy",
       "spinTrack": "W105",
       "performanceTip": "R2F",
-      "stats": { "attack": 8, "defense": 5, "stamina": 4 },
+      "stats": {
+        "attack": 8,
+        "defense": 5,
+        "stamina": 4
+      },
       "weight": "39.6g",
       "debut": "2010",
       "description": "Gingka's evolved blade. Galaxy wheel hits with precision while R2F drives fierce movement.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Galaxy_Pegasus_W105R2F"
     },
     {
       "id": "rock-aries",
       "name": "Rock Aries",
-      "code": "BB-57",
+      "code": "BB-45",
       "combo": "Rock Aries ED145B",
       "type": "Defense",
-      "owner": "Hyoma",
+      "owner": "Hyoma (English video games)",
       "energyRing": "Aries",
       "fusionWheel": "Rock",
       "spinTrack": "ED145",
       "performanceTip": "B",
-      "stats": { "attack": 4, "defense": 7, "stamina": 5 },
+      "stats": {
+        "attack": 4,
+        "defense": 7,
+        "stamina": 5
+      },
       "weight": "39.2g",
       "debut": "2010",
       "description": "Tall ED145 track and Ball tip keep Aries upright through heavy collisions.",
-      "image": null,
-      "source": null
+      "image": "/beys/rock-aries.png",
+      "source": "https://beyblade.fandom.com/wiki/Rock_Aries_ED145B"
     },
     {
       "id": "cyber-pegasus",
       "name": "Cyber Pegasus",
-      "code": "BB-46",
+      "code": "BB-01BB-01A (Metal Fury 3-Pack)",
       "combo": "Cyber Pegasus 105F",
       "type": "Attack",
       "owner": "Hikaru Hasama",
@@ -174,12 +210,16 @@
       "fusionWheel": "Cyber",
       "spinTrack": "105",
       "performanceTip": "F",
-      "stats": { "attack": 6, "defense": 4, "stamina": 4 },
+      "stats": {
+        "attack": 6,
+        "defense": 4,
+        "stamina": 4
+      },
       "weight": "36.0g",
       "debut": "2009",
       "description": "Lightweight attacker with a Flat tip — early MFB favorite among aggressive bladers.",
-      "image": null,
-      "source": null
+      "image": "/beys/cyber-pegasus.png",
+      "source": "https://beyblade.fandom.com/wiki/Cyber_Pegasus_105F"
     }
   ]
 }
