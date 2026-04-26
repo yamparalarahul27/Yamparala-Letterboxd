@@ -293,13 +293,13 @@
     {
       "id": "storm-capricorne",
       "name": "Storm Capricorne",
-      "code": "—",
+      "code": "BB-50",
       "combo": "Storm Capricorne M145Q",
       "type": "Attack",
       "series": "Metal Fusion",
       "owner": "Tobio Oike",
       "ownerId": "tobio-oike",
-      "energyRing": "Capricorne",
+      "energyRing": "Capricorn",
       "fusionWheel": "Storm",
       "spinTrack": "M145",
       "performanceTip": "Q",
@@ -311,8 +311,8 @@
       "weight": "—",
       "debut": "2009",
       "description": "Tetsuya's tactical Bey. M145 + Quake tip enables ledge-tipping tactics — a defensive trickster.",
-      "image": null,
-      "source": null
+      "image": "/beys/storm-capricorne.png",
+      "source": "https://beyblade.fandom.com/wiki/Storm_Capricorne_M145Q"
     },
     {
       "id": "killerken",
@@ -336,7 +336,7 @@
       "debut": "2010",
       "description": "Tetsuya's evolved crab-themed Bey. Heavier and more stable than Storm Capricorne.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Killerken_100SF"
     },
     {
       "id": "inferno-aquario",
@@ -360,7 +360,7 @@
       "debut": "2009",
       "description": "Hikaru's first Beyblade — a low-profile attacker before her later switch to Storm Aquario.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Inferno_Aquario_105F"
     },
     {
       "id": "dark-wolf",

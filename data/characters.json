@@ -160,8 +160,8 @@
       "role": "Antagonist",
       "team": "Dark Nebula (formerly)",
       "bio": "Crab-themed early Metal Fusion antagonist. Loud, scheming, and surprisingly tactical with Storm Capricorne's tip-tricks.",
-      "image": null,
-      "source": null
+      "image": "/bladers/tetsuya-watarigani.png",
+      "source": "https://beyblade.fandom.com/wiki/Tetsuya_Watarigani"
     },
     {
       "id": "faust",
@@ -170,7 +170,7 @@
       "team": "HD Academy",
       "bio": "The Spiral Force arc's mecha-blader. Twisted Tempo's relentless stamina is engineered, not earned — until the boy beneath the machine resurfaces.",
       "image": null,
-      "source": null
+      "source": "https://beyblade.fandom.com/wiki/Faust"
     },
     {
       "id": "damure",
@@ -178,8 +178,8 @@
       "role": "Antagonist",
       "team": "HD Academy",
       "bio": "HD Academy striker. Mercury Anubis's 85 track and XF tip make him the fastest blade Damian fields.",
-      "image": null,
-      "source": null
+      "image": "/bladers/damure.png",
+      "source": "https://beyblade.fandom.com/wiki/Damure"
     },
     {
       "id": "tobio-oike",
@@ -187,8 +187,8 @@
       "role": "Antagonist",
       "team": "Dark Nebula (formerly)",
       "bio": "Sniper-style Metal Fusion antagonist. Storm Capricorne's M145Q tip enables ledge-tipping precision shots — his Sniper Shot is iconic.",
-      "image": null,
-      "source": null
+      "image": "/bladers/tobio-oike.png",
+      "source": "https://beyblade.fandom.com/wiki/Tobio_Oike"
     },
     {
       "id": "salhan",
@@ -196,8 +196,8 @@
       "role": "Rival",
       "team": "Team Chandora",
       "bio": "Cocky leader of Team Chandora — India's representative. Trained on the streets of Bombay; Flame Serpent's Burning Mirage is his signature.",
-      "image": null,
-      "source": null
+      "image": "/bladers/salhan.png",
+      "source": "https://beyblade.fandom.com/wiki/Salhan"
     },
     {
       "id": "mei-mei",
@@ -205,8 +205,8 @@
       "role": "Rival",
       "team": "Wang Hu Zhong",
       "bio": "Cheerful Wang Hu Zhong support blader. Bandid Goreim's stamina build keeps her in fights longer than opponents expect.",
-      "image": null,
-      "source": null
+      "image": "/bladers/mei-mei.png",
+      "source": "https://beyblade.fandom.com/wiki/Mei-Mei"
     },
     {
       "id": "aguma",
@@ -214,8 +214,8 @@
       "role": "Rival",
       "team": "Beylin Fang (formerly)",
       "bio": "Massive, principled blader of Metal Fury. Wields Death Quetzalcoatl as a Legendary Bey after parting from his earlier Scythe Kronos.",
-      "image": null,
-      "source": null
+      "image": "/bladers/aguma.png",
+      "source": "https://beyblade.fandom.com/wiki/Aguma"
     },
     {
       "id": "yuki-mizusawa",
@@ -223,8 +223,8 @@
       "role": "Supporting",
       "team": "Legendary Bladers",
       "bio": "Astronomy prodigy and Legendary Blader of Metal Fury. Beat Lynx's tall TH170 track suits his careful, calculative style.",
-      "image": null,
-      "source": null
+      "image": "/bladers/yuki-mizusawa.png",
+      "source": "https://beyblade.fandom.com/wiki/Yuki_Mizusawa"
     },
     {
       "id": "doji",

@@ -125,9 +125,9 @@
     {
       "id": "death-quetzalcoatl",
       "name": "Death Quetzalcoatl",
-      "code": "—",
+      "code": "BB-119",
       "combo": "Death Quetzalcoatl 125RDF",
-      "type": "Attack",
+      "type": "Balance",
       "series": "Metal Fury",
       "owner": "Tithi",
       "ownerId": "tithi",
@@ -143,15 +143,15 @@
       "weight": "—",
       "debut": "2012",
       "description": "Aguma's Legendary Bey. Mesoamerican feathered serpent with crushing aerial smash.",
-      "image": null,
-      "source": null
+      "image": "/beys/death-quetzalcoatl.png",
+      "source": "https://beyblade.fandom.com/wiki/Death_Quetzalcoatl_125RDF"
     },
     {
       "id": "beat-lynx",
       "name": "Beat Lynx",
-      "code": "—",
+      "code": "BB-109 (Japanese)",
       "combo": "Beat Lynx TH170WD",
-      "type": "Stamina",
+      "type": "Balance",
       "series": "Metal Fury",
       "owner": "Johannes",
       "ownerId": "johannes",
@@ -167,13 +167,13 @@
       "weight": "—",
       "debut": "2012",
       "description": "Yuki's Legendary Bey. Tall TH170 track gives the lynx a scholar's height advantage.",
-      "image": null,
-      "source": null
+      "image": "/beys/beat-lynx.png",
+      "source": "https://beyblade.fandom.com/wiki/Beat_Lynx_TH170WD"
     },
     {
       "id": "blitz-striker",
       "name": "Blitz Striker",
-      "code": "—",
+      "code": "BB-117 (Takara Tomy)",
       "combo": "Blitz Striker 100RSF",
       "type": "Attack",
       "series": "Metal Fury",
@@ -191,13 +191,13 @@
       "weight": "—",
       "debut": "2012",
       "description": "Masamune's Legendary upgrade. RSF tip drives even more aggressive smash than Ray Striker.",
-      "image": null,
-      "source": null
+      "image": "/beys/blitz-striker.png",
+      "source": "https://beyblade.fandom.com/wiki/Blitz_Striker_100RSF"
     },
     {
       "id": "flash-sagittario",
       "name": "Flash Sagittario",
-      "code": "—",
+      "code": "BB-126",
       "combo": "Flash Sagittario 230WD",
       "type": "Stamina",
       "series": "Metal Fury",
@@ -215,13 +215,13 @@
       "weight": "—",
       "debut": "2012",
       "description": "Kenta's Legendary Bey — arguably his masterwork. 230 track makes him a tower of stamina.",
-      "image": null,
-      "source": null
+      "image": "/beys/flash-sagittario.png",
+      "source": "https://beyblade.fandom.com/wiki/Flash_Sagittario_230WD"
     },
     {
       "id": "scythe-kronos",
       "name": "Scythe Kronos",
-      "code": "—",
+      "code": "BB-113",
       "combo": "Scythe Kronos T125EDS",
       "type": "Stamina",
       "series": "Metal Fury",
@@ -239,15 +239,15 @@
       "weight": "—",
       "debut": "2011",
       "description": "Aguma's earlier Bey before Death Quetzalcoatl. Time-themed reaper with steady spin.",
-      "image": null,
-      "source": null
+      "image": "/beys/scythe-kronos.png",
+      "source": "https://beyblade.fandom.com/wiki/Scythe_Kronos_T125EDS"
     },
     {
       "id": "flame-byxis",
       "name": "Flame Byxis",
-      "code": "—",
+      "code": "BB-95",
       "combo": "Flame Byxis 230WD",
-      "type": "Stamina",
+      "type": "Balance",
       "series": "Metal Fury",
       "owner": "Zeo Abyss",
       "ownerId": "zeo-abyss",
@@ -263,8 +263,8 @@
       "weight": "—",
       "debut": "2011",
       "description": "Yuki's first Bey. Constellation-themed with the Flame wheel — quiet but effective.",
-      "image": null,
-      "source": null
+      "image": "/beys/flame-byxis.png",
+      "source": "https://beyblade.fandom.com/wiki/Flame_Byxis_230WD"
     },
     {
       "id": "l-drago-destructor",

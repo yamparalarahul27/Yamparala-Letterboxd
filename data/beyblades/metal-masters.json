@@ -173,9 +173,9 @@
     {
       "id": "twisted-tempo",
       "name": "Twisted Tempo",
-      "code": "—",
+      "code": "BB-104",
       "combo": "Twisted Tempo 145WD",
-      "type": "Stamina",
+      "type": "Defense",
       "series": "Metal Masters",
       "owner": "Faust",
       "ownerId": "faust",
@@ -191,19 +191,19 @@
       "weight": "—",
       "debut": "2010",
       "description": "Faust's stamina monster from the Spiral Force arc. Engineered with mechanical precision.",
-      "image": null,
-      "source": null
+      "image": "/beys/twisted-tempo.png",
+      "source": "https://beyblade.fandom.com/wiki/Twisted_Tempo_145WD"
     },
     {
       "id": "mercury-anubis",
       "name": "Mercury Anubis",
-      "code": "—",
+      "code": "B-166 (Hasbro)",
       "combo": "Mercury Anubis 85XF",
       "type": "Attack",
       "series": "Metal Masters",
       "owner": "Damure",
       "ownerId": "damure",
-      "energyRing": "Anubis",
+      "energyRing": "Anubius",
       "fusionWheel": "Mercury",
       "spinTrack": "85",
       "performanceTip": "XF",
@@ -215,15 +215,15 @@
       "weight": "—",
       "debut": "2011",
       "description": "Damure's HD Academy attacker. Ultra-low 85 track plus XF tip drives brutal smash speed.",
-      "image": null,
-      "source": null
+      "image": "/beys/mercury-anubis.png",
+      "source": "https://beyblade.fandom.com/wiki/Mercury_Anubis_85XF"
     },
     {
       "id": "grand-cetus",
       "name": "Grand Cetus",
-      "code": "—",
+      "code": "BB-82 (Takara Tomy)",
       "combo": "Grand Cetus T125RS",
-      "type": "Stamina",
+      "type": "Defense",
       "series": "Metal Masters",
       "owner": "Sophie",
       "ownerId": "sophie",
@@ -239,19 +239,19 @@
       "weight": "—",
       "debut": "2010",
       "description": "Tobio's stamina sea-beast. Tornado track and rubber semi-flat tip extend spin.",
-      "image": null,
-      "source": null
+      "image": "/beys/grand-cetus.png",
+      "source": "https://beyblade.fandom.com/wiki/Grand_Cetus_T125RS"
     },
     {
       "id": "rock-giraffe",
       "name": "Rock Giraffe",
-      "code": "—",
+      "code": "BB-78",
       "combo": "Rock Giraffe R145WB",
       "type": "Defense",
       "series": "Metal Masters",
       "owner": "Da Xiang Wang",
       "ownerId": "da-xiang-wang",
-      "energyRing": "Giraffe",
+      "energyRing": "Zurafa",
       "fusionWheel": "Rock",
       "spinTrack": "R145",
       "performanceTip": "WB",
@@ -263,15 +263,15 @@
       "weight": "—",
       "debut": "2010",
       "description": "Wang Hu Zhong's tower of patience. Tall R145 plus Wide Ball makes Giraffe nearly untippable.",
-      "image": null,
-      "source": null
+      "image": "/beys/rock-giraffe.png",
+      "source": "https://beyblade.fandom.com/wiki/Rock_Giraffe_R145WB"
     },
     {
       "id": "jade-jupiter",
       "name": "Jade Jupiter",
-      "code": "—",
+      "code": "BB-116 (Takara Tomy)",
       "combo": "Jade Jupiter S130RB",
-      "type": "Balance",
+      "type": "Defense",
       "series": "Metal Masters",
       "owner": "Dynamis",
       "ownerId": "dynamis",
@@ -287,8 +287,8 @@
       "weight": "—",
       "debut": "2011",
       "description": "Chris's first major Bey before Phantom Orion. Balanced, tournament-tested, deceptively versatile.",
-      "image": null,
-      "source": null
+      "image": "/beys/jade-jupiter.png",
+      "source": "https://beyblade.fandom.com/wiki/Jade_Jupiter_S130RB"
     },
     {
       "id": "burn-phoenix",
