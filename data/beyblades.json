@@ -13,7 +13,11 @@
       "fusionWheel": "Storm",
       "spinTrack": "105",
       "performanceTip": "RF",
-      "stats": { "attack": 7, "defense": 4, "stamina": 3 },
+      "stats": {
+        "attack": 7,
+        "defense": 4,
+        "stamina": 3
+      },
       "weight": "37.4g",
       "debut": "2009",
       "description": "Gingka's first Beyblade. The Rubber Flat tip drives explosive speed and aggressive smash attacks.",
@@ -32,7 +36,11 @@
       "fusionWheel": "Lightning",
       "spinTrack": "100",
       "performanceTip": "HF",
-      "stats": { "attack": 8, "defense": 2, "stamina": 4 },
+      "stats": {
+        "attack": 8,
+        "defense": 2,
+        "stamina": 4
+      },
       "weight": "37.0g",
       "debut": "2009",
       "description": "The forbidden left-spin top. Steals opponents' spin on contact and counters with brutal force.",
@@ -51,7 +59,11 @@
       "fusionWheel": "Rock",
       "spinTrack": "145",
       "performanceTip": "WB",
-      "stats": { "attack": 4, "defense": 8, "stamina": 5 },
+      "stats": {
+        "attack": 4,
+        "defense": 8,
+        "stamina": 5
+      },
       "weight": "44.5g",
       "debut": "2009",
       "description": "Kyoya's signature top. Heavy Rock wheel and Wide Ball tip make it a defensive fortress.",
@@ -70,7 +82,11 @@
       "fusionWheel": "Flame",
       "spinTrack": "C145",
       "performanceTip": "S",
-      "stats": { "attack": 3, "defense": 4, "stamina": 8 },
+      "stats": {
+        "attack": 3,
+        "defense": 4,
+        "stamina": 8
+      },
       "weight": "33.8g",
       "debut": "2009",
       "description": "Built around the Sharp tip's minimal friction. Outspins most attackers through patience.",
@@ -89,7 +105,11 @@
       "fusionWheel": "Earth",
       "spinTrack": "145",
       "performanceTip": "WD",
-      "stats": { "attack": 5, "defense": 6, "stamina": 6 },
+      "stats": {
+        "attack": 5,
+        "defense": 6,
+        "stamina": 6
+      },
       "weight": "39.0g",
       "debut": "2010",
       "description": "Tsubasa's well-rounded top. Wide Defense tip absorbs attacks while preserving spin.",
@@ -108,7 +128,11 @@
       "fusionWheel": "Dark",
       "spinTrack": "Horn 145",
       "performanceTip": "SD",
-      "stats": { "attack": 5, "defense": 7, "stamina": 5 },
+      "stats": {
+        "attack": 5,
+        "defense": 7,
+        "stamina": 5
+      },
       "weight": "37.7g",
       "debut": "2009",
       "description": "Aggressive defense — Benkei's bull-rush style hits hard while soaking heavy damage.",
@@ -127,7 +151,11 @@
       "fusionWheel": "Burn",
       "spinTrack": "135",
       "performanceTip": "MS",
-      "stats": { "attack": 4, "defense": 5, "stamina": 7 },
+      "stats": {
+        "attack": 4,
+        "defense": 5,
+        "stamina": 7
+      },
       "weight": "38.5g",
       "debut": "2010",
       "description": "Heavy stamina top with a Metal Sharp tip — wears opponents down through endurance.",
@@ -146,7 +174,11 @@
       "fusionWheel": "Galaxy",
       "spinTrack": "W105",
       "performanceTip": "R2F",
-      "stats": { "attack": 8, "defense": 5, "stamina": 4 },
+      "stats": {
+        "attack": 8,
+        "defense": 5,
+        "stamina": 4
+      },
       "weight": "39.6g",
       "debut": "2010",
       "description": "Gingka's evolved blade. Galaxy wheel hits with precision while R2F drives fierce movement.",
@@ -165,7 +197,11 @@
       "fusionWheel": "Rock",
       "spinTrack": "ED145",
       "performanceTip": "B",
-      "stats": { "attack": 4, "defense": 7, "stamina": 5 },
+      "stats": {
+        "attack": 4,
+        "defense": 7,
+        "stamina": 5
+      },
       "weight": "39.2g",
       "debut": "2010",
       "description": "Tall ED145 track and Ball tip keep Aries upright through heavy collisions.",
@@ -184,7 +220,11 @@
       "fusionWheel": "Cyber",
       "spinTrack": "105",
       "performanceTip": "F",
-      "stats": { "attack": 6, "defense": 4, "stamina": 4 },
+      "stats": {
+        "attack": 6,
+        "defense": 4,
+        "stamina": 4
+      },
       "weight": "36.0g",
       "debut": "2009",
       "description": "Lightweight attacker with a Flat tip — early MFB favorite among aggressive bladers.",
@@ -194,40 +234,48 @@
     {
       "id": "earth-virgo",
       "name": "Earth Virgo",
-      "code": "—",
+      "code": "BB-60",
       "combo": "Earth Virgo GB145BS",
       "type": "Stamina",
       "series": "Metal Fusion",
-      "owner": "Yu Tendo",
+      "owner": "Teru Saotome",
       "energyRing": "Virgo",
       "fusionWheel": "Earth",
       "spinTrack": "GB145",
       "performanceTip": "BS",
-      "stats": { "attack": 3, "defense": 5, "stamina": 8 },
+      "stats": {
+        "attack": 3,
+        "defense": 5,
+        "stamina": 8
+      },
       "weight": "—",
       "debut": "—",
       "description": "Yu's later top. Gear Ball track lets it shift mid-spin, frustrating attackers and outlasting them.",
-      "image": null,
-      "source": null
+      "image": "/beys/earth-virgo.png",
+      "source": "https://beyblade.fandom.com/wiki/Earth_Virgo_GB145BS"
     },
     {
       "id": "storm-aquario",
       "name": "Storm Aquario",
-      "code": "—",
+      "code": "BB-37",
       "combo": "Storm Aquario 100HF/S",
-      "type": "Defense",
+      "type": "Attack",
       "series": "Metal Fusion",
-      "owner": "Hikaru Hasama",
+      "owner": "Hikaru Hasama (English video games)",
       "energyRing": "Aquario",
       "fusionWheel": "Storm",
       "spinTrack": "100",
       "performanceTip": "HF/S",
-      "stats": { "attack": 4, "defense": 7, "stamina": 6 },
+      "stats": {
+        "attack": 4,
+        "defense": 7,
+        "stamina": 6
+      },
       "weight": "—",
       "debut": "—",
       "description": "Hikaru's signature top. The Aquario energy ring carries her serpentine fighting style.",
-      "image": null,
-      "source": null
+      "image": "/beys/storm-aquario.png",
+      "source": "https://beyblade.fandom.com/wiki/Storm_Aquario_100HF/S"
     },
     {
       "id": "counter-leone",
@@ -236,22 +284,26 @@
       "combo": "Counter Leone D125B",
       "type": "Defense",
       "series": "Metal Masters",
-      "owner": "Kyoya Tategami",
-      "energyRing": "Leone",
+      "owner": "Nemea",
+      "energyRing": "Leone I",
       "fusionWheel": "Counter",
       "spinTrack": "D125",
       "performanceTip": "B",
-      "stats": { "attack": 5, "defense": 7, "stamina": 4 },
+      "stats": {
+        "attack": 5,
+        "defense": 7,
+        "stamina": 4
+      },
       "weight": "—",
       "debut": "—",
       "description": "Kyoya's transitional Bey before Fang Leone. Counter wheel turns opponent attacks into momentum.",
-      "image": null,
-      "source": null
+      "image": "/beys/counter-leone.png",
+      "source": "https://beyblade.fandom.com/wiki/Counter_Leone_D125B"
     },
     {
       "id": "meteo-ldrago",
       "name": "Meteo L-Drago",
-      "code": "—",
+      "code": "BB-88",
       "combo": "Meteo L-Drago LW105LF",
       "type": "Attack",
       "series": "Metal Masters",
@@ -260,131 +312,159 @@
       "fusionWheel": "Meteo",
       "spinTrack": "LW105",
       "performanceTip": "LF",
-      "stats": { "attack": 8, "defense": 3, "stamina": 6 },
+      "stats": {
+        "attack": 8,
+        "defense": 3,
+        "stamina": 6
+      },
       "weight": "—",
       "debut": "—",
       "description": "Ryuga's evolved L-Drago. The Left Flat tip lets it hit hard while still feeding off opponents' spin.",
-      "image": null,
-      "source": null
+      "image": "/beys/meteo-ldrago.png",
+      "source": "https://beyblade.fandom.com/wiki/Meteo_L-Drago_LW105LF"
     },
     {
       "id": "hell-kerbecs",
       "name": "Hell Kerbecs",
-      "code": "—",
+      "code": "BB-99",
       "combo": "Hell Kerbecs BD145DS",
-      "type": "Defense",
+      "type": "Stamina",
       "series": "Metal Masters",
       "owner": "Damian Hart",
       "energyRing": "Kerbecs",
-      "fusionWheel": "Hell",
+      "fusionWheel": "Hades",
       "spinTrack": "BD145",
       "performanceTip": "DS",
-      "stats": { "attack": 4, "defense": 8, "stamina": 6 },
+      "stats": {
+        "attack": 4,
+        "defense": 8,
+        "stamina": 6
+      },
       "weight": "—",
       "debut": "—",
       "description": "Damian's three-headed beast. Boost Disk track adds height while DS tip soaks impact.",
-      "image": null,
-      "source": null
+      "image": "/beys/hell-kerbecs.png",
+      "source": "https://beyblade.fandom.com/wiki/Hell_Kerbecs_BD145DS"
     },
     {
       "id": "ray-striker",
       "name": "Ray Striker",
-      "code": "—",
+      "code": "BB-71 (Starter)",
       "combo": "Ray Striker D125CS",
       "type": "Attack",
       "series": "Metal Masters",
       "owner": "Masamune Kadoya",
-      "energyRing": "Striker",
+      "energyRing": "Striker I",
       "fusionWheel": "Ray",
       "spinTrack": "D125",
       "performanceTip": "CS",
-      "stats": { "attack": 7, "defense": 4, "stamina": 4 },
+      "stats": {
+        "attack": 7,
+        "defense": 4,
+        "stamina": 4
+      },
       "weight": "—",
       "debut": "—",
       "description": "Masamune's loud confidence in spinning form. Coat Sharp tip darts in for sudden attacks.",
-      "image": null,
-      "source": null
+      "image": "/beys/ray-striker.png",
+      "source": "https://beyblade.fandom.com/wiki/Ray_Striker_D125CS"
     },
     {
       "id": "vulcan-horuseus",
       "name": "Vulcan Horuseus",
-      "code": "—",
+      "code": "BB-P01",
       "combo": "Vulcan Horuseus 145D",
       "type": "Defense",
       "series": "Metal Masters",
-      "owner": "Da Xiang Wang",
+      "owner": "Nile",
       "energyRing": "Horuseus",
       "fusionWheel": "Vulcan",
       "spinTrack": "145",
-      "performanceTip": "D",
-      "stats": { "attack": 4, "defense": 8, "stamina": 6 },
+      "performanceTip": "Defense",
+      "stats": {
+        "attack": 4,
+        "defense": 8,
+        "stamina": 6
+      },
       "weight": "—",
       "debut": "—",
       "description": "Da Xiang's tank. Vulcan wheel and Defense tip make it almost impossible to topple.",
-      "image": null,
-      "source": null
+      "image": "/beys/vulcan-horuseus.png",
+      "source": "https://beyblade.fandom.com/wiki/Vulcan_Horuseus_145D"
     },
     {
       "id": "gravity-perseus",
       "name": "Gravity Perseus",
-      "code": "—",
+      "code": "BB-80",
       "combo": "Gravity Perseus AD145WD",
-      "type": "Balance",
+      "type": "Defense",
       "series": "Metal Masters",
       "owner": "Julian Konzern",
-      "energyRing": "Perseus",
+      "energyRing": "Destroyer",
       "fusionWheel": "Gravity",
       "spinTrack": "AD145",
       "performanceTip": "WD",
-      "stats": { "attack": 6, "defense": 7, "stamina": 8 },
+      "stats": {
+        "attack": 6,
+        "defense": 7,
+        "stamina": 8
+      },
       "weight": "—",
       "debut": "—",
       "description": "Julian's aristocratic blade. Switches spin direction mid-battle — banned in some metagames for good reason.",
-      "image": null,
-      "source": null
+      "image": "/beys/gravity-perseus.png",
+      "source": "https://beyblade.fandom.com/wiki/Gravity_Perseus_AD145WD"
     },
     {
       "id": "poison-serpent",
       "name": "Poison Serpent",
-      "code": "—",
+      "code": "BB-69",
       "combo": "Poison Serpent SW145SD",
-      "type": "Stamina",
+      "type": "Balance",
       "series": "Metal Masters",
       "owner": "Reiji Mizuchi",
       "energyRing": "Serpent",
       "fusionWheel": "Poison",
       "spinTrack": "SW145",
       "performanceTip": "SD",
-      "stats": { "attack": 5, "defense": 5, "stamina": 7 },
+      "stats": {
+        "attack": 5,
+        "defense": 5,
+        "stamina": 7
+      },
       "weight": "—",
       "debut": "—",
       "description": "Reiji's predator. Slowly wears down opponents until they wobble — then strikes.",
-      "image": null,
-      "source": null
+      "image": "/beys/poison-serpent.png",
+      "source": "https://beyblade.fandom.com/wiki/Poison_Serpent_SW145SD"
     },
     {
       "id": "big-bang-pegasis",
       "name": "Big Bang Pegasis",
-      "code": "—",
+      "code": "BB-105 (Takara Tomy, Legends)",
       "combo": "Big Bang Pegasis F:D",
-      "type": "Stamina",
+      "type": "Attack",
       "series": "Metal Fury",
       "owner": "Gingka Hagane",
-      "energyRing": "Pegasis III",
-      "fusionWheel": "Big Bang",
+      "energyRing": "Pegasus III",
+      "fusionWheel": "Cosmic",
       "spinTrack": "—",
       "performanceTip": "F:D",
-      "stats": { "attack": 7, "defense": 6, "stamina": 8 },
+      "stats": {
+        "attack": 7,
+        "defense": 6,
+        "stamina": 8
+      },
       "weight": "—",
       "debut": "—",
       "description": "Gingka's ultimate Pegasus. The F:D tip switches between Final Drive and Stamina mode for full-spectrum dominance.",
-      "image": null,
-      "source": null
+      "image": "/beys/big-bang-pegasis.png",
+      "source": "https://beyblade.fandom.com/wiki/Big_Bang_Pegasis_F:D"
     },
     {
       "id": "phantom-orion",
       "name": "Phantom Orion",
-      "code": "—",
+      "code": "BB-118",
       "combo": "Phantom Orion B:D",
       "type": "Stamina",
       "series": "Metal Fury",
@@ -393,55 +473,67 @@
       "fusionWheel": "Phantom",
       "spinTrack": "—",
       "performanceTip": "B:D",
-      "stats": { "attack": 4, "defense": 5, "stamina": 9 },
+      "stats": {
+        "attack": 4,
+        "defense": 5,
+        "stamina": 9
+      },
       "weight": "—",
       "debut": "—",
       "description": "Chris's stamina monster. The Burn tip and Phantom wheel make it nearly impossible to outspin.",
-      "image": null,
-      "source": null
+      "image": "/beys/phantom-orion.png",
+      "source": "https://beyblade.fandom.com/wiki/Phantom_Orion_B:D"
     },
     {
       "id": "diablo-nemesis",
       "name": "Diablo Nemesis",
-      "code": "—",
+      "code": "BB-122 (Takara Tomy, Legends)",
       "combo": "Diablo Nemesis X:D",
       "type": "Balance",
       "series": "Metal Fury",
       "owner": "Rago",
-      "energyRing": "Nemesis",
+      "energyRing": "Nemesis A",
       "fusionWheel": "Diablo",
       "spinTrack": "—",
       "performanceTip": "X:D",
-      "stats": { "attack": 9, "defense": 8, "stamina": 8 },
+      "stats": {
+        "attack": 9,
+        "defense": 8,
+        "stamina": 8
+      },
       "weight": "—",
       "debut": "—",
       "description": "The series' final boss Bey. Three modes via the X:D tip; the Diablo wheel breaks the rules of spin.",
-      "image": null,
-      "source": null
+      "image": "/beys/diablo-nemesis.png",
+      "source": "https://beyblade.fandom.com/wiki/Diablo_Nemesis_X:D"
     },
     {
       "id": "variares",
       "name": "Variares",
-      "code": "—",
+      "code": "BB-114 (Takara Tomy)",
       "combo": "Variares D:D",
-      "type": "Attack",
+      "type": "Defense",
       "series": "Metal Fury",
-      "owner": "Masamune Kadoya",
+      "owner": "King",
       "energyRing": "Ares",
       "fusionWheel": "Variares",
       "spinTrack": "—",
       "performanceTip": "D:D",
-      "stats": { "attack": 8, "defense": 5, "stamina": 5 },
+      "stats": {
+        "attack": 8,
+        "defense": 5,
+        "stamina": 5
+      },
       "weight": "—",
       "debut": "—",
       "description": "Masamune's evolved attacker. The D:D tip flips between Defense and Attack — Masamune always picks attack.",
-      "image": null,
-      "source": null
+      "image": "/beys/variares.png",
+      "source": "https://beyblade.fandom.com/wiki/Variares_D:D"
     },
     {
       "id": "fang-leone",
       "name": "Fang Leone",
-      "code": "—",
+      "code": "BB-106",
       "combo": "Fang Leone 130W2D",
       "type": "Defense",
       "series": "Metal Fury",
@@ -450,12 +542,16 @@
       "fusionWheel": "Fang",
       "spinTrack": "130",
       "performanceTip": "W2D",
-      "stats": { "attack": 5, "defense": 9, "stamina": 6 },
+      "stats": {
+        "attack": 5,
+        "defense": 9,
+        "stamina": 6
+      },
       "weight": "—",
       "debut": "—",
       "description": "Kyoya's left-spin king of defense. The Fang wheel's curved teeth deflect attacks at unexpected angles.",
-      "image": null,
-      "source": null
+      "image": "/beys/fang-leone.png",
+      "source": "https://beyblade.fandom.com/wiki/Fang_Leone_130W2D"
     }
   ]
 }
