@@ -4,7 +4,7 @@
   "sources": [
     {
       "id": "storm-pegasus",
-      "page": "Storm_Pegasus_105RF"
+      "page": "Storm_Pegasus"
     },
     {
       "id": "lightning-ldrago",
@@ -24,7 +24,7 @@
     },
     {
       "id": "dark-bull",
-      "page": "Dark_Bull_H145SD"
+      "page": "Dark_Bull"
     },
     {
       "id": "burn-fireblaze",
@@ -32,7 +32,7 @@
     },
     {
       "id": "galaxy-pegasus",
-      "page": "Galaxy_Pegasus_W105R2F"
+      "page": "Galaxy_Pegasus"
     },
     {
       "id": "rock-aries",
@@ -104,11 +104,11 @@
     },
     {
       "id": "killerken",
-      "page": "Killerken_100SF"
+      "page": "Killerken"
     },
     {
       "id": "inferno-aquario",
-      "page": "Inferno_Aquario_105F"
+      "page": "Inferno_Aquario"
     },
     {
       "id": "twisted-tempo",
@@ -164,7 +164,7 @@
     },
     {
       "id": "wind-aquario",
-      "page": "Wind_Aquario_100HF"
+      "page": "Wind_Aquario"
     },
     {
       "id": "dark-cancer",
@@ -204,7 +204,7 @@
     },
     {
       "id": "hades-crown",
-      "page": "Hades_Crown_130FB"
+      "page": "Hades_Crown"
     }
   ]
 }

@@ -184,6 +184,102 @@ async function fetchPage(pageSlug) {
   };
 }
 
+// ── Bey-page part scraper ───────────────────────────────────────────────
+const BEY_SOURCES_PATH = join(ROOT, "data", "sources.json");
+
+const PART_TYPE_PATTERNS = [
+  { type: "wheel", regex: /\(Fusion[_ ]Wheel\)/i },
+  { type: "ring", regex: /\(Energy[_ ]Ring\)/i },
+  { type: "track", regex: /\(Spin[_ ]Track\)/i },
+  { type: "tip", regex: /\(Performance[_ ]Tip\)/i },
+];
+
+function detectPartTypeFromFilename(filename) {
+  for (const { type, regex } of PART_TYPE_PATTERNS) {
+    if (regex.test(filename)) return type;
+  }
+  return null;
+}
+
+function extractPartNameFromFilename(filename) {
+  let base = filename.replace(/\.(png|jpe?g|gif|webp)$/i, "");
+  base = base.replace(
+    /_?\((?:Fusion[_ ]Wheel|Energy[_ ]Ring|Spin[_ ]Track|Performance[_ ]Tip)\)/gi,
+    ""
+  );
+  return base.replace(/_/g, " ").trim();
+}
+
+function buildPartLookup(dataByType) {
+  // Map "<type>:<lowercased name or fullName>" → part id, for fast match.
+  const map = new Map();
+  for (const [type, bucket] of Object.entries(dataByType)) {
+    for (const p of bucket.list) {
+      const keys = new Set([p.name]);
+      if (p.fullName) keys.add(p.fullName);
+      // Also try without trailing roman numerals (e.g. "Pegasus I" → "Pegasus").
+      keys.add(p.name.replace(/\s+I+$/, "").trim());
+      for (const k of keys) {
+        if (!k) continue;
+        const key = `${type}:${k.toLowerCase()}`;
+        if (!map.has(key)) map.set(key, p.id);
+      }
+    }
+  }
+  return map;
+}
+
+async function fillPartImagesFromBeys(dataByType) {
+  const beySources = await readJson(BEY_SOURCES_PATH);
+  const lookup = buildPartLookup(dataByType);
+  let scraped = 0;
+
+  for (const src of beySources.sources) {
+    process.stdout.write(`  scanning bey ${src.id} … `);
+    try {
+      const { wikitext } = await fetchPage(src.page);
+      // Find every [[File:<filename>...]] reference.
+      const seen = new Set();
+      const re = /\[\[(?:File|Image):([^|\]\n]+\.(?:png|jpe?g|gif|webp))/gi;
+      let m;
+      let hits = 0;
+      while ((m = re.exec(wikitext))) {
+        const filename = m[1].trim();
+        if (seen.has(filename)) continue;
+        seen.add(filename);
+        const partType = detectPartTypeFromFilename(filename);
+        if (!partType) continue;
+        const partName = extractPartNameFromFilename(filename);
+        if (!partName) continue;
+        const key = `${partType}:${partName.toLowerCase()}`;
+        const partId = lookup.get(key);
+        if (!partId) continue;
+        const existing = dataByType[partType].byId.get(partId);
+        if (!existing || existing.image) continue; // already has one
+
+        const fileUrl = await resolveImageUrl(filename);
+        if (!fileUrl) continue;
+        const ext = (extname(new URL(fileUrl).pathname) || ".png")
+          .toLowerCase()
+          .split("?")[0];
+        const safeExt = [".png", ".jpg", ".jpeg", ".gif", ".webp"].includes(ext)
+          ? ext
+          : ".png";
+        const dest = join(IMAGES_DIR, partType, `${partId}${safeExt}`);
+        await downloadFile(fileUrl, dest);
+        const localPath = `/parts/${partType}/${partId}${safeExt}`;
+        dataByType[partType].byId.set(partId, { ...existing, image: localPath });
+        scraped++;
+        hits++;
+      }
+      console.log(`${hits} new`);
+    } catch (err) {
+      console.log(`skip (${err.message})`);
+    }
+  }
+  return scraped;
+}
+
 // ── Main ─────────────────────────────────────────────────────────────────
 async function main() {
   const onlyIds = process.argv.slice(2);
@@ -259,6 +355,16 @@ async function main() {
       bucket.byId.set(src.id, { ...existing, source: sourceUrl });
       failed++;
     }
+  }
+
+  // ── Pass 2: scrape part images from Bey wikitexts ───────────────────
+  // Many parts don't have dedicated wiki pages. But each Bey article on
+  // the wiki includes inline [[File:Storm_(Fusion_Wheel).png]]-style
+  // references for its components. We scan all Bey wikitexts for those
+  // patterns and fill in any part image that's still null.
+  if (onlyIds.length === 0) {
+    const filledFromBeys = await fillPartImagesFromBeys(dataByType);
+    console.log(`\nFrom Bey pages: ${filledFromBeys} additional part images.`);
   }
 
   // Write back each part-type JSON, preserving original ordering.
