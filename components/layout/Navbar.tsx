@@ -5,10 +5,11 @@ import { Menu, X, Github, Search as SearchIcon } from "lucide-react";
 import { BEYBLADES } from "@/data/beyblades";
 
 const navLinks = [
-    { label: "Collection", href: "#collection" },
-    { label: "Anatomy", href: "#anatomy" },
-    { label: "Types", href: "#types" },
-    { label: "About", href: "#about" },
+    { label: "Collection", href: "/#collection" },
+    { label: "Bladers", href: "/bladers" },
+    { label: "Anatomy", href: "/#anatomy" },
+    { label: "Types", href: "/#types" },
+    { label: "About", href: "/#about" },
 ];
 
 function openPalette() {

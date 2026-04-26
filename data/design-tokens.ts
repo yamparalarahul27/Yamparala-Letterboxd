@@ -1,10 +1,17 @@
-import type { BeybladeType } from "./beyblades";
+import type { BeybladeType, CharacterRole } from "./beyblades";
 
 export const TYPE_COLORS: Record<BeybladeType, { fg: string; bg: string; border: string }> = {
   Attack: { fg: "#FF4752", bg: "rgba(255,71,82,0.12)", border: "rgba(255,71,82,0.30)" },
   Defense: { fg: "#4F9DFF", bg: "rgba(79,157,255,0.12)", border: "rgba(79,157,255,0.30)" },
   Stamina: { fg: "#4ADE80", bg: "rgba(74,222,128,0.12)", border: "rgba(74,222,128,0.30)" },
   Balance: { fg: "#E5B84B", bg: "rgba(229,184,75,0.12)", border: "rgba(229,184,75,0.30)" },
+};
+
+export const ROLE_COLORS: Record<CharacterRole, string> = {
+  Protagonist: "#FF4752",
+  Rival: "#E5B84B",
+  Antagonist: "#9D5DFF",
+  Supporting: "#4F9DFF",
 };
 
 export const TYPE_DEFINITIONS: { type: BeybladeType; tagline: string; description: string }[] = [
