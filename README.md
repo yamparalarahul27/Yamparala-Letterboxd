@@ -58,6 +58,7 @@ Adding new entries: stub the JSON with editorial fields, add the source mapping,
 - **Beyblade detail** at `/bey/[id]` — large hero, stats bars, clickable parts breakdown, metadata pills, related Beys
 - **Blader detail** at `/blader/[id]` — avatar, role/team chips, bio, full list of their Beyblades
 - **Part detail** at `/part/[type]/[id]` — image, info, list of Beys using this tip / wheel / ring / track
+- **⌘K search palette** — global keyboard-driven search across Beys, bladers, and parts. See [docs/SEARCH.md](./docs/SEARCH.md) for the full implementation.
 
 All routes are pre-rendered statically at build time.
 
