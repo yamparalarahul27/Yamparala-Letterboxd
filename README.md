@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Metal Fusion Codex
 
-## Getting Started
+A curated showcase of **Beyblade Metal Fusion** tops — their components, types, owners, and stats. A fan-made codex of the 2009–2010 MFB era.
 
-First, run the development server:
+Built with [Next.js](https://nextjs.org) 16, React 19, Tailwind v4, and Geist Mono.
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Data
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The Beyblade catalog lives in [`data/beyblades.json`](./data/beyblades.json) and is consumed via the typed importer in [`data/beyblades.ts`](./data/beyblades.ts).
 
-## Learn More
+Editorial fields (`stats.*`, `description`) are hand-curated. Canonical fields (`owner`, `weight`, `debut`, `code`, parts, `image`) can be refreshed from the [Beyblade Fandom Wiki](https://beyblade.fandom.com) using the sync script:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Refresh all entries
+npm run sync:beys
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Refresh a subset
+npm run sync:beys -- storm-pegasus rock-leone
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+What the script does:
 
-## Deploy on Vercel
+1. Reads [`data/sources.json`](./data/sources.json) — a mapping of `id` → Fandom page slug.
+2. For each entry, hits the MediaWiki `parse` API for that page's wikitext + image list.
+3. Parses the infobox (brace-depth-aware) and extracts canonical fields.
+4. Resolves the lead image's CDN URL via the `query/imageinfo` API.
+5. Downloads the image into `public/beys/{id}.{ext}`.
+6. Merges fetched fields into `data/beyblades.json` (preserving editorial fields).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Adding a new Beyblade: add a stub entry to `data/beyblades.json` with editorial stats + description, add the `id` → page slug to `data/sources.json`, then run `npm run sync:beys -- new-id`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## What's inside
+
+- **Hero** — sets the tone for the collection
+- **Anatomy** — the five parts of a Metal Fight Beyblade
+- **Collection** — filterable grid of cataloged tops with components and stats
+- **Types** — Attack / Defense / Stamina / Balance explainer
+- **About** — why the codex exists
+
+## Disclaimer
+
+Fan project. Not affiliated with Takara Tomy or Hasbro. All Beyblade names, characters, and images sourced from the Fandom wiki are property of their respective owners.

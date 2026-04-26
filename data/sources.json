@@ -1,0 +1,16 @@
+{
+  "$schema": "Mapping of Beyblade id -> Fandom (beyblade.fandom.com) page slug. Used by scripts/sync-beys.mjs.",
+  "wiki": "https://beyblade.fandom.com",
+  "sources": [
+    { "id": "storm-pegasus", "page": "Storm_Pegasus_105RF" },
+    { "id": "lightning-ldrago", "page": "Lightning_L-Drago_100HF" },
+    { "id": "rock-leone", "page": "Rock_Leone_145WB" },
+    { "id": "flame-sagittario", "page": "Flame_Sagittario_C145S" },
+    { "id": "earth-eagle", "page": "Earth_Eagle_145WD" },
+    { "id": "dark-bull", "page": "Dark_Bull_H145SD" },
+    { "id": "burn-fireblaze", "page": "Burn_Fireblaze_135MS" },
+    { "id": "galaxy-pegasus", "page": "Galaxy_Pegasus_W105R2F" },
+    { "id": "rock-aries", "page": "Rock_Aries_ED145B" },
+    { "id": "cyber-pegasus", "page": "Cyber_Pegasus_105F" }
+  ]
+}

@@ -7,12 +7,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "YPM — Prediction Markets",
+  title: "Metal Fusion Codex — A Beyblade MFB Collection",
   description:
-    "YPM is an experimental project by Yamparala Rahul on making Prediction Markets simple and interesting.",
-  icons: {
-    icon: "/YPM Fav.png",
-  },
+    "A curated showcase of Beyblade Metal Fusion tops — their parts, types, owners, and stats. A fan-made codex of the 2009–2010 MFB era.",
 };
 
 export default function RootLayout({
