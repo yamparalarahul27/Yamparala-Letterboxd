@@ -185,8 +185,8 @@
       "id": "tobio-oike",
       "name": "Tobio Oike",
       "role": "Antagonist",
-      "team": "HD Academy",
-      "bio": "HD Academy stamina specialist. Grand Cetus's tornado-track design lets him outlast attack-types in long matches.",
+      "team": "Dark Nebula (formerly)",
+      "bio": "Sniper-style Metal Fusion antagonist. Storm Capricorne's M145Q tip enables ledge-tipping precision shots — his Sniper Shot is iconic.",
       "image": "/bladers/tobio-oike.png",
       "source": "https://beyblade.fandom.com/wiki/Tobio_Oike"
     },
@@ -194,8 +194,8 @@
       "id": "salhan",
       "name": "Salhan",
       "role": "Rival",
-      "team": "Wang Hu Zhong",
-      "bio": "Wang Hu Zhong's Indian-themed defender. Patient and stoic; Rock Giraffe's 145+WB combo turns him into an immovable tower.",
+      "team": "Team Chandora",
+      "bio": "Cocky leader of Team Chandora — India's representative. Trained on the streets of Bombay; Flame Serpent's Burning Mirage is his signature.",
       "image": "/bladers/salhan.png",
       "source": "https://beyblade.fandom.com/wiki/Salhan"
     },
@@ -225,6 +225,150 @@
       "bio": "Astronomy prodigy and Legendary Blader of Metal Fury. Beat Lynx's tall TH170 track suits his careful, calculative style.",
       "image": "/bladers/yuki-mizusawa.png",
       "source": "https://beyblade.fandom.com/wiki/Yuki_Mizusawa"
+    },
+    {
+      "id": "doji",
+      "name": "Doji",
+      "role": "Antagonist",
+      "team": "Dark Nebula",
+      "bio": "Metal Fusion's main antagonist. Cold, calculating, theatrical. Wields Dark Wolf and orchestrates the Dark Nebula's hunt for L-Drago.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "reiki-sodo",
+      "name": "Reiki Sodo",
+      "role": "Antagonist",
+      "team": "Dark Nebula",
+      "bio": "Dark Nebula recruit and Cyber Pegasus's blader. Mechanical, methodical, designed to emulate Pegasus's strengths without the heart.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "teru-saotome",
+      "name": "Teru Saotome",
+      "role": "Antagonist",
+      "team": "Dark Nebula",
+      "bio": "Dark Nebula blader of Earth Virgo. Calm, fastidious, uses ED145's defense ring to outlast attackers.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "busujima",
+      "name": "Busujima",
+      "role": "Antagonist",
+      "team": "Bey Society",
+      "bio": "Brute-force Metal Fusion antagonist. Bakushin Susanow's smash attacks fit his blunt, no-nonsense style.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "sophie",
+      "name": "Sophie",
+      "role": "Rival",
+      "team": "Excalibur",
+      "bio": "Team Excalibur's elegant tactician — France's representative. Tag-teams with Wales using Grand Cetus T125RS.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "klaus",
+      "name": "Klaus",
+      "role": "Rival",
+      "team": "Excalibur",
+      "bio": "Team Excalibur's German powerhouse. Wields Grand Capricorn 145D — known for the fastest launch in the World Championships.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "argo-garcia",
+      "name": "Argo Garcia",
+      "role": "Antagonist",
+      "team": "Garcia Family",
+      "bio": "Eldest of the Garcia siblings. Wields Killer Beafowl with theatrical menace; rules his team through fear.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "chao-xin",
+      "name": "Chao Xin",
+      "role": "Rival",
+      "team": "Wang Hu Zhong",
+      "bio": "Wang Hu Zhong's idol-blader and ladies' man. Poison Virgo's stamina build hides serious tournament chops.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "chiyun-li",
+      "name": "Chiyun Li",
+      "role": "Rival",
+      "team": "Wang Hu Zhong",
+      "bio": "Wang Hu Zhong's serious, principled blader. Thermal Lacerta's WA130 track suits his sharp, calculated style.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "nile",
+      "name": "Nile",
+      "role": "Rival",
+      "team": "Wild Fang",
+      "bio": "Africa's representative blader on Team Wild Fang. Egyptian-themed Vulcan Horuseus pairs falcon imagery with hammer-strike defense.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "tithi",
+      "name": "Tithi",
+      "role": "Supporting",
+      "team": "Legendary Bladers",
+      "bio": "Energetic Legendary Blader of Mars. Death Quetzalcoatl's mesoamerican-feathered serpent design matches his playful but lethal style.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "dynamis",
+      "name": "Dynamis",
+      "role": "Supporting",
+      "team": "Legendary Bladers",
+      "bio": "Legendary Blader of Venus and keeper of the Mist Mountain shrine. Jade Jupiter's bidirectional design reflects his cosmic perspective.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "johannes",
+      "name": "Johannes",
+      "role": "Antagonist",
+      "team": "Cat-themed Hades Inc.",
+      "bio": "Lyra-themed Metal Fury antagonist. Wields Beat Lynx — a tall, agile stamina build that fits his feline persona.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "bao",
+      "name": "Bao",
+      "role": "Antagonist",
+      "team": "Beylin Fang (corrupted)",
+      "bio": "Possessed Beylin Fang blader fighting under Nemesis's shadow. Hades Crown's FB tip mirrors his erratic, tortured rage.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "king",
+      "name": "King",
+      "role": "Rival",
+      "team": "Legendary Bladers",
+      "bio": "Brash, friendly Legendary Blader of Mars (alongside Aguma's Saturn). Variares's mode-change wheel matches his flexible, improv-driven combat.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "zeo-abyss",
+      "name": "Zeo Abyss",
+      "role": "Antagonist",
+      "team": "Star Breakers",
+      "bio": "Star Breaker recruit and former friend of Masamune & Toby. Flame Byxis's stamina build supports his calculated, manipulative style.",
+      "image": null,
+      "source": null
     }
   ]
 }

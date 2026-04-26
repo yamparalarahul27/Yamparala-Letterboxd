@@ -5,6 +5,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CommandPalette from "@/components/ui/CommandPalette";
 
 export const metadata: Metadata = {
   title: "Beyblade Metal Fusion — Tops & Bladers",
@@ -29,6 +30,9 @@ export default function RootLayout({
 
         {/* Footer */}
         <Footer />
+
+        {/* Global ⌘K command palette */}
+        <CommandPalette />
 
         {/* Toasts */}
         <Toaster
