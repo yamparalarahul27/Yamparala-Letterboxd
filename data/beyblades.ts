@@ -1,4 +1,6 @@
-import beyRaw from "./beyblades.json";
+import metalFusionRaw from "./beyblades/metal-fusion.json";
+import metalMastersRaw from "./beyblades/metal-masters.json";
+import metalFuryRaw from "./beyblades/metal-fury.json";
 import charRaw from "./characters.json";
 import tipsRaw from "./parts/tips.json";
 import wheelsRaw from "./parts/wheels.json";
@@ -30,7 +32,11 @@ export interface Beyblade {
   source: string | null;
 }
 
-export const BEYBLADES: Beyblade[] = beyRaw.beyblades as Beyblade[];
+export const BEYBLADES: Beyblade[] = [
+  ...(metalFusionRaw.beyblades as Beyblade[]),
+  ...(metalMastersRaw.beyblades as Beyblade[]),
+  ...(metalFuryRaw.beyblades as Beyblade[]),
+];
 
 export const SERIES: BeybladeSeries[] = ["Metal Fusion", "Metal Masters", "Metal Fury"];
 

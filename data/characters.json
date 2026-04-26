@@ -153,6 +153,78 @@
       "bio": "The vessel of the dark god Nemesis and the trilogy's final antagonist. Wields Diablo Nemesis X:D — a Bey designed to break the rules of spin itself.",
       "image": "/bladers/rago.png",
       "source": "https://beyblade.fandom.com/wiki/Rago"
+    },
+    {
+      "id": "tetsuya-watarigani",
+      "name": "Tetsuya Watarigani",
+      "role": "Antagonist",
+      "team": "Dark Nebula (formerly)",
+      "bio": "Crab-themed early Metal Fusion antagonist. Loud, scheming, and surprisingly tactical with Storm Capricorne's tip-tricks.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "faust",
+      "name": "Faust",
+      "role": "Antagonist",
+      "team": "HD Academy",
+      "bio": "The Spiral Force arc's mecha-blader. Twisted Tempo's relentless stamina is engineered, not earned — until the boy beneath the machine resurfaces.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "damure",
+      "name": "Damure",
+      "role": "Antagonist",
+      "team": "HD Academy",
+      "bio": "HD Academy striker. Mercury Anubis's 85 track and XF tip make him the fastest blade Damian fields.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "tobio-oike",
+      "name": "Tobio Oike",
+      "role": "Antagonist",
+      "team": "HD Academy",
+      "bio": "HD Academy stamina specialist. Grand Cetus's tornado-track design lets him outlast attack-types in long matches.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "salhan",
+      "name": "Salhan",
+      "role": "Rival",
+      "team": "Wang Hu Zhong",
+      "bio": "Wang Hu Zhong's Indian-themed defender. Patient and stoic; Rock Giraffe's 145+WB combo turns him into an immovable tower.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "mei-mei",
+      "name": "Mei-Mei",
+      "role": "Rival",
+      "team": "Wang Hu Zhong",
+      "bio": "Cheerful Wang Hu Zhong support blader. Bandid Goreim's stamina build keeps her in fights longer than opponents expect.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "aguma",
+      "name": "Aguma",
+      "role": "Rival",
+      "team": "Beylin Fang (formerly)",
+      "bio": "Massive, principled blader of Metal Fury. Wields Death Quetzalcoatl as a Legendary Bey after parting from his earlier Scythe Kronos.",
+      "image": null,
+      "source": null
+    },
+    {
+      "id": "yuki-mizusawa",
+      "name": "Yuki Mizusawa",
+      "role": "Supporting",
+      "team": "Legendary Bladers",
+      "bio": "Astronomy prodigy and Legendary Blader of Metal Fury. Beat Lynx's tall TH170 track suits his careful, calculative style.",
+      "image": null,
+      "source": null
     }
   ]
 }
