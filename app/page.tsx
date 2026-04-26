@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import CardWithCornerShine from "@/components/ui/CardWithCornerShine";
 import { BEYBLADES, type Beyblade, type BeybladeType } from "@/data/beyblades";
 
@@ -171,7 +172,7 @@ function BeyHero({ bey, accent }: { bey: Beyblade; accent: string }) {
             className="text-[10px] uppercase tracking-widest"
             style={{ color: "#444", fontFamily: "var(--font-geist-mono)" }}
           >
-            no image · run sync
+            image pending
           </span>
         </div>
       )}
@@ -451,8 +452,9 @@ export default function HomePage() {
           {filtered.map((b) => {
             const c = TYPE_COLORS[b.type];
             return (
-              <CardWithCornerShine key={b.id} padding="lg">
-                <div className="flex flex-col gap-5 h-full">
+              <Link key={b.id} href={`/bey/${b.id}`} className="block group">
+              <CardWithCornerShine padding="lg">
+                <div className="flex flex-col gap-5 h-full cursor-pointer">
                   {/* Header row */}
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex items-center gap-2">
@@ -535,7 +537,7 @@ export default function HomePage() {
                         {b.owner}
                       </p>
                     </div>
-                    <div className="text-right flex flex-col items-end">
+                    <div className="text-right">
                       <p className="text-label-12-mono" style={{ color: "#666666" }}>
                         Weight
                       </p>
@@ -545,30 +547,11 @@ export default function HomePage() {
                       >
                         {b.weight}
                       </p>
-                      {b.source && (
-                        <a
-                          href={b.source}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-[10px] mt-1 transition-colors duration-150"
-                          style={{
-                            color: "#666666",
-                            fontFamily: "var(--font-geist-mono)",
-                          }}
-                          onMouseEnter={(e) =>
-                            ((e.currentTarget as HTMLElement).style.color = "#FF4752")
-                          }
-                          onMouseLeave={(e) =>
-                            ((e.currentTarget as HTMLElement).style.color = "#666666")
-                          }
-                        >
-                          source ↗
-                        </a>
-                      )}
                     </div>
                   </div>
                 </div>
               </CardWithCornerShine>
+              </Link>
             );
           })}
         </div>
