@@ -2,29 +2,161 @@
   "$schema": "Mapping of Beyblade id -> Fandom (beyblade.fandom.com) page slug. Used by scripts/sync-beys.mjs.",
   "wiki": "https://beyblade.fandom.com",
   "sources": [
-    { "id": "storm-pegasus", "page": "Storm_Pegasus_105RF" },
-    { "id": "lightning-ldrago", "page": "Lightning_L-Drago_100HF" },
-    { "id": "rock-leone", "page": "Rock_Leone_145WB" },
-    { "id": "flame-sagittario", "page": "Flame_Sagittario_C145S" },
-    { "id": "earth-eagle", "page": "Earth_Eagle_145WD" },
-    { "id": "dark-bull", "page": "Dark_Bull_H145SD" },
-    { "id": "burn-fireblaze", "page": "Burn_Fireblaze_135MS" },
-    { "id": "galaxy-pegasus", "page": "Galaxy_Pegasus_W105R2F" },
-    { "id": "rock-aries", "page": "Rock_Aries_ED145B" },
-    { "id": "cyber-pegasus", "page": "Cyber_Pegasus_105F" },
-    { "id": "earth-virgo", "page": "Earth_Virgo_GB145BS" },
-    { "id": "storm-aquario", "page": "Storm_Aquario_100HF/S" },
-    { "id": "counter-leone", "page": "Counter_Leone_D125B" },
-    { "id": "meteo-ldrago", "page": "Meteo_L-Drago_LW105LF" },
-    { "id": "hell-kerbecs", "page": "Hell_Kerbecs_BD145DS" },
-    { "id": "ray-striker", "page": "Ray_Striker_D125CS" },
-    { "id": "vulcan-horuseus", "page": "Vulcan_Horuseus_145D" },
-    { "id": "gravity-perseus", "page": "Gravity_Perseus_AD145WD" },
-    { "id": "poison-serpent", "page": "Poison_Serpent_SW145SD" },
-    { "id": "big-bang-pegasis", "page": "Big_Bang_Pegasis_F:D" },
-    { "id": "phantom-orion", "page": "Phantom_Orion_B:D" },
-    { "id": "diablo-nemesis", "page": "Diablo_Nemesis_X:D" },
-    { "id": "variares", "page": "Variares_D:D" },
-    { "id": "fang-leone", "page": "Fang_Leone_130W2D" }
+    {
+      "id": "storm-pegasus",
+      "page": "Storm_Pegasus_105RF"
+    },
+    {
+      "id": "lightning-ldrago",
+      "page": "Lightning_L-Drago_100HF"
+    },
+    {
+      "id": "rock-leone",
+      "page": "Rock_Leone_145WB"
+    },
+    {
+      "id": "flame-sagittario",
+      "page": "Flame_Sagittario_C145S"
+    },
+    {
+      "id": "earth-eagle",
+      "page": "Earth_Eagle_145WD"
+    },
+    {
+      "id": "dark-bull",
+      "page": "Dark_Bull_H145SD"
+    },
+    {
+      "id": "burn-fireblaze",
+      "page": "Burn_Fireblaze_135MS"
+    },
+    {
+      "id": "galaxy-pegasus",
+      "page": "Galaxy_Pegasus_W105R2F"
+    },
+    {
+      "id": "rock-aries",
+      "page": "Rock_Aries_ED145B"
+    },
+    {
+      "id": "cyber-pegasus",
+      "page": "Cyber_Pegasus_105F"
+    },
+    {
+      "id": "earth-virgo",
+      "page": "Earth_Virgo_GB145BS"
+    },
+    {
+      "id": "storm-aquario",
+      "page": "Storm_Aquario_100HF/S"
+    },
+    {
+      "id": "counter-leone",
+      "page": "Counter_Leone_D125B"
+    },
+    {
+      "id": "meteo-ldrago",
+      "page": "Meteo_L-Drago_LW105LF"
+    },
+    {
+      "id": "hell-kerbecs",
+      "page": "Hell_Kerbecs_BD145DS"
+    },
+    {
+      "id": "ray-striker",
+      "page": "Ray_Striker_D125CS"
+    },
+    {
+      "id": "vulcan-horuseus",
+      "page": "Vulcan_Horuseus_145D"
+    },
+    {
+      "id": "gravity-perseus",
+      "page": "Gravity_Perseus_AD145WD"
+    },
+    {
+      "id": "poison-serpent",
+      "page": "Poison_Serpent_SW145SD"
+    },
+    {
+      "id": "big-bang-pegasis",
+      "page": "Big_Bang_Pegasis_F:D"
+    },
+    {
+      "id": "phantom-orion",
+      "page": "Phantom_Orion_B:D"
+    },
+    {
+      "id": "diablo-nemesis",
+      "page": "Diablo_Nemesis_X:D"
+    },
+    {
+      "id": "variares",
+      "page": "Variares_D:D"
+    },
+    {
+      "id": "fang-leone",
+      "page": "Fang_Leone_130W2D"
+    },
+    {
+      "id": "storm-capricorne",
+      "page": "Storm_Capricorne_M145Q"
+    },
+    {
+      "id": "killerken",
+      "page": "Killerken_100SF"
+    },
+    {
+      "id": "inferno-aquario",
+      "page": "Inferno_Aquario_105F"
+    },
+    {
+      "id": "twisted-tempo",
+      "page": "Twisted_Tempo_145WD"
+    },
+    {
+      "id": "mercury-anubis",
+      "page": "Mercury_Anubis_85XF"
+    },
+    {
+      "id": "grand-cetus",
+      "page": "Grand_Cetus_T125RS"
+    },
+    {
+      "id": "rock-giraffe",
+      "page": "Rock_Giraffe_R145WB"
+    },
+    {
+      "id": "jade-jupiter",
+      "page": "Jade_Jupiter_S130RB"
+    },
+    {
+      "id": "bandid-goreim",
+      "page": "Bandid_Goreim_DF145BS"
+    },
+    {
+      "id": "death-quetzalcoatl",
+      "page": "Death_Quetzalcoatl_125RDF"
+    },
+    {
+      "id": "beat-lynx",
+      "page": "Beat_Lynx_TH170WD"
+    },
+    {
+      "id": "blitz-striker",
+      "page": "Blitz_Striker_100RSF"
+    },
+    {
+      "id": "flash-sagittario",
+      "page": "Flash_Sagittario_230WD"
+    },
+    {
+      "id": "scythe-kronos",
+      "page": "Scythe_Kronos_T125EDS"
+    },
+    {
+      "id": "flame-byxis",
+      "page": "Flame_Byxis_230WD"
+    }
   ]
 }

@@ -4,10 +4,11 @@
  *
  * Pulls Beyblade data + lead images from beyblade.fandom.com (MediaWiki API)
  * for each entry in data/sources.json, parses the infobox, and merges fields
- * into data/beyblades.json. Lead images are downloaded into public/beys/.
+ * into the per-series files in data/beyblades/. Lead images are downloaded
+ * into public/beys/.
  *
- * Editorial fields (stats.*, description) are preserved — sync only fills in
- * canonical fields like owner, weight, debut, code, parts, and image.
+ * Editorial fields (stats.*, description, owner) are preserved — sync only
+ * fills in canonical fields like weight, debut, code, parts, and image.
  *
  * Usage:
  *   npm run sync:beys              # all entries
@@ -23,7 +24,11 @@ import { fileURLToPath } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, "..");
-const DATA_PATH = join(ROOT, "data", "beyblades.json");
+const SERIES_FILES = {
+  "Metal Fusion": join(ROOT, "data", "beyblades", "metal-fusion.json"),
+  "Metal Masters": join(ROOT, "data", "beyblades", "metal-masters.json"),
+  "Metal Fury": join(ROOT, "data", "beyblades", "metal-fury.json"),
+};
 const SOURCES_PATH = join(ROOT, "data", "sources.json");
 const IMAGES_DIR = join(ROOT, "public", "beys");
 
@@ -338,8 +343,17 @@ function mergeBey(existing, parsed, sourceUrl, localImagePath) {
 async function main() {
   const onlyIds = process.argv.slice(2);
   const sourcesFile = await readJson(SOURCES_PATH);
-  const dataFile = await readJson(DATA_PATH);
-  const byId = new Map(dataFile.beyblades.map((b) => [b.id, b]));
+
+  // Load each per-series file and build a unified map of id -> { entry, series }.
+  const seriesData = {};
+  const byId = new Map();
+  for (const [series, path] of Object.entries(SERIES_FILES)) {
+    const file = await readJson(path);
+    seriesData[series] = file;
+    for (const b of file.beyblades) {
+      byId.set(b.id, { entry: b, series });
+    }
+  }
 
   const targets = sourcesFile.sources.filter((s) => onlyIds.length === 0 || onlyIds.includes(s.id));
   if (!targets.length) {
@@ -352,12 +366,13 @@ async function main() {
   let failed = 0;
 
   for (const src of targets) {
-    const existing = byId.get(src.id);
-    if (!existing) {
-      console.error(`  - ${src.id}: no entry in beyblades.json (skipping)`);
+    const slot = byId.get(src.id);
+    if (!slot) {
+      console.error(`  - ${src.id}: no entry in any data/beyblades/*.json (skipping)`);
       failed++;
       continue;
     }
+    const { entry: existing, series } = slot;
     const sourceUrl = `${sourcesFile.wiki}/wiki/${src.page}`;
     process.stdout.write(`  - ${src.id} (${src.page}) … `);
     try {
@@ -366,8 +381,6 @@ async function main() {
       if (!fields) throw new Error("no infobox found");
       const parsed = mapInfobox(fields);
 
-      // Resolve image URL — prefer the infobox image= field, then a [[File:...]] match
-      // anywhere in the wikitext, then the first image in parse.images as a last resort.
       let imageFilename = parsed.image;
       if (!imageFilename) imageFilename = findFirstImageInWikitext(wikitext);
       if (!imageFilename && images.length) imageFilename = images[0];
@@ -385,25 +398,26 @@ async function main() {
       }
 
       const merged = mergeBey(existing, parsed, sourceUrl, localPath);
-      byId.set(src.id, merged);
+      byId.set(src.id, { entry: merged, series });
       console.log(`ok${localPath ? " (image)" : ""}`);
       ok++;
     } catch (err) {
       console.log(`failed: ${err.message}`);
-      // Still record source URL so the entry links back to its origin.
-      byId.set(src.id, { ...existing, source: sourceUrl });
+      byId.set(src.id, { entry: { ...existing, source: sourceUrl }, series });
       failed++;
     }
   }
 
-  // Preserve original ordering in the file.
-  const updated = {
-    ...dataFile,
-    beyblades: dataFile.beyblades.map((b) => byId.get(b.id) ?? b),
-  };
-  await writeJson(DATA_PATH, updated);
+  // Write back each per-series file, preserving original ordering.
+  for (const [series, file] of Object.entries(seriesData)) {
+    const updated = {
+      ...file,
+      beyblades: file.beyblades.map((b) => byId.get(b.id)?.entry ?? b),
+    };
+    await writeJson(SERIES_FILES[series], updated);
+  }
 
-  console.log(`\nDone. ${ok} ok, ${failed} failed. Wrote ${DATA_PATH}.`);
+  console.log(`\nDone. ${ok} ok, ${failed} failed.`);
   if (existsSync(IMAGES_DIR)) console.log(`Images in ${IMAGES_DIR}.`);
   process.exit(failed && !ok ? 1 : 0);
 }
