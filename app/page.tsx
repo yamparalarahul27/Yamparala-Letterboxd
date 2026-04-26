@@ -537,7 +537,7 @@ export default function HomePage() {
                         {b.owner}
                       </p>
                     </div>
-                    <div className="text-right flex flex-col items-end">
+                    <div className="text-right">
                       <p className="text-label-12-mono" style={{ color: "#666666" }}>
                         Weight
                       </p>
@@ -547,27 +547,6 @@ export default function HomePage() {
                       >
                         {b.weight}
                       </p>
-                      {b.source && (
-                        <a
-                          href={b.source}
-                          target="_blank"
-                          rel="noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="text-[10px] mt-1 transition-colors duration-150"
-                          style={{
-                            color: "#666666",
-                            fontFamily: "var(--font-geist-mono)",
-                          }}
-                          onMouseEnter={(e) =>
-                            ((e.currentTarget as HTMLElement).style.color = "#FF4752")
-                          }
-                          onMouseLeave={(e) =>
-                            ((e.currentTarget as HTMLElement).style.color = "#666666")
-                          }
-                        >
-                          source ↗
-                        </a>
-                      )}
                     </div>
                   </div>
                 </div>

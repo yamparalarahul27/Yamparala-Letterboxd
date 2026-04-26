@@ -310,18 +310,6 @@ export default async function BeyDetailPage({
               >
                 {bey.description}
               </p>
-
-              {bey.source && (
-                <a
-                  href={bey.source}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-[12px] mt-2 transition-colors duration-150"
-                  style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
-                >
-                  Read on Beyblade Wiki ↗
-                </a>
-              )}
             </div>
           </div>
         </div>
