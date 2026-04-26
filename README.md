@@ -15,10 +15,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Data
 
-Two layered catalogs:
+Three layered catalogs, all typed via [`data/beyblades.ts`](./data/beyblades.ts):
 
-- **Beyblades** — [`data/beyblades.json`](./data/beyblades.json), typed via [`data/beyblades.ts`](./data/beyblades.ts). Each entry references a character via `ownerId`.
-- **Characters** — [`data/characters.json`](./data/characters.json), typed in the same module.
+- **Beyblades** — [`data/beyblades.json`](./data/beyblades.json). Each entry references a character via `ownerId` and uses parts by name (`fusionWheel`, `energyRing`, `spinTrack`, `performanceTip`).
+- **Characters** — [`data/characters.json`](./data/characters.json).
+- **Parts** — split by type: [`data/parts/tips.json`](./data/parts/tips.json), [`wheels.json`](./data/parts/wheels.json), [`rings.json`](./data/parts/rings.json), [`tracks.json`](./data/parts/tracks.json).
 
 Editorial fields (Beyblade `stats.*` and `description`; Character `name`, `role`, `team`, `bio`) are hand-curated. Canonical fields and lead images come from the [Beyblade Fandom Wiki](https://beyblade.fandom.com) via two sync scripts:
 
@@ -26,15 +27,15 @@ Editorial fields (Beyblade `stats.*` and `description`; Character `name`, `role`
 # Refresh everything
 npm run sync:all
 
-# Just Beyblades
+# Just one layer
 npm run sync:beys
-
-# Just characters
 npm run sync:characters
+npm run sync:parts
 
 # Subset by id
 npm run sync:beys -- storm-pegasus rock-leone
 npm run sync:characters -- gingka-hagane kyoya-tategami
+npm run sync:parts -- rf storm pegasus-i 145
 ```
 
 How the scripts work:
@@ -54,10 +55,15 @@ Adding new entries: stub the JSON with editorial fields, add the source mapping,
 ## What's inside
 
 - **Home** — hero, per-series stats, anatomy explainer, filterable collection (by type and series), types breakdown, about
-- **Beyblade detail** at `/bey/[id]` — large hero, stats bars, parts breakdown with explanations, metadata pills, related Beys
+- **Beyblade detail** at `/bey/[id]` — large hero, stats bars, clickable parts breakdown, metadata pills, related Beys
 - **Blader detail** at `/blader/[id]` — avatar, role/team chips, bio, full list of their Beyblades
+- **Part detail** at `/part/[type]/[id]` — image, info, list of Beys using this tip / wheel / ring / track
 
 All routes are pre-rendered statically at build time.
+
+## Project rules
+
+The repo enforces a **700-effective-line cap per file** (blank lines and comments excluded). ESLint covers code; `npm run check:lines` covers JSON / CSS / MD / YML. See [CLAUDE.md](./CLAUDE.md). Run `npm run check` to verify.
 
 ## Disclaimer
 

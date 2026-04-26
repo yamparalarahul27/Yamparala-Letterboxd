@@ -3,7 +3,12 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ChevronLeft } from "lucide-react";
 import CardWithCornerShine from "@/components/ui/CardWithCornerShine";
-import { BEYBLADES, getCharacter, type BeybladeType } from "@/data/beyblades";
+import {
+  BEYBLADES,
+  getCharacter,
+  findPart,
+  type BeybladeType,
+} from "@/data/beyblades";
 
 // ──────────────────────────────────────────────────────────────────────
 // Static params — pre-render every detail page at build time
@@ -157,18 +162,17 @@ function PartRow({
   value,
   note,
   accent,
+  href,
 }: {
   step: string;
   name: string;
   value: string;
   note: string;
   accent: string;
+  href?: string;
 }) {
-  return (
-    <div
-      className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 px-5 py-4"
-      style={{ borderBottom: "1px solid #252525" }}
-    >
+  const inner = (
+    <>
       <div className="flex items-center gap-3 sm:w-48 flex-shrink-0">
         <span
           className="text-num-32"
@@ -185,9 +189,12 @@ function PartRow({
           </span>
           <span
             className="text-heading-16"
-            style={{ color: "#EFEFEF" }}
+            style={{ color: href ? accent : "#EFEFEF" }}
           >
             {value}
+            {href && (
+              <span style={{ color: "#666", fontSize: "11px", marginLeft: "6px" }}>↗</span>
+            )}
           </span>
         </div>
       </div>
@@ -201,6 +208,21 @@ function PartRow({
       >
         {note}
       </p>
+    </>
+  );
+  const className =
+    "flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 px-5 py-4 transition-colors duration-150";
+  const style = { borderBottom: "1px solid #252525" } as const;
+  if (href) {
+    return (
+      <Link href={href} className={className} style={style}>
+        {inner}
+      </Link>
+    );
+  }
+  return (
+    <div className={className} style={style}>
+      {inner}
     </div>
   );
 }
@@ -383,6 +405,12 @@ export default async function BeyDetailPage({
             Parts
           </p>
 
+          {(() => {
+            const ringPart = findPart("ring", bey.energyRing);
+            const wheelPart = findPart("wheel", bey.fusionWheel);
+            const trackPart = findPart("track", bey.spinTrack);
+            const tipPart = findPart("tip", bey.performanceTip);
+            return (
           <div style={{ border: "1px solid #252525", background: "#000" }}>
             {/* Face Bolt is shared with Energy Ring identity in MFB; we surface the same name. */}
             <PartRow
@@ -398,6 +426,7 @@ export default async function BeyDetailPage({
               value={bey.energyRing}
               note={PART_NOTES["Energy Ring"]}
               accent={accent}
+              href={ringPart ? `/part/ring/${ringPart.id}` : undefined}
             />
             <PartRow
               step="03"
@@ -405,6 +434,7 @@ export default async function BeyDetailPage({
               value={bey.fusionWheel}
               note={PART_NOTES["Fusion Wheel"]}
               accent={accent}
+              href={wheelPart ? `/part/wheel/${wheelPart.id}` : undefined}
             />
             <PartRow
               step="04"
@@ -412,6 +442,7 @@ export default async function BeyDetailPage({
               value={bey.spinTrack}
               note={PART_NOTES["Spin Track"]}
               accent={accent}
+              href={trackPart ? `/part/track/${trackPart.id}` : undefined}
             />
             <div style={{ borderBottom: "none" }}>
               <PartRow
@@ -420,9 +451,12 @@ export default async function BeyDetailPage({
                 value={bey.performanceTip}
                 note={PART_NOTES["Performance Tip"]}
                 accent={accent}
+                href={tipPart ? `/part/tip/${tipPart.id}` : undefined}
               />
             </div>
           </div>
+            );
+          })()}
         </div>
       </section>
 

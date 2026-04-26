@@ -315,8 +315,19 @@ function mapInfobox(fields) {
 
 function mergeBey(existing, parsed, sourceUrl, localImagePath) {
   // Only overwrite fields that the wiki actually returned (truthy).
+  // 'owner' (the free-text display) is intentionally omitted: ownerId is the
+  // source of truth for character joins, and we want editorial owner names
+  // (e.g. "Gingka Hagane" for Storm Pegasus) to survive subsequent syncs.
   const out = { ...existing, source: sourceUrl };
-  const keys = ["owner", "code", "weight", "debut", "energyRing", "fusionWheel", "spinTrack", "performanceTip"];
+  const keys = [
+    "code",
+    "weight",
+    "debut",
+    "energyRing",
+    "fusionWheel",
+    "spinTrack",
+    "performanceTip",
+  ];
   for (const k of keys) if (parsed[k]) out[k] = parsed[k];
   if (parsed.type) out.type = parsed.type;
   if (localImagePath) out.image = localImagePath;
