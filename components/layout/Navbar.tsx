@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Menu, X, Github } from "lucide-react";
+import { Menu, X, Github, Search as SearchIcon } from "lucide-react";
+import { BEYBLADES } from "@/data/beyblades";
 
 const navLinks = [
     { label: "Collection", href: "#collection" },
@@ -9,6 +10,10 @@ const navLinks = [
     { label: "Types", href: "#types" },
     { label: "About", href: "#about" },
 ];
+
+function openPalette() {
+    window.dispatchEvent(new Event("palette:open"));
+}
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -103,20 +108,48 @@ export default function Navbar() {
                     {/* Spacer */}
                     <div className="flex-1" />
 
-                    {/* Right — counter + GitHub */}
-                    <div className="hidden sm:flex items-center gap-4 px-4 py-1.5 border-x border-[#252525]">
+                    {/* Search trigger */}
+                    <button
+                        type="button"
+                        onClick={openPalette}
+                        className="flex items-center gap-2 px-3 py-1.5 transition-colors duration-200"
+                        style={{
+                            border: "1px solid #252525",
+                            color: "#CACACA",
+                            fontFamily: "var(--font-geist-mono)",
+                        }}
+                        onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLElement).style.borderColor = "#FF4752";
+                        }}
+                        onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLElement).style.borderColor = "#252525";
+                        }}
+                        aria-label="Open search"
+                    >
+                        <SearchIcon size={14} />
+                        <span className="hidden md:inline text-[11px]">Search</span>
+                        <span
+                            className="hidden md:inline text-[10px] px-1 ml-1"
+                            style={{ color: "#666", border: "1px solid #252525", borderRadius: "3px" }}
+                        >
+                            ⌘K
+                        </span>
+                    </button>
+
+                    {/* Counter (desktop only) */}
+                    <div className="hidden lg:flex items-center gap-4 px-4 py-1.5 border-x border-[#252525]">
                         <div className="flex flex-col">
                             <span
                                 className="text-[10px] uppercase tracking-wider text-[#666666]"
                                 style={{ fontFamily: "var(--font-geist-mono)" }}
                             >
-                                Tops in collection
+                                Tops cataloged
                             </span>
                             <span
                                 className="text-xs font-medium text-[#EFEFEF] tabular-nums"
                                 style={{ fontFamily: "var(--font-geist-mono)" }}
                             >
-                                10 / ∞
+                                {BEYBLADES.length}
                             </span>
                         </div>
                     </div>
@@ -179,8 +212,8 @@ export default function Navbar() {
                                 </Link>
                             ))}
                             <div className="mt-4 pt-4 border-t border-[#252525] flex justify-between items-center px-4">
-                                <span className="text-xs text-[#666666]">Tops in collection</span>
-                                <span className="text-xs text-[#EFEFEF] tabular-nums">10 / ∞</span>
+                                <span className="text-xs text-[#666666]">Tops cataloged</span>
+                                <span className="text-xs text-[#EFEFEF] tabular-nums">{BEYBLADES.length}</span>
                             </div>
                         </nav>
                     </div>
