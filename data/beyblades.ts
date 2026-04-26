@@ -1,6 +1,7 @@
 import raw from "./beyblades.json";
 
 export type BeybladeType = "Attack" | "Defense" | "Stamina" | "Balance";
+export type BeybladeSeries = "Metal Fusion" | "Metal Masters" | "Metal Fury";
 
 export interface Beyblade {
   id: string;
@@ -8,6 +9,7 @@ export interface Beyblade {
   code: string;
   combo: string;
   type: BeybladeType;
+  series: BeybladeSeries;
   owner: string;
   energyRing: string;
   fusionWheel: string;
@@ -22,3 +24,5 @@ export interface Beyblade {
 }
 
 export const BEYBLADES: Beyblade[] = raw.beyblades as Beyblade[];
+
+export const SERIES: BeybladeSeries[] = ["Metal Fusion", "Metal Masters", "Metal Fury"];

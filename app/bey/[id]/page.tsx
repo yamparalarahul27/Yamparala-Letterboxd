@@ -281,6 +281,18 @@ export default async function BeyDetailPage({
               <div className="flex items-center gap-2 flex-wrap">
                 <TypeChip type={bey.type} />
                 <span
+                  className="inline-block px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider"
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    color: "#CACACA",
+                    border: "1px solid rgba(255,255,255,0.10)",
+                    borderRadius: "6px",
+                    fontFamily: "var(--font-geist-mono)",
+                  }}
+                >
+                  {bey.series}
+                </span>
+                <span
                   className="text-[11px]"
                   style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
                 >

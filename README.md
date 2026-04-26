@@ -1,6 +1,6 @@
 # Metal Fusion Codex
 
-A curated showcase of **Beyblade Metal Fusion** tops — their components, types, owners, and stats. A fan-made codex of the 2009–2010 MFB era.
+A curated showcase of **Beyblade Metal Fight** tops across the original three sub-series (Metal Fusion 2009–10, Metal Masters 2010–11, Metal Fury 2011–12) — their components, types, owners, and stats.
 
 Built with [Next.js](https://nextjs.org) 16, React 19, Tailwind v4, and Geist Mono.
 
