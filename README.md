@@ -1,6 +1,6 @@
 # Metal Fusion Codex
 
-A curated showcase of **Beyblade Metal Fight** tops across the original three sub-series (Metal Fusion 2009–10, Metal Masters 2010–11, Metal Fury 2011–12) — their components, types, owners, and stats.
+A curated showcase of **Beyblade Metal Fight** tops across the original three sub-series (Metal Fusion 2009–10, Metal Masters 2010–11, Metal Fury 2011–12) — their components, types, owners, and stats. Now with bladers too.
 
 Built with [Next.js](https://nextjs.org) 16, React 19, Tailwind v4, and Geist Mono.
 
@@ -15,36 +15,49 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Data
 
-The Beyblade catalog lives in [`data/beyblades.json`](./data/beyblades.json) and is consumed via the typed importer in [`data/beyblades.ts`](./data/beyblades.ts).
+Two layered catalogs:
 
-Editorial fields (`stats.*`, `description`) are hand-curated. Canonical fields (`owner`, `weight`, `debut`, `code`, parts, `image`) can be refreshed from the [Beyblade Fandom Wiki](https://beyblade.fandom.com) using the sync script:
+- **Beyblades** — [`data/beyblades.json`](./data/beyblades.json), typed via [`data/beyblades.ts`](./data/beyblades.ts). Each entry references a character via `ownerId`.
+- **Characters** — [`data/characters.json`](./data/characters.json), typed in the same module.
+
+Editorial fields (Beyblade `stats.*` and `description`; Character `name`, `role`, `team`, `bio`) are hand-curated. Canonical fields and lead images come from the [Beyblade Fandom Wiki](https://beyblade.fandom.com) via two sync scripts:
 
 ```bash
-# Refresh all entries
+# Refresh everything
+npm run sync:all
+
+# Just Beyblades
 npm run sync:beys
 
-# Refresh a subset
+# Just characters
+npm run sync:characters
+
+# Subset by id
 npm run sync:beys -- storm-pegasus rock-leone
+npm run sync:characters -- gingka-hagane kyoya-tategami
 ```
 
-What the script does:
+How the scripts work:
 
-1. Reads [`data/sources.json`](./data/sources.json) — a mapping of `id` → Fandom page slug.
-2. For each entry, hits the MediaWiki `parse` API for that page's wikitext + image list.
-3. Parses the infobox (brace-depth-aware) and extracts canonical fields.
-4. Resolves the lead image's CDN URL via the `query/imageinfo` API.
-5. Downloads the image into `public/beys/{id}.{ext}`.
-6. Merges fetched fields into `data/beyblades.json` (preserving editorial fields).
+1. Read [`data/sources.json`](./data/sources.json) (Beys) or [`data/character-sources.json`](./data/character-sources.json) — maps `id` → Fandom page slug.
+2. Hit MediaWiki's `parse` API for that page's wikitext + image list.
+3. Parse the infobox (brace-depth-aware) and extract canonical fields.
+4. Resolve the lead image via `query/imageinfo`, download to `public/beys/{id}.ext` or `public/bladers/{id}.ext`.
+5. Merge fetched fields into the JSON, preserving editorial fields.
 
-Adding a new Beyblade: add a stub entry to `data/beyblades.json` with editorial stats + description, add the `id` → page slug to `data/sources.json`, then run `npm run sync:beys -- new-id`.
+Adding new entries: stub the JSON with editorial fields, add the source mapping, run the relevant sync.
+
+## CI
+
+`.github/workflows/sync-beys.yml` runs both syncs via `workflow_dispatch`. From the GitHub mobile or web app: **Actions → Sync Beyblade & Character data → Run workflow**. Optional `target` input picks `all` (default), `beys`, or `characters`; optional `ids` narrows to a subset. The workflow commits the result back to the triggering branch.
 
 ## What's inside
 
-- **Hero** — sets the tone for the collection
-- **Anatomy** — the five parts of a Metal Fight Beyblade
-- **Collection** — filterable grid of cataloged tops with components and stats
-- **Types** — Attack / Defense / Stamina / Balance explainer
-- **About** — why the codex exists
+- **Home** — hero, per-series stats, anatomy explainer, filterable collection (by type and series), types breakdown, about
+- **Beyblade detail** at `/bey/[id]` — large hero, stats bars, parts breakdown with explanations, metadata pills, related Beys
+- **Blader detail** at `/blader/[id]` — avatar, role/team chips, bio, full list of their Beyblades
+
+All routes are pre-rendered statically at build time.
 
 ## Disclaimer
 

@@ -1,0 +1,23 @@
+{
+  "$schema": "Mapping of character id -> Fandom (beyblade.fandom.com) page slug. Used by scripts/sync-characters.mjs.",
+  "wiki": "https://beyblade.fandom.com",
+  "sources": [
+    { "id": "gingka-hagane", "page": "Gingka_Hagane" },
+    { "id": "ryo-hagane", "page": "Ryo_Hagane" },
+    { "id": "ryuga", "page": "Ryuga" },
+    { "id": "kyoya-tategami", "page": "Kyoya_Tategami" },
+    { "id": "kenta-yumiya", "page": "Kenta_Yumiya" },
+    { "id": "tsubasa-otori", "page": "Tsubasa_Otori" },
+    { "id": "benkei-hanawa", "page": "Benkei_Hanawa" },
+    { "id": "hyoma", "page": "Hyoma" },
+    { "id": "hikaru-hasama", "page": "Hikaru_Hasama" },
+    { "id": "yu-tendo", "page": "Yu_Tendo" },
+    { "id": "damian-hart", "page": "Damian_Hart" },
+    { "id": "masamune-kadoya", "page": "Masamune_Kadoya" },
+    { "id": "da-xiang-wang", "page": "Da_Xiang_Wang" },
+    { "id": "julian-konzern", "page": "Julian_Konzern" },
+    { "id": "reiji-mizuchi", "page": "Reiji_Mizuchi" },
+    { "id": "chris", "page": "Chris" },
+    { "id": "rago", "page": "Rago" }
+  ]
+}
