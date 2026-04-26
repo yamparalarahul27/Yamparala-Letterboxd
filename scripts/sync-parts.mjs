@@ -188,10 +188,16 @@ async function fetchPage(pageSlug) {
 const BEY_SOURCES_PATH = join(ROOT, "data", "sources.json");
 
 const PART_TYPE_PATTERNS = [
-  { type: "wheel", regex: /\(Fusion[_ ]Wheel\)/i },
-  { type: "ring", regex: /\(Energy[_ ]Ring\)/i },
-  { type: "track", regex: /\(Spin[_ ]Track\)/i },
-  { type: "tip", regex: /\(Performance[_ ]Tip\)/i },
+  // Canonical Fandom pattern: "Fusion_Wheel_-_Storm.png" (verified live).
+  { type: "wheel", regex: /^Fusion[_ ]Wheel[_ ]-[_ ]/i, prefix: "fusion" },
+  { type: "ring", regex: /^Energy[_ ]Ring[_ ]-[_ ]/i, prefix: "energy" },
+  { type: "track", regex: /^Spin[_ ]Track[_ ]-[_ ]/i, prefix: "spin" },
+  { type: "tip", regex: /^Performance[_ ]Tip[_ ]-[_ ]/i, prefix: "performance" },
+  // Legacy parens form, kept as fallback.
+  { type: "wheel", regex: /\(Fusion[_ ]Wheel\)/i, prefix: null },
+  { type: "ring", regex: /\(Energy[_ ]Ring\)/i, prefix: null },
+  { type: "track", regex: /\(Spin[_ ]Track\)/i, prefix: null },
+  { type: "tip", regex: /\(Performance[_ ]Tip\)/i, prefix: null },
 ];
 
 function detectPartTypeFromFilename(filename) {
@@ -203,6 +209,12 @@ function detectPartTypeFromFilename(filename) {
 
 function extractPartNameFromFilename(filename) {
   let base = filename.replace(/\.(png|jpe?g|gif|webp)$/i, "");
+  // Strip canonical "Fusion_Wheel_-_" / "Energy_Ring_-_" / etc. prefix.
+  base = base.replace(
+    /^(?:Fusion[_ ]Wheel|Energy[_ ]Ring|Spin[_ ]Track|Performance[_ ]Tip)[_ ]-[_ ]/i,
+    ""
+  );
+  // Strip legacy parens form too.
   base = base.replace(
     /_?\((?:Fusion[_ ]Wheel|Energy[_ ]Ring|Spin[_ ]Track|Performance[_ ]Tip)\)/gi,
     ""
