@@ -23,9 +23,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const c = CHARACTERS.find((x) => x.id === id);
-  if (!c) return { title: "Not found — Metal Fusion Codex" };
+  if (!c) return { title: "Not found — Beyblade Metal Fusion" };
   return {
-    title: `${c.name} — Metal Fusion Codex`,
+    title: `${c.name} — Beyblade Metal Fusion`,
     description: c.bio,
   };
 }

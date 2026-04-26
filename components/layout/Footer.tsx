@@ -25,7 +25,7 @@ export default function Footer() {
                         className="text-label-12-mono font-bold tracking-widest uppercase"
                         style={{ color: "#FF4752", fontFamily: "var(--font-geist-mono)" }}
                     >
-                        Metal Fusion Codex
+                        Beyblade Metal Fusion
                     </span>
                     <span
                         className="text-label-12"

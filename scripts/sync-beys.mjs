@@ -27,7 +27,7 @@ const DATA_PATH = join(ROOT, "data", "beyblades.json");
 const SOURCES_PATH = join(ROOT, "data", "sources.json");
 const IMAGES_DIR = join(ROOT, "public", "beys");
 
-const UA = "MetalFusionCodex/1.0 (https://github.com/yamparalarahul27/YPM; fan-project)";
+const UA = "BeybladeMetalFusion/1.0 (fan-project)";
 
 // ── Utilities ────────────────────────────────────────────────────────────
 async function readJson(path) {

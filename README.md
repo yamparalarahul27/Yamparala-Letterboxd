@@ -1,4 +1,4 @@
-# Metal Fusion Codex
+# Beyblade Metal Fusion
 
 A curated showcase of **Beyblade Metal Fight** tops across the original three sub-series (Metal Fusion 2009–10, Metal Masters 2010–11, Metal Fury 2011–12) — their components, types, owners, and stats. Now with bladers too.
 

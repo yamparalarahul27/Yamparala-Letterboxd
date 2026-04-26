@@ -72,16 +72,16 @@ export default function Navbar() {
                         </span>
                         <div className="flex flex-col leading-none">
                             <span
+                                className="text-[9px] uppercase tracking-[0.2em] mb-0.5"
+                                style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
+                            >
+                                Beyblade
+                            </span>
+                            <span
                                 className="text-[13px] font-bold tracking-wider"
                                 style={{ color: "#EFEFEF", fontFamily: "var(--font-geist-mono)" }}
                             >
                                 METAL FUSION
-                            </span>
-                            <span
-                                className="text-[9px] uppercase tracking-[0.2em] mt-0.5"
-                                style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
-                            >
-                                Codex
                             </span>
                         </div>
                     </Link>
