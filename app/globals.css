@@ -60,6 +60,11 @@
 /* ============================================
    Base
    ============================================ */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
 body {
   background-color: var(--bg);
   color: var(--text-primary);
@@ -70,6 +75,8 @@ body {
 @layer base {
   * {
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
   }
 }
 
