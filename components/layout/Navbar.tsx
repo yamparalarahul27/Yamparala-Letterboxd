@@ -1,11 +1,12 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Menu, X, Github, Search as SearchIcon } from "lucide-react";
+import { Menu, X, Search as SearchIcon } from "lucide-react";
 import { BEYBLADES } from "@/data/beyblades";
 
 const navLinks = [
     { label: "Collection", href: "/#collection" },
+    { label: "Canvas", href: "/canvasgallery" },
     { label: "Bladers", href: "/bladers" },
     { label: "Anatomy", href: "/#anatomy" },
     { label: "Types", href: "/#types" },
@@ -154,16 +155,6 @@ export default function Navbar() {
                             </span>
                         </div>
                     </div>
-
-                    <a
-                        href="https://github.com"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="hidden sm:flex items-center justify-center w-8 h-8 border border-[#252525] hover:border-[#FF4752] transition-colors duration-200"
-                        aria-label="GitHub"
-                    >
-                        <Github size={14} className="text-[#CACACA]" />
-                    </a>
 
                     {/* Hamburger (mobile) */}
                     <button

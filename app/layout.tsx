@@ -6,6 +6,7 @@ import { Toaster } from "sonner";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CommandPalette from "@/components/ui/CommandPalette";
+import AgentationToolbar from "@/components/ui/AgentationToolbar";
 
 export const metadata: Metadata = {
   title: "Beyblade Metal Fusion — Tops & Bladers",
@@ -33,6 +34,9 @@ export default function RootLayout({
 
         {/* Global ⌘K command palette */}
         <CommandPalette />
+
+        {/* Visual annotation toolbar for dev feedback loops */}
+        <AgentationToolbar />
 
         {/* Toasts */}
         <Toaster
