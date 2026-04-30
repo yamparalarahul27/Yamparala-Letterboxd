@@ -3,10 +3,10 @@
 import Link from "next/link";
 
 const footerLinks = [
-    { label: "Collection", href: "/#collection" },
+    { label: "Collections", href: "/#collections" },
+    { label: "Beyblades", href: "/beyblades" },
     { label: "Bladers", href: "/bladers" },
-    { label: "Anatomy", href: "/#anatomy" },
-    { label: "Types", href: "/#types" },
+    { label: "Canvas", href: "/canvasgallery" },
     { label: "About", href: "/#about" },
 ];
 
@@ -26,13 +26,13 @@ export default function Footer() {
                         className="text-label-12-mono font-bold tracking-widest uppercase"
                         style={{ color: "#FF4752", fontFamily: "var(--font-geist-mono)" }}
                     >
-                        Beyblade Metal Fusion
+                        Yamparala Favourites
                     </span>
                     <span
                         className="text-label-12"
                         style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
                     >
-                        A Beyblade Metal Fusion collection
+                        A personal catalog of the things I love
                     </span>
                 </div>
 
@@ -61,7 +61,7 @@ export default function Footer() {
                     className="text-label-12"
                     style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
                 >
-                    Fan project — not affiliated with{" "}
+                    Personal project — Beyblades not affiliated with{" "}
                     <span style={{ color: "#CACACA" }}>Takara Tomy</span>
                 </p>
             </div>

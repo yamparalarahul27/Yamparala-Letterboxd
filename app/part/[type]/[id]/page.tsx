@@ -33,12 +33,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { type, id } = await params;
   if (!VALID_TYPES.includes(type as PartType)) {
-    return { title: "Not found — Beyblade Metal Fusion" };
+    return { title: "Not found — Yamparala Favourites" };
   }
   const part = getPart(type as PartType, id);
-  if (!part) return { title: "Not found — Beyblade Metal Fusion" };
+  if (!part) return { title: "Not found — Yamparala Favourites" };
   return {
-    title: `${part.fullName ?? part.name} — Beyblade Metal Fusion`,
+    title: `${part.fullName ?? part.name} · Beyblades — Yamparala Favourites`,
     description: part.info,
   };
 }

@@ -1,15 +1,14 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Menu, X, Search as SearchIcon } from "lucide-react";
+import { Menu, X, Search as SearchIcon, Command, ChevronRight } from "lucide-react";
 import { BEYBLADES } from "@/data/beyblades";
 
 const navLinks = [
-    { label: "Collection", href: "/#collection" },
+    { label: "Collections", href: "/#collections" },
+    { label: "Beyblades", href: "/beyblades" },
     { label: "Canvas", href: "/canvasgallery" },
     { label: "Bladers", href: "/bladers" },
-    { label: "Anatomy", href: "/#anatomy" },
-    { label: "Types", href: "/#types" },
     { label: "About", href: "/#about" },
 ];
 
@@ -75,20 +74,20 @@ export default function Navbar() {
                                 letterSpacing: "-0.04em",
                             }}
                         >
-                            BX
+                            YF
                         </span>
                         <div className="flex flex-col leading-none">
                             <span
                                 className="text-[9px] uppercase tracking-[0.2em] mb-0.5"
                                 style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
                             >
-                                Beyblade
+                                Yamparala
                             </span>
                             <span
                                 className="text-[13px] font-bold tracking-wider"
                                 style={{ color: "#EFEFEF", fontFamily: "var(--font-geist-mono)" }}
                             >
-                                METAL FUSION
+                                FAVOURITES
                             </span>
                         </div>
                     </Link>
@@ -131,10 +130,11 @@ export default function Navbar() {
                         <SearchIcon size={14} />
                         <span className="hidden md:inline text-[11px]">Search</span>
                         <span
-                            className="hidden md:inline text-[10px] px-1 ml-1"
+                            className="hidden md:inline-flex items-center gap-0.5 text-[10px] px-1 ml-1"
                             style={{ color: "#666", border: "1px solid #252525", borderRadius: "3px" }}
                         >
-                            ⌘K
+                            <Command size={10} />
+                            K
                         </span>
                     </button>
 
@@ -145,7 +145,7 @@ export default function Navbar() {
                                 className="text-[10px] uppercase tracking-wider text-[#666666]"
                                 style={{ fontFamily: "var(--font-geist-mono)" }}
                             >
-                                Tops cataloged
+                                Items cataloged
                             </span>
                             <span
                                 className="text-xs font-medium text-[#EFEFEF] tabular-nums"
@@ -196,15 +196,12 @@ export default function Navbar() {
                                         fontFamily: "var(--font-geist-mono)",
                                     }}
                                 >
-                                    <span
-                                        className="w-1.5 h-1.5 rounded-full"
-                                        style={{ background: "#FF4752" }}
-                                    />
+                                    <ChevronRight size={14} style={{ color: "#FF4752" }} />
                                     {link.label}
                                 </Link>
                             ))}
                             <div className="mt-4 pt-4 border-t border-[#252525] flex justify-between items-center px-4">
-                                <span className="text-xs text-[#666666]">Tops cataloged</span>
+                                <span className="text-xs text-[#666666]">Items cataloged</span>
                                 <span className="text-xs text-[#EFEFEF] tabular-nums">{BEYBLADES.length}</span>
                             </div>
                         </nav>

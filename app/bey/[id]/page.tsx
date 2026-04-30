@@ -24,9 +24,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const bey = BEYBLADES.find((b) => b.id === id);
-  if (!bey) return { title: "Not found — Beyblade Metal Fusion" };
+  if (!bey) return { title: "Not found — Yamparala Favourites" };
   return {
-    title: `${bey.combo} — Beyblade Metal Fusion`,
+    title: `${bey.combo} · Beyblades — Yamparala Favourites`,
     description: bey.description,
   };
 }
