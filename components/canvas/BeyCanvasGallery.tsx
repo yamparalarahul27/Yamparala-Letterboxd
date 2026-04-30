@@ -458,13 +458,12 @@ export default function BeyCanvasGallery() {
                 type="button"
                 onClick={() => onSelectItem(item.id)}
                 data-bey-id={item.id}
-                className="group absolute overflow-hidden border text-left transition-transform duration-200 hover:z-10 hover:scale-[1.045] focus-visible:z-10 focus-visible:scale-[1.045]"
+                className="group absolute overflow-hidden text-left transition-transform duration-200 hover:z-10 hover:scale-[1.045] focus-visible:z-10 focus-visible:scale-[1.045]"
                 style={{
                   left,
                   top,
                   width: `${CELL_W}px`,
                   height: `${CELL_H}px`,
-                  borderColor: isSelected ? accent : "rgba(255,255,255,0.12)",
                   boxShadow: isSelected
                     ? `0 0 0 2px ${accent} inset, 0 20px 36px rgba(0,0,0,0.42)`
                     : "0 12px 28px rgba(0,0,0,0.32)",

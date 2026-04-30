@@ -9,9 +9,9 @@ import CommandPalette from "@/components/ui/CommandPalette";
 import AgentationToolbar from "@/components/ui/AgentationToolbar";
 
 export const metadata: Metadata = {
-  title: "Beyblade Metal Fusion — Tops & Bladers",
+  title: "Yamparala Favourites — A personal catalog",
   description:
-    "A curated showcase of Beyblade Metal Fight tops across the trilogy (Metal Fusion, Metal Masters, Metal Fury) — components, types, stats, and the bladers who wield them.",
+    "A living catalog of the things Yamparala loves — laid out, archived, and explorable. Starting with Beyblades, with more collections on the way.",
 };
 
 export default function RootLayout({

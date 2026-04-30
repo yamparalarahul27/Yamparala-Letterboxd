@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Search as SearchIcon, X } from "lucide-react";
+import { Search as SearchIcon, X, ArrowUp, ArrowDown, CornerDownLeft } from "lucide-react";
 import {
   BEYBLADES,
   CHARACTERS,
@@ -241,10 +241,17 @@ export default function CommandPalette() {
                 {CHARACTERS.length} bladers, and {PARTS.length} parts.
               </p>
               <p
-                className="text-[10px] mt-3 uppercase tracking-widest"
+                className="text-[10px] mt-3 uppercase tracking-widest inline-flex items-center justify-center gap-1.5"
                 style={{ color: "#444", fontFamily: "var(--font-geist-mono)" }}
               >
-                ↑↓ navigate · ↵ open · esc close
+                <ArrowUp size={10} />
+                <ArrowDown size={10} />
+                <span>navigate</span>
+                <span aria-hidden>·</span>
+                <CornerDownLeft size={10} />
+                <span>open</span>
+                <span aria-hidden>·</span>
+                <span>esc close</span>
               </p>
             </div>
           ) : flat.length === 0 ? (

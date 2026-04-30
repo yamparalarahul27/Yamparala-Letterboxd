@@ -1,77 +1,123 @@
-"use client";
-
-import { useMemo, useState } from "react";
 import Link from "next/link";
-import CardWithCornerShine from "@/components/ui/CardWithCornerShine";
-import { TypeChip, StatBar, BeyHero, ComponentRow } from "@/components/ui/bey-bits";
 import {
-  BEYBLADES,
-  SERIES,
-  type BeybladeType,
-  type BeybladeSeries,
-} from "@/data/beyblades";
-import { TYPE_COLORS, TYPE_DEFINITIONS, ANATOMY_PARTS } from "@/data/design-tokens";
+  Disc,
+  Film,
+  BookOpen,
+  Music,
+  Gamepad2,
+  Tv,
+  ArrowUpRight,
+  Sparkles,
+  type LucideIcon,
+} from "lucide-react";
+import CardWithCornerShine from "@/components/ui/CardWithCornerShine";
+import { BEYBLADES, CHARACTERS, PARTS } from "@/data/beyblades";
 
-const TYPES: ("All" | BeybladeType)[] = ["All", "Attack", "Defense", "Stamina", "Balance"];
-const SERIES_FILTERS: ("All" | BeybladeSeries)[] = ["All", ...SERIES];
+type CollectionStatus = "live" | "coming-soon";
 
-// ──────────────────────────────────────────────────────────────────────
-// Page
-// ──────────────────────────────────────────────────────────────────────
+type Collection = {
+  id: string;
+  title: string;
+  tagline: string;
+  description: string;
+  href: string;
+  icon: LucideIcon;
+  accent: string;
+  status: CollectionStatus;
+  count?: number;
+  countLabel?: string;
+};
+
+const COLLECTIONS: Collection[] = [
+  {
+    id: "beyblades",
+    title: "Beyblades",
+    tagline: "Metal Fight tops, parts, and bladers.",
+    description:
+      "The full Metal Fusion / Masters / Fury roster — components, types, stats, and the bladers who wield them.",
+    href: "/beyblades",
+    icon: Disc,
+    accent: "#FF4752",
+    status: "live",
+    count: BEYBLADES.length + CHARACTERS.length + PARTS.length,
+    countLabel: "items",
+  },
+  {
+    id: "films",
+    title: "Films",
+    tagline: "Movies that left a mark.",
+    description: "From late-night rewatches to first-time gut-punches — a list-of-lists in progress.",
+    href: "#",
+    icon: Film,
+    accent: "#FFC857",
+    status: "coming-soon",
+  },
+  {
+    id: "books",
+    title: "Books",
+    tagline: "Stories worth re-reading.",
+    description: "Fiction, non-fiction, and the occasional manga shelf — annotated and dog-eared.",
+    href: "#",
+    icon: BookOpen,
+    accent: "#4ADE80",
+    status: "coming-soon",
+  },
+  {
+    id: "music",
+    title: "Music",
+    tagline: "Albums on heavy rotation.",
+    description: "The records that shaped the playlists, sorted by mood, era, and weather.",
+    href: "#",
+    icon: Music,
+    accent: "#A78BFA",
+    status: "coming-soon",
+  },
+  {
+    id: "games",
+    title: "Games",
+    tagline: "Worlds I keep returning to.",
+    description: "Single-player runs, co-op nights, and the comfort games that never quite leave the SSD.",
+    href: "#",
+    icon: Gamepad2,
+    accent: "#40A2FF",
+    status: "coming-soon",
+  },
+  {
+    id: "anime",
+    title: "Anime",
+    tagline: "Series binged and rewatched.",
+    description: "From the shōnen classics to the slow-burn favourites — beys included.",
+    href: "#",
+    icon: Tv,
+    accent: "#F472B6",
+    status: "coming-soon",
+  },
+];
+
 export default function HomePage() {
-  const [filter, setFilter] = useState<(typeof TYPES)[number]>("All");
-  const [seriesFilter, setSeriesFilter] = useState<(typeof SERIES_FILTERS)[number]>("All");
+  const liveCount = COLLECTIONS.filter((c) => c.status === "live").length;
+  const totalItems = COLLECTIONS.reduce((sum, c) => sum + (c.count ?? 0), 0);
 
-  const filtered = useMemo(
-    () =>
-      BEYBLADES.filter((b) => {
-        if (filter !== "All" && b.type !== filter) return false;
-        if (seriesFilter !== "All" && b.series !== seriesFilter) return false;
-        return true;
-      }),
-    [filter, seriesFilter]
-  );
-
-  const totals = useMemo(() => {
-    const types: Record<BeybladeType, number> = {
-      Attack: 0,
-      Defense: 0,
-      Stamina: 0,
-      Balance: 0,
-    };
-    const seriesCounts: Record<BeybladeSeries, number> = {
-      "Metal Fusion": 0,
-      "Metal Masters": 0,
-      "Metal Fury": 0,
-    };
-    BEYBLADES.forEach((b) => {
-      types[b.type] += 1;
-      seriesCounts[b.series] += 1;
-    });
-    return { ...types, series: seriesCounts };
-  }, []);
-
-  const stats = [
-    { label: "Tops Cataloged", value: BEYBLADES.length.toString(), unit: "" },
-    { label: "Metal Fusion", value: totals.series["Metal Fusion"].toString(), unit: "" },
-    { label: "Metal Masters", value: totals.series["Metal Masters"].toString(), unit: "" },
-    { label: "Metal Fury", value: totals.series["Metal Fury"].toString(), unit: "" },
+  const heroStats = [
+    { label: "Collections live", value: liveCount.toString() },
+    { label: "Items cataloged", value: totalItems.toString() },
+    { label: "More on the way", value: (COLLECTIONS.length - liveCount).toString() },
   ];
 
   return (
     <div className="min-h-screen" style={{ background: "#000", color: "#EFEFEF" }}>
-      {/* ── Hero Section ── */}
+      {/* ── Hero ── */}
       <section className="relative border-b" style={{ borderColor: "#252525" }}>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(255,71,82,0.08) 0%, transparent 70%)",
+              "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(255,71,82,0.10) 0%, transparent 70%)",
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-24 sm:py-32 text-center">
           <span
-            className="inline-block px-3 py-1 text-[11px] font-bold tracking-widest uppercase mb-6"
+            className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-bold tracking-widest uppercase mb-6"
             style={{
               background: "rgba(255,71,82,0.12)",
               color: "#FF4752",
@@ -80,28 +126,30 @@ export default function HomePage() {
               fontFamily: "var(--font-geist-mono)",
             }}
           >
-            Metal Fight Beyblade · 2009–2012
+            <Sparkles size={12} />
+            Personal Catalog
           </span>
 
           <h1 className="text-heading-64 sm:text-heading-72 mb-6" style={{ color: "#EFEFEF" }}>
-            Let it <span style={{ color: "#FF4752" }}>rip.</span>
+            Yamparala <span style={{ color: "#FF4752" }}>Favourites.</span>
           </h1>
 
           <p
-            className="text-label-16 max-w-xl mx-auto mb-10"
+            className="text-label-16 max-w-2xl mx-auto mb-10"
             style={{
               color: "#666666",
               fontFamily: "var(--font-geist-sans)",
               lineHeight: "1.7",
             }}
           >
-            A curated showcase of <span style={{ color: "#CACACA" }}>Beyblade Metal Fusion</span> tops —
-            their components, types, and stats, all in one place.
+            A living catalog of the things I love — laid out, archived, and explorable.
+            Started with <span style={{ color: "#CACACA" }}>Beyblades</span>. More
+            collections on the way.
           </p>
 
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <a
-              href="#collection"
+              href="#collections"
               className="px-6 py-2.5 text-sm font-medium transition-all duration-150"
               style={{
                 background: "#FF4752",
@@ -109,17 +157,11 @@ export default function HomePage() {
                 borderRadius: "0px",
                 fontFamily: "var(--font-geist-sans)",
               }}
-              onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLElement).style.background = "#FF2030")
-              }
-              onMouseLeave={(e) =>
-                ((e.currentTarget as HTMLElement).style.background = "#FF4752")
-              }
             >
-              Browse Collection
+              Browse Collections
             </a>
             <a
-              href="#anatomy"
+              href="#about"
               className="px-6 py-2.5 text-sm font-medium transition-all duration-150"
               style={{
                 background: "transparent",
@@ -128,25 +170,17 @@ export default function HomePage() {
                 border: "1px solid #252525",
                 fontFamily: "var(--font-geist-sans)",
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = "#555";
-                (e.currentTarget as HTMLElement).style.color = "#EFEFEF";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = "#252525";
-                (e.currentTarget as HTMLElement).style.color = "#CACACA";
-              }}
             >
-              Anatomy of a Bey
+              About this catalog
             </a>
           </div>
         </div>
       </section>
 
-      {/* ── Stats Row ── */}
+      {/* ── Stats ── */}
       <section className="border-b" style={{ borderColor: "#252525" }}>
         <div
-          className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0"
+          className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-3 divide-x"
           style={
             {
               borderColor: "#252525",
@@ -154,15 +188,10 @@ export default function HomePage() {
             } as React.CSSProperties
           }
         >
-          {stats.map((stat) => (
+          {heroStats.map((stat) => (
             <div key={stat.label} className="px-6 py-6 flex flex-col gap-1">
               <span className="text-num-40" style={{ color: "#EFEFEF" }}>
                 {stat.value}
-                {stat.unit && (
-                  <span className="text-label-12-mono ml-1" style={{ color: "#666666" }}>
-                    {stat.unit}
-                  </span>
-                )}
               </span>
               <span
                 className="text-label-12"
@@ -175,304 +204,81 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Anatomy Section ── */}
-      <section
-        id="anatomy"
-        className="border-b"
-        style={{ borderColor: "#252525", background: "#0A0A0A" }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="mb-10">
-            <p
-              className="text-label-12 uppercase tracking-widest mb-2"
-              style={{ color: "#FF4752", fontFamily: "var(--font-geist-mono)" }}
-            >
-              Anatomy
-            </p>
-            <h2 className="text-heading-32" style={{ color: "#EFEFEF" }}>
-              Five parts. <span style={{ color: "#666666" }}>One spinning top.</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-            {ANATOMY_PARTS.map((part) => (
-              <CardWithCornerShine key={part.name} padding="md">
-                <div className="flex flex-col gap-3 h-full">
-                  <span
-                    className="text-num-32"
-                    style={{ color: "#FF4752", lineHeight: 1 }}
-                  >
-                    {part.short}
-                  </span>
-                  <h3
-                    className="text-heading-16"
-                    style={{ color: "#EFEFEF" }}
-                  >
-                    {part.name}
-                  </h3>
-                  <p
-                    className="text-label-13"
-                    style={{
-                      color: "#666666",
-                      fontFamily: "var(--font-geist-sans)",
-                      lineHeight: "1.6",
-                    }}
-                  >
-                    {part.purpose}
-                  </p>
-                </div>
-              </CardWithCornerShine>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Collection Section ── */}
-      <section id="collection" className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
-        <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
-          <div>
-            <p
-              className="text-label-12 uppercase tracking-widest mb-2"
-              style={{ color: "#FF4752", fontFamily: "var(--font-geist-mono)" }}
-            >
-              Collection
-            </p>
-            <h2 className="text-heading-32" style={{ color: "#EFEFEF" }}>
-              The Bey Roster
-            </h2>
-            <p
-              className="text-label-13 mt-1"
-              style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
-            >
-              {filtered.length} {filtered.length === 1 ? "top" : "tops"}
-              {filter !== "All" && <> · {filter}</>}
-              {seriesFilter !== "All" && <> · {seriesFilter}</>}
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-2 items-start sm:items-end">
-            {/* Type filter row */}
-            <div className="flex items-center gap-2 flex-wrap">
-              {TYPES.map((t) => {
-                const active = filter === t;
-                const accent =
-                  t === "All" ? "#FF4752" : TYPE_COLORS[t as BeybladeType].fg;
-                return (
-                  <button
-                    key={t}
-                    onClick={() => setFilter(t)}
-                    className="px-3 py-1 text-[12px] font-medium transition-all duration-150"
-                    style={{
-                      borderRadius: "6px",
-                      border: `1px solid ${active ? accent : "#252525"}`,
-                      background: active ? accent : "transparent",
-                      color: active ? "#0A0A0A" : "#CACACA",
-                      fontFamily: "var(--font-geist-mono)",
-                    }}
-                  >
-                    {t}
-                  </button>
-                );
-              })}
-            </div>
-            {/* Series filter row */}
-            <div className="flex items-center gap-2 flex-wrap">
-              <span
-                className="text-[10px] uppercase tracking-widest mr-1"
-                style={{ color: "#444", fontFamily: "var(--font-geist-mono)" }}
-              >
-                Series
-              </span>
-              {SERIES_FILTERS.map((s) => {
-                const active = seriesFilter === s;
-                return (
-                  <button
-                    key={s}
-                    onClick={() => setSeriesFilter(s)}
-                    className="px-3 py-1 text-[11px] font-medium transition-all duration-150"
-                    style={{
-                      borderRadius: "6px",
-                      border: `1px solid ${active ? "#CACACA" : "#252525"}`,
-                      background: active ? "#CACACA" : "transparent",
-                      color: active ? "#0A0A0A" : "#666666",
-                      fontFamily: "var(--font-geist-mono)",
-                    }}
-                  >
-                    {s === "All" ? "All series" : s}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-          {filtered.map((b) => {
-            const c = TYPE_COLORS[b.type];
-            return (
-              <Link key={b.id} href={`/bey/${b.id}`} className="block group">
-              <CardWithCornerShine padding="lg">
-                <div className="flex flex-col gap-5 h-full cursor-pointer">
-                  {/* Header row */}
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex items-center gap-2">
-                      <TypeChip type={b.type} />
-                      <span
-                        className="text-[11px]"
-                        style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
-                      >
-                        {b.code}
-                      </span>
-                    </div>
-                    <span
-                      className="text-[11px] uppercase tracking-wider"
-                      style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
-                    >
-                      Debut · {b.debut}
-                    </span>
-                  </div>
-
-                  {/* Name + combo */}
-                  <div>
-                    <h3 className="text-heading-24" style={{ color: "#EFEFEF" }}>
-                      {b.name}
-                    </h3>
-                    <p
-                      className="text-label-12-mono mt-1"
-                      style={{ color: c.fg }}
-                    >
-                      {b.combo}
-                    </p>
-                  </div>
-
-                  {/* Hero image / placeholder */}
-                  <BeyHero bey={b} accent={c.fg} />
-
-                  {/* Description */}
-                  <p
-                    className="text-label-13"
-                    style={{
-                      color: "#CACACA",
-                      fontFamily: "var(--font-geist-sans)",
-                      lineHeight: "1.6",
-                    }}
-                  >
-                    {b.description}
-                  </p>
-
-                  {/* Components grid */}
-                  <div className="grid grid-cols-2 gap-x-6">
-                    <div>
-                      <ComponentRow label="Energy Ring" value={b.energyRing} />
-                      <ComponentRow label="Fusion Wheel" value={b.fusionWheel} />
-                    </div>
-                    <div>
-                      <ComponentRow label="Spin Track" value={b.spinTrack} />
-                      <ComponentRow label="Tip" value={b.performanceTip} />
-                    </div>
-                  </div>
-
-                  {/* Stats */}
-                  <div className="flex flex-col gap-2 pt-1">
-                    <StatBar label="Attack" value={b.stats.attack} color={TYPE_COLORS.Attack.fg} />
-                    <StatBar label="Defense" value={b.stats.defense} color={TYPE_COLORS.Defense.fg} />
-                    <StatBar label="Stamina" value={b.stats.stamina} color={TYPE_COLORS.Stamina.fg} />
-                  </div>
-
-                  {/* Footer */}
-                  <div
-                    className="flex items-center justify-between pt-4 mt-auto"
-                    style={{ borderTop: "1px solid #252525" }}
-                  >
-                    <div>
-                      <p className="text-label-12-mono" style={{ color: "#666666" }}>
-                        Owner
-                      </p>
-                      <p
-                        className="text-label-13 mt-0.5"
-                        style={{ color: "#EFEFEF", fontFamily: "var(--font-geist-mono)" }}
-                      >
-                        {b.owner}
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-label-12-mono" style={{ color: "#666666" }}>
-                        Weight
-                      </p>
-                      <p
-                        className="text-label-13 mt-0.5 tabular-nums"
-                        style={{ color: "#EFEFEF", fontFamily: "var(--font-geist-mono)" }}
-                      >
-                        {b.weight}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CardWithCornerShine>
-              </Link>
-            );
-          })}
-        </div>
-
-        {filtered.length === 0 && (
-          <div
-            className="mt-8 px-6 py-10 border text-center"
-            style={{
-              borderColor: "#252525",
-              background: "rgba(255,71,82,0.04)",
-            }}
+      {/* ── Collections Hub ── */}
+      <section id="collections" className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <div className="mb-10">
+          <p
+            className="text-label-12 uppercase tracking-widest mb-2"
+            style={{ color: "#FF4752", fontFamily: "var(--font-geist-mono)" }}
           >
-            <p
-              className="text-label-14"
-              style={{ color: "#CACACA", fontFamily: "var(--font-geist-mono)" }}
-            >
-              No tops match this filter — yet.
-            </p>
-          </div>
-        )}
-      </section>
+            Collections
+          </p>
+          <h2 className="text-heading-32" style={{ color: "#EFEFEF" }}>
+            Pick a shelf. <span style={{ color: "#666666" }}>More open over time.</span>
+          </h2>
+        </div>
 
-      {/* ── Types Section ── */}
-      <section
-        id="types"
-        className="border-t border-b"
-        style={{ borderColor: "#252525", background: "#0A0A0A" }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="mb-10">
-            <p
-              className="text-label-12 uppercase tracking-widest mb-2"
-              style={{ color: "#FF4752", fontFamily: "var(--font-geist-mono)" }}
-            >
-              Types
-            </p>
-            <h2 className="text-heading-32" style={{ color: "#EFEFEF" }}>
-              Four roles in the stadium.
-            </h2>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {COLLECTIONS.map((collection) => {
+            const Icon = collection.icon;
+            const isLive = collection.status === "live";
+            const Wrapper = ({ children }: { children: React.ReactNode }) =>
+              isLive ? (
+                <Link href={collection.href} className="block group">
+                  {children}
+                </Link>
+              ) : (
+                <div className="block" aria-disabled>
+                  {children}
+                </div>
+              );
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {TYPE_DEFINITIONS.map((t) => {
-              const c = TYPE_COLORS[t.type];
-              return (
-                <CardWithCornerShine key={t.type} padding="lg">
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-center justify-between">
-                      <TypeChip type={t.type} />
+            return (
+              <Wrapper key={collection.id}>
+                <CardWithCornerShine padding="lg">
+                  <div
+                    className="flex flex-col gap-4 h-full"
+                    style={{ opacity: isLive ? 1 : 0.55 }}
+                  >
+                    <div className="flex items-start justify-between gap-4">
                       <span
-                        className="text-num-32"
-                        style={{ color: c.fg, opacity: 0.6, lineHeight: 1 }}
+                        className="inline-flex items-center justify-center w-11 h-11"
+                        style={{
+                          background: `${collection.accent}1F`,
+                          border: `1px solid ${collection.accent}55`,
+                          color: collection.accent,
+                          borderRadius: "8px",
+                        }}
                       >
-                        {totals[t.type].toString().padStart(2, "0")}
+                        <Icon size={20} />
+                      </span>
+
+                      <span
+                        className="text-[10px] uppercase tracking-widest px-2 py-1"
+                        style={{
+                          color: isLive ? collection.accent : "#666",
+                          border: `1px solid ${isLive ? `${collection.accent}55` : "#252525"}`,
+                          background: isLive ? `${collection.accent}14` : "transparent",
+                          fontFamily: "var(--font-geist-mono)",
+                          borderRadius: "4px",
+                        }}
+                      >
+                        {isLive ? "Live" : "Coming soon"}
                       </span>
                     </div>
-                    <h3
-                      className="text-heading-20"
-                      style={{ color: "#EFEFEF" }}
-                    >
-                      {t.tagline}
-                    </h3>
+
+                    <div>
+                      <h3 className="text-heading-24" style={{ color: "#EFEFEF" }}>
+                        {collection.title}
+                      </h3>
+                      <p
+                        className="text-label-13 mt-1"
+                        style={{ color: collection.accent, fontFamily: "var(--font-geist-mono)" }}
+                      >
+                        {collection.tagline}
+                      </p>
+                    </div>
+
                     <p
                       className="text-label-14"
                       style={{
@@ -481,18 +287,48 @@ export default function HomePage() {
                         lineHeight: "1.6",
                       }}
                     >
-                      {t.description}
+                      {collection.description}
                     </p>
+
+                    <div
+                      className="flex items-center justify-between pt-4 mt-auto"
+                      style={{ borderTop: "1px solid #252525" }}
+                    >
+                      <span
+                        className="text-label-12-mono"
+                        style={{ color: "#666666" }}
+                      >
+                        {isLive
+                          ? `${collection.count} ${collection.countLabel}`
+                          : "Catalog opening soon"}
+                      </span>
+                      {isLive && (
+                        <span
+                          className="inline-flex items-center gap-1 text-[12px] transition-transform duration-150 group-hover:translate-x-0.5"
+                          style={{
+                            color: "#EFEFEF",
+                            fontFamily: "var(--font-geist-mono)",
+                          }}
+                        >
+                          Enter
+                          <ArrowUpRight size={14} />
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </CardWithCornerShine>
-              );
-            })}
-          </div>
+              </Wrapper>
+            );
+          })}
         </div>
       </section>
 
-      {/* ── About Section ── */}
-      <section id="about" className="border-t" style={{ borderColor: "#252525", background: "#000" }}>
+      {/* ── About ── */}
+      <section
+        id="about"
+        className="border-t"
+        style={{ borderColor: "#252525", background: "#0A0A0A" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 flex flex-col md:flex-row items-start gap-8">
           <div className="md:w-1/3">
             <p
@@ -502,7 +338,7 @@ export default function HomePage() {
               About
             </p>
             <h3 className="text-heading-32" style={{ color: "#EFEFEF" }}>
-              Why this <br /> collection?
+              A catalog,<br />not a feed.
             </h3>
           </div>
           <div className="md:w-2/3">
@@ -514,10 +350,10 @@ export default function HomePage() {
                 lineHeight: "1.8",
               }}
             >
-              Metal Fusion (or <span style={{ color: "#EFEFEF" }}>Metal Fight Beyblade</span>) launched
-              the modern era of Beyblade in 2009 — replacing plastic with metal-cored tops you could
-              swap, mix, and fine-tune. Every top is a four-part puzzle: Energy Ring, Fusion Wheel,
-              Spin Track, and Performance Tip.
+              <span style={{ color: "#EFEFEF" }}>Yamparala Favourites</span> is a personal,
+              long-form catalog — the things that earned a permanent spot, not whatever the
+              algorithm served last week. Each shelf is hand-curated, fully cross-linked,
+              and built to outlast the next platform shift.
             </p>
             <p
               className="text-label-16"
@@ -527,9 +363,9 @@ export default function HomePage() {
                 lineHeight: "1.8",
               }}
             >
-              This collection brings together the icons of that era — the Beys you grew up with, organized by
-              type, owner, and stats. A small love letter to a simpler stadium. Fan project, no
-              affiliation with Takara Tomy or Hasbro.
+              The first shelf is <span style={{ color: "#EFEFEF" }}>Beyblade Metal Fusion</span> —
+              every top, blader, and part documented. Films, books, music, games, and anime
+              shelves are next. New collections land when they&apos;re actually ready, not before.
             </p>
           </div>
         </div>
