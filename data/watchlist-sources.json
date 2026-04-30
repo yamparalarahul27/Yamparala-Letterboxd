@@ -1,0 +1,21 @@
+{
+  "$schema": "Mapping of Watchlist id -> external source id. Anime ids point to a MyAnimeList numeric id (used by api.jikan.moe). Movie/series ids point to a TMDB numeric id (used by api.themoviedb.org).",
+  "anime": {
+    "jikan": "https://api.jikan.moe/v4",
+    "mal": "https://myanimelist.net",
+    "sources": [
+      {
+        "id": "jujutsu-kaisen",
+        "malId": 40748
+      }
+    ]
+  },
+  "movies": {
+    "tmdb": "https://api.themoviedb.org/3",
+    "sources": []
+  },
+  "series": {
+    "tmdb": "https://api.themoviedb.org/3",
+    "sources": []
+  }
+}

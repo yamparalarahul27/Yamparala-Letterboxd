@@ -10,9 +10,14 @@ import {
   partTypeLabel,
   type PartType,
 } from "@/data/beyblades";
+import {
+  WATCHLIST,
+  watchCategoryLabel,
+  type WatchCategory,
+} from "@/data/watchlist";
 import { TYPE_COLORS } from "@/data/design-tokens";
 
-type EntryType = "bey" | "blader" | "part";
+type EntryType = "bey" | "blader" | "part" | "watch";
 
 interface Entry {
   type: EntryType;
@@ -29,6 +34,12 @@ const PART_ACCENT: Record<PartType, string> = {
   wheel: "#4F9DFF",
   ring: "#4ADE80",
   track: "#E5B84B",
+};
+
+const WATCH_ACCENT: Record<WatchCategory, string> = {
+  anime: "#FF4752",
+  movie: "#4F9DFF",
+  series: "#4ADE80",
 };
 
 function buildIndex(): Entry[] {
@@ -66,6 +77,18 @@ function buildIndex(): Entry[] {
       haystack: `${p.name} ${p.fullName ?? ""}`.toLowerCase(),
     });
   }
+  for (const w of WATCHLIST) {
+    const yearBit = w.year ? ` · ${w.year}` : "";
+    out.push({
+      type: "watch",
+      id: `${w.category}-${w.id}`,
+      name: w.title,
+      subtitle: `${watchCategoryLabel(w.category)} · ${w.status}${yearBit}`,
+      href: `/watchlist/${w.category}/${w.id}`,
+      accent: WATCH_ACCENT[w.category],
+      haystack: `${w.title} ${w.titleEnglish ?? ""} ${w.genres.join(" ")} ${w.category}`.toLowerCase(),
+    });
+  }
   return out;
 }
 
@@ -88,8 +111,9 @@ const TYPE_LABEL: Record<EntryType, string> = {
   bey: "Beyblades",
   blader: "Bladers",
   part: "Parts",
+  watch: "Watchlist",
 };
-const TYPE_ORDER: EntryType[] = ["bey", "blader", "part"];
+const TYPE_ORDER: EntryType[] = ["bey", "blader", "part", "watch"];
 
 export default function CommandPalette() {
   const [open, setOpen] = useState(false);
@@ -214,7 +238,7 @@ export default function CommandPalette() {
           <input
             ref={inputRef}
             type="text"
-            placeholder="Search Beyblades, bladers, parts…"
+            placeholder="Search Beyblades, bladers, parts, watchlist…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="flex-1 bg-transparent outline-none text-[15px]"
@@ -238,7 +262,8 @@ export default function CommandPalette() {
                 style={{ color: "#666", fontFamily: "var(--font-geist-mono)" }}
               >
                 Start typing to search across {BEYBLADES.length} Beyblades,{" "}
-                {CHARACTERS.length} bladers, and {PARTS.length} parts.
+                {CHARACTERS.length} bladers, {PARTS.length} parts, and{" "}
+                {WATCHLIST.length} watchlist entries.
               </p>
               <p
                 className="text-[10px] mt-3 uppercase tracking-widest inline-flex items-center justify-center gap-1.5"
@@ -319,7 +344,9 @@ export default function CommandPalette() {
                           ? "Bey"
                           : item.type === "blader"
                             ? "Blader"
-                            : "Part"}
+                            : item.type === "part"
+                              ? "Part"
+                              : "Watch"}
                       </span>
                     </button>
                   );

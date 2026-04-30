@@ -1,0 +1,20 @@
+{
+  "anime": [
+    {
+      "id": "jujutsu-kaisen",
+      "title": "Jujutsu Kaisen",
+      "titleEnglish": null,
+      "year": null,
+      "episodes": null,
+      "studios": [],
+      "genres": [],
+      "synopsis": "",
+      "image": null,
+      "source": null,
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    }
+  ]
+}
