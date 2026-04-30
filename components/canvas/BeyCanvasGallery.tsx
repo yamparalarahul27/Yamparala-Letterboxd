@@ -246,7 +246,7 @@ export default function BeyCanvasGallery() {
     const nextY = dragStartRef.current.y + dy;
 
     setTransform((prev) => {
-      const clamped = clampPosition(nextX, nextY, prev.scale);
+      const clamped = clampPosition(nextX, nextY);
       return { ...prev, ...clamped };
     });
 
