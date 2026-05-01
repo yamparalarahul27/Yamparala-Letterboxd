@@ -9,6 +9,7 @@ const navLinks = [
     { label: "Beyblades", href: "/beyblades" },
     { label: "Canvas", href: "/canvasgallery" },
     { label: "Bladers", href: "/bladers" },
+    { label: "Watchlist", href: "/watchlist" },
     { label: "About", href: "/#about" },
 ];
 

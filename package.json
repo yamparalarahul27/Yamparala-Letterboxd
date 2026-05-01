@@ -12,7 +12,9 @@
     "sync:beys": "node scripts/sync-beys.mjs",
     "sync:characters": "node scripts/sync-characters.mjs",
     "sync:parts": "node scripts/sync-parts.mjs",
-    "sync:all": "npm run sync:beys && npm run sync:characters && npm run sync:parts"
+    "sync:anime": "node scripts/sync-anime.mjs",
+    "sync:watchlist": "npm run sync:anime",
+    "sync:all": "npm run sync:beys && npm run sync:characters && npm run sync:parts && npm run sync:watchlist"
   },
   "dependencies": {
     "agentation": "^3.0.2",
