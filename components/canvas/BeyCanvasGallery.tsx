@@ -467,7 +467,7 @@ export default function BeyCanvasGallery() {
                   boxShadow: isSelected
                     ? `0 0 0 2px ${accent} inset, 0 20px 36px rgba(0,0,0,0.42)`
                     : "0 12px 28px rgba(0,0,0,0.32)",
-                  background: "#0D0D0D",
+                  background: "transparent",
                   transformOrigin: "center center",
                 }}
               >
@@ -477,7 +477,7 @@ export default function BeyCanvasGallery() {
                     alt={item.name}
                     fill
                     sizes="(max-width: 900px) 40vw, 248px"
-                    style={{ objectFit: "contain", background: "#090909" }}
+                    style={{ objectFit: "contain" }}
                     draggable={false}
                   />
                 ) : (
@@ -489,14 +489,11 @@ export default function BeyCanvasGallery() {
                 )}
 
                 <div
-                  className="absolute inset-x-0 bottom-0 px-3 py-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.88) 76%, rgba(0,0,0,0.95) 100%)",
-                  }}
+                  className="absolute inset-0 flex items-center justify-center px-3 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100"
+                  style={{ background: "rgba(0,0,0,0.55)" }}
                 >
                   <p
-                    className="text-[11px] font-medium"
+                    className="text-center text-[11px] font-medium"
                     style={{ color: "#EFEFEF", fontFamily: "var(--font-geist-mono)" }}
                   >
                     {item.name}
