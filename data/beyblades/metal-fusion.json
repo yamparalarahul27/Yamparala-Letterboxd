@@ -23,7 +23,7 @@
       "weight": "37.4g",
       "debut": "2009",
       "description": "Gingka's first Beyblade. The Rubber Flat tip drives explosive speed and aggressive smash attacks.",
-      "image": null,
+      "image": "/beys/storm-pegasus.png",
       "source": "https://beyblade.fandom.com/wiki/Storm_Pegasus"
     },
     {
@@ -143,7 +143,7 @@
       "weight": "37.7g",
       "debut": "2009",
       "description": "Aggressive defense — Benkei's bull-rush style hits hard while soaking heavy damage.",
-      "image": null,
+      "image": "/beys/dark-bull.png",
       "source": "https://beyblade.fandom.com/wiki/Dark_Bull"
     },
     {
@@ -191,7 +191,7 @@
       "weight": "39.6g",
       "debut": "2010",
       "description": "Gingka's evolved blade. Galaxy wheel hits with precision while R2F drives fierce movement.",
-      "image": null,
+      "image": "/beys/galaxy-pegasus.png",
       "source": "https://beyblade.fandom.com/wiki/Galaxy_Pegasus"
     },
     {
@@ -313,30 +313,6 @@
       "description": "Tetsuya's tactical Bey. M145 + Quake tip enables ledge-tipping tactics — a defensive trickster.",
       "image": "/beys/storm-capricorne.png",
       "source": "https://beyblade.fandom.com/wiki/Storm_Capricorne_M145Q"
-    },
-    {
-      "id": "killerken",
-      "name": "Killerken",
-      "code": "—",
-      "combo": "Killerken 100SF",
-      "type": "Stamina",
-      "series": "Metal Fusion",
-      "owner": "Tetsuya Watarigani",
-      "ownerId": "tetsuya-watarigani",
-      "energyRing": "Killerken",
-      "fusionWheel": "Storm",
-      "spinTrack": "100",
-      "performanceTip": "SF",
-      "stats": {
-        "attack": 5,
-        "defense": 5,
-        "stamina": 6
-      },
-      "weight": "—",
-      "debut": "2010",
-      "description": "Tetsuya's evolved crab-themed Bey. Heavier and more stable than Storm Capricorne.",
-      "image": null,
-      "source": "https://beyblade.fandom.com/wiki/Killerken"
     },
     {
       "id": "inferno-aquario",
