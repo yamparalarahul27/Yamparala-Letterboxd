@@ -25,7 +25,7 @@ const DATA_PATH = join(ROOT, "data", "characters.json");
 const SOURCES_PATH = join(ROOT, "data", "character-sources.json");
 const IMAGES_DIR = join(ROOT, "public", "bladers");
 
-const UA = "BeybladeMetalFusion/1.0 (fan-project)";
+const UA = "YamparalaFavourites/1.0 (fan-project)";
 
 // ── IO helpers ───────────────────────────────────────────────────────────
 async function readJson(path) {

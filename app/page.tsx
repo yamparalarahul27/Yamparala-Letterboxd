@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import CardWithCornerShine from "@/components/ui/CardWithCornerShine";
 import { BEYBLADES, CHARACTERS, PARTS } from "@/data/beyblades";
+import { WATCHLIST } from "@/data/watchlist";
 
 type CollectionStatus = "live" | "coming-soon";
 
@@ -43,14 +44,17 @@ const COLLECTIONS: Collection[] = [
     countLabel: "items",
   },
   {
-    id: "films",
-    title: "Films",
-    tagline: "Movies that left a mark.",
-    description: "From late-night rewatches to first-time gut-punches — a list-of-lists in progress.",
-    href: "#",
-    icon: Film,
-    accent: "#FFC857",
-    status: "coming-soon",
+    id: "watchlist",
+    title: "Watchlist",
+    tagline: "Anime, movies, and series tracked.",
+    description:
+      "From the shōnen classics to late-night rewatches — everything watched, watching, or planned, in one tracker.",
+    href: "/watchlist",
+    icon: Tv,
+    accent: "#F472B6",
+    status: "live",
+    count: WATCHLIST.length,
+    countLabel: "titles",
   },
   {
     id: "books",
@@ -83,13 +87,13 @@ const COLLECTIONS: Collection[] = [
     status: "coming-soon",
   },
   {
-    id: "anime",
-    title: "Anime",
-    tagline: "Series binged and rewatched.",
-    description: "From the shōnen classics to the slow-burn favourites — beys included.",
+    id: "films",
+    title: "Films",
+    tagline: "Movies that left a mark.",
+    description: "From late-night rewatches to first-time gut-punches — a list-of-lists in progress.",
     href: "#",
-    icon: Tv,
-    accent: "#F472B6",
+    icon: Film,
+    accent: "#FFC857",
     status: "coming-soon",
   },
 ];

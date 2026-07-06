@@ -2,7 +2,10 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, X, Search as SearchIcon, Command, ChevronRight } from "lucide-react";
-import { BEYBLADES } from "@/data/beyblades";
+import { BEYBLADES, CHARACTERS, PARTS } from "@/data/beyblades";
+
+// Matches the home page's "Items cataloged" stat.
+const TOTAL_ITEMS = BEYBLADES.length + CHARACTERS.length + PARTS.length;
 
 const navLinks = [
     { label: "Collections", href: "/#collections" },
@@ -152,7 +155,7 @@ export default function Navbar() {
                                 className="text-xs font-medium text-[#EFEFEF] tabular-nums"
                                 style={{ fontFamily: "var(--font-geist-mono)" }}
                             >
-                                {BEYBLADES.length}
+                                {TOTAL_ITEMS}
                             </span>
                         </div>
                     </div>
@@ -203,7 +206,7 @@ export default function Navbar() {
                             ))}
                             <div className="mt-4 pt-4 border-t border-[#252525] flex justify-between items-center px-4">
                                 <span className="text-xs text-[#666666]">Items cataloged</span>
-                                <span className="text-xs text-[#EFEFEF] tabular-nums">{BEYBLADES.length}</span>
+                                <span className="text-xs text-[#EFEFEF] tabular-nums">{TOTAL_ITEMS}</span>
                             </div>
                         </nav>
                     </div>

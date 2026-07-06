@@ -32,19 +32,16 @@ export default function BladersIndexPage() {
     return ["All", ...Array.from(set).sort()];
   }, [role]);
 
-  // If the current team isn't in the team list for the new role, reset to All.
-  if (team !== "All" && !teams.includes(team)) {
-    // Defer state update past render; React will warn otherwise.
-    setTimeout(() => setTeam("All"), 0);
-  }
+  // If the stored team isn't valid for the current role, treat it as All.
+  const activeTeam = team !== "All" && !teams.includes(team) ? "All" : team;
 
   const filtered = useMemo(() => {
     return CHARACTERS.filter((c) => {
       if (role !== "All" && c.role !== role) return false;
-      if (team !== "All" && c.team !== team) return false;
+      if (activeTeam !== "All" && c.team !== activeTeam) return false;
       return true;
     });
-  }, [role, team]);
+  }, [role, activeTeam]);
 
   // Per-role counts for the chips.
   const roleCounts = useMemo(() => {
@@ -140,7 +137,7 @@ export default function BladersIndexPage() {
               Team
             </span>
             {teams.map((t) => {
-              const active = team === t;
+              const active = activeTeam === t;
               return (
                 <button
                   key={t}
@@ -167,7 +164,7 @@ export default function BladersIndexPage() {
         >
           {filtered.length} {filtered.length === 1 ? "blader" : "bladers"}
           {role !== "All" && <> · {role}</>}
-          {team !== "All" && <> · {team}</>}
+          {activeTeam !== "All" && <> · {activeTeam}</>}
         </p>
 
         {/* Grid */}

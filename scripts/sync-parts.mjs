@@ -32,7 +32,7 @@ const PART_FILES = {
   track: { path: join(ROOT, "data", "parts", "tracks.json"), key: "tracks" },
 };
 
-const UA = "BeybladeMetalFusion/1.0 (fan-project)";
+const UA = "YamparalaFavourites/1.0 (fan-project)";
 
 // ── IO helpers ───────────────────────────────────────────────────────────
 async function readJson(path) {

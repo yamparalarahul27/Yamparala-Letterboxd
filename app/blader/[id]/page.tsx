@@ -92,12 +92,12 @@ export default async function BladerDetailPage({
         />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16">
           <Link
-            href="/#collection"
+            href="/bladers"
             className="inline-flex items-center gap-1 text-[12px] mb-8 transition-colors duration-150"
             style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
           >
             <ChevronLeft size={14} />
-            Back to collection
+            Back to bladers
           </Link>
 
           <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start">

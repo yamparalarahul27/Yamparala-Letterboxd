@@ -69,7 +69,7 @@ export default async function PartDetailPage({
         />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16">
           <Link
-            href="/#collection"
+            href="/beyblades#collection"
             className="inline-flex items-center gap-1 text-[12px] mb-8 transition-colors duration-150"
             style={{ color: "#666666", fontFamily: "var(--font-geist-mono)" }}
           >
