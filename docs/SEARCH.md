@@ -7,7 +7,7 @@ The search palette is a global, keyboard-driven overlay that lets you jump to an
 - **Lives in** [`components/ui/CommandPalette.tsx`](../components/ui/CommandPalette.tsx)
 - **Mounted globally** in [`app/layout.tsx`](../app/layout.tsx), so it's available on every route
 - **Triggered** by `⌘K` / `Ctrl+K`, by the navbar search button, or by dispatching a `palette:open` window event
-- **Indexes** all Beys (51), bladers (41), and parts (79) — ~170 entries total
+- **Indexes** all Beys (50), bladers (41), and parts (79) — ~170 entries total
 - **No external dependencies** — fuzzy matching is ~30 lines of local TypeScript scoring
 - **Client-only** — uses `"use client"`; doesn't add any new static routes
 
@@ -99,7 +99,7 @@ Returns `null`. No DOM, no listeners except the global keyboard one. Body scroll
 │  🔍  [autofocused input]              ✕   │
 ├────────────────────────────────────────────┤
 │                                            │
-│   Start typing to search across 51         │
+│   Start typing to search across 50         │
 │   Beyblades, 41 bladers, and 79 parts.    │
 │                                            │
 │           ↑↓ NAVIGATE · ↵ OPEN · ESC CLOSE │

@@ -32,7 +32,7 @@ const SERIES_FILES = {
 const SOURCES_PATH = join(ROOT, "data", "sources.json");
 const IMAGES_DIR = join(ROOT, "public", "beys");
 
-const UA = "BeybladeMetalFusion/1.0 (fan-project)";
+const UA = "YamparalaFavourites/1.0 (fan-project)";
 
 // ── Utilities ────────────────────────────────────────────────────────────
 async function readJson(path) {

@@ -39,7 +39,6 @@ const IGNORED_FILES = new Set(["package-lock.json"]);
 
 async function* walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
-    if (entry.name.startsWith(".") && IGNORED_DIRS.has(entry.name)) continue;
     if (IGNORED_DIRS.has(entry.name)) continue;
     const full = join(dir, entry.name);
     if (entry.isDirectory()) {

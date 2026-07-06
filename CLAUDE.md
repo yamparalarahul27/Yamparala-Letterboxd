@@ -11,7 +11,7 @@ Two checks, both in `npm run check`:
 1. **`npm run lint`** — ESLint's `max-lines` rule covers `.ts`, `.tsx`, `.mjs`, `.js` (configured in `eslint.config.mjs`).
 2. **`npm run check:lines`** — `scripts/check-lines.mjs` covers `.json`, `.css`, `.md`, `.yml`/`.yaml` files.
 
-CI runs both. A file over the cap fails the build.
+CI (`.github/workflows/ci.yml`) runs both on every PR and push to `main`, plus `npm run typecheck` and the production build. A file over the cap fails the build.
 
 ### Exemptions
 
@@ -24,7 +24,7 @@ CI runs both. A file over the cap fails the build.
 Don't bypass — split. Natural split patterns we use:
 
 - **Data by type** — `data/parts/` is split into `tips.json`, `wheels.json`, `rings.json`, `tracks.json`.
-- **Data by series** — when `data/beyblades.json` grows past 700, split into `data/beyblades/{metal-fusion,metal-masters,metal-fury}.json`.
+- **Data by series** — `data/beyblades/` is split into `{metal-fusion,metal-masters,metal-fury}.json`; `data/watchlist/` into `{anime,movies,series}.json`.
 - **Code by responsibility** — extract helper components into `components/ui/`, extract design constants into `data/design-tokens.ts`, etc.
 - **Pages by section** — if a page grows large, extract sections into co-located components (e.g. `app/foo/_components/Hero.tsx`).
 

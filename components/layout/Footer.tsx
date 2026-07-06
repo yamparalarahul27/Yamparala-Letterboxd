@@ -7,6 +7,7 @@ const footerLinks = [
     { label: "Beyblades", href: "/beyblades" },
     { label: "Bladers", href: "/bladers" },
     { label: "Canvas", href: "/canvasgallery" },
+    { label: "Watchlist", href: "/watchlist" },
     { label: "About", href: "/#about" },
 ];
 
