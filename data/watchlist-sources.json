@@ -4,10 +4,23 @@
     "jikan": "https://api.jikan.moe/v4",
     "mal": "https://myanimelist.net",
     "sources": [
-      {
-        "id": "jujutsu-kaisen",
-        "malId": 40748
-      }
+      { "id": "death-note", "malId": 1535 },
+      { "id": "naruto", "malId": 20 },
+      { "id": "naruto-shippuden", "malId": 1735 },
+      { "id": "dr-stone", "malId": 38691 },
+      { "id": "kaiju-no-8", "malId": 52588 },
+      { "id": "hells-paradise", "malId": 46569 },
+      { "id": "one-punch-man", "malId": 30276 },
+      { "id": "record-of-ragnarok", "malId": 44880 },
+      { "id": "my-hero-academia", "malId": 31964 },
+      { "id": "demon-slayer", "malId": 38000 },
+      { "id": "blue-lock", "malId": 49596 },
+      { "id": "tokyo-revengers", "malId": 42249 },
+      { "id": "tokyo-ghoul", "malId": 22319 },
+      { "id": "jujutsu-kaisen", "malId": 40748 },
+      { "id": "mashle", "malId": 52211 },
+      { "id": "solo-leveling", "malId": 52299 },
+      { "id": "black-clover", "malId": 34572 }
     ]
   },
   "movies": {

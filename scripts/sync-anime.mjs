@@ -69,7 +69,9 @@ function pickImageUrl(images) {
 
 function mapJikan(data) {
   return {
-    title: data.title || data.title_japanese || "",
+    // Prefer the English title for display (e.g. "Solo Leveling" over
+    // "Ore dake Level Up na Ken"); fall back to romaji, then Japanese.
+    title: data.title_english || data.title || data.title_japanese || "",
     titleEnglish: data.title_english || null,
     year: data.year ?? (data.aired?.from ? new Date(data.aired.from).getUTCFullYear() : null),
     episodes: data.episodes ?? null,

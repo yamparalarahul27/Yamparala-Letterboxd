@@ -1,3 +1,23 @@
 {
-  "series": []
+  "series": [
+    {
+      "id": "the-sandman",
+      "title": "The Sandman",
+      "titleEnglish": "The Sandman",
+      "year": 2022,
+      "seasons": 2,
+      "episodes": 21,
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "synopsis": "A rich blend of modern myth and dark fantasy in which contemporary fiction, historical drama and legend are seamlessly interwoven, The Sandman follows the people and places affected by Morpheus, the Dream King, as he mends the cosmic — and human — mistakes he's made during his vast existence.",
+      "image": "/watchlist/series/the-sandman.jpg",
+      "source": "https://www.netflix.com/title/81150303",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    }
+  ]
 }
