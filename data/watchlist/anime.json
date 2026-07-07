@@ -1,16 +1,365 @@
 {
   "anime": [
     {
+      "id": "death-note",
+      "title": "Death Note",
+      "titleEnglish": "Death Note",
+      "year": 2006,
+      "episodes": 37,
+      "studios": [
+        "Madhouse"
+      ],
+      "genres": [
+        "Supernatural",
+        "Suspense"
+      ],
+      "synopsis": "Brutal murders, petty thefts, and senseless violence pollute the human world. In contrast, the realm of death gods is a humdrum, unchanging gambling den. The ingenious 17-year-old Japanese student Light Yagami and sadistic god of death Ryuk share one belief: their worlds are rotten.\n\nFor his own amusement, Ryuk drops his Death Note into the human world. Light stumbles upon it, deeming the first of its rules ridiculous: the human whose name is written in this note shall die. However, the temptation is too great, and Light experiments by writing a felon's name, which disturbingly enacts his first murder.\n\nAware of the terrifying godlike power that has fallen into his hands, Light—under the alias Kira—follows his wicked sense of justice with the ultimate goal of cleansing the world of all evil-doers. The meticulous mastermind detective L is already on his trail, but as Light's brilliance rivals L's, the grand chase for Kira turns into an intense battle of wits that can only end when one of them is dead.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/death-note.webp",
+      "source": "https://myanimelist.net/anime/1535/Death_Note",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "naruto",
+      "title": "Naruto",
+      "titleEnglish": "Naruto",
+      "year": 2002,
+      "episodes": 220,
+      "studios": [
+        "Studio Pierrot"
+      ],
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "synopsis": "Twelve years ago, a colossal demon fox terrorized the world. During the monster's attack on the Hidden Leaf Village, the Hokage—the village's leader and most powerful ninja—sacrifices himself to seal the beast inside a newborn, relieving civilization from destruction while dooming the baby to a lonely life.\n\nNow, after years of being shunned and bullied, Naruto Uzumaki pesters the village with elaborate pranks and vandalism. Despite these antics, he works hard to achieve his dream: to become the Hokage and earn the acknowledgement of those who have mistreated him for his entire life. Naruto joins Team 7, a ninja squad made up of two of his peers—prodigy Sasuke Uchiha and clever Sakura Haruno.\n\nUnder the aloof Kakashi Hatake's leadership, Team 7 takes on a series of difficult missions, forcing its members to grow in strength and comradery despite their many differences. Naruto strives to stand out in his rivalry with Sasuke and earn the romantic affection of Sakura. But as the trio brush against danger and death, their tragic pasts threaten to tear them apart.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/naruto.webp",
+      "source": "https://myanimelist.net/anime/20/Naruto",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "naruto-shippuden",
+      "title": "Naruto Shippuden",
+      "titleEnglish": "Naruto Shippuden",
+      "year": 2007,
+      "episodes": 500,
+      "studios": [
+        "Studio Pierrot"
+      ],
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "synopsis": "It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world.\n \nAlthough Naruto is older and sinister events loom on the horizon, he has changed little in personality—still rambunctious and childish—though he is now far more confident and possesses an even greater determination to protect his friends and home. Come whatever may, Naruto will carry on with the fight for what is important to him, even at the expense of his own body, in the continuation of the saga about the boy who wishes to become Hokage.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/naruto-shippuden.webp",
+      "source": "https://myanimelist.net/anime/1735/Naruto__Shippuuden",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "dr-stone",
+      "title": "Dr. Stone",
+      "titleEnglish": "Dr. Stone",
+      "year": 2019,
+      "episodes": 24,
+      "studios": [
+        "TMS Entertainment"
+      ],
+      "genres": [
+        "Adventure",
+        "Comedy"
+      ],
+      "synopsis": "After five years of harboring unspoken feelings, high-schooler Taiju Ooki is finally ready to confess his love to Yuzuriha Ogawa. Just when Taiju begins his confession however, a blinding green light strikes the Earth and petrifies mankind around the world—turning every single human into stone.\n\nSeveral millennia later, Taiju awakens to find the modern world completely nonexistent, as nature has flourished in the years humanity stood still. Among a stone world of statues, Taiju encounters one other living human: his science-loving friend Senkuu, who has been active for a few months. Taiju learns that Senkuu has developed a grand scheme—to launch the complete revival of civilization with science. Taiju's brawn and Senkuu's brains combine to forge a formidable partnership, and they soon uncover a method to revive those petrified.\n\nHowever, Senkuu's master plan is threatened when his ideologies are challenged by those who awaken. All the while, the reason for mankind's petrification remains unknown.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/dr-stone.webp",
+      "source": "https://myanimelist.net/anime/38691/Dr_Stone",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "kaiju-no-8",
+      "title": "Kaiju No. 8",
+      "titleEnglish": "Kaiju No. 8",
+      "year": 2024,
+      "episodes": 12,
+      "studios": [
+        "Production I.G"
+      ],
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "synopsis": "After the destruction of their hometown, childhood friends Kafka Hibino and Mina Ashiro make a pact to become officers in the Defense Force—a militarized organization tasked with protecting Japan from colossal monsters known as \"kaijuu.\" Decades later, the 32-year-old Kafka has all but given up on his dreams of heroism. Instead, he cleans up the remains of the slaughtered kaijuu after they are defeated by valiant soldiers—including Mina, who has successfully achieved their shared goal.\n\nUpon meeting his new coworker, Reno Ichikawa, Kafka faces a mirror of his past self: an ambitious young man whose one desire is to fight as a member of the Defense Force. Unfortunately, the two are soon involved in a freak encounter with a rogue kaijuu. Though Kafka demonstrates his innate heroic nature and rescues Reno from certain doom, he is left gravely injured.\n\nWhile both men recover in a hospital, Kafka is seemingly attacked by another one of the beasts. As a result, he gains the ability to transform into a humanoid kaijuu with the strength and powers of the massive monsters menacing Japan. Dubbed \"Kaijuu No. 8\" by the military, Kafka resolves to use his newfound gifts for the greater good. Tied together by mutual respect, Kafka and Reno set out to join warriors like Mina at the forefront of the Defense Force.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/kaiju-no-8.webp",
+      "source": "https://myanimelist.net/anime/52588/Kaijuu_8-gou",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "hells-paradise",
+      "title": "Hell's Paradise",
+      "titleEnglish": "Hell's Paradise",
+      "year": 2023,
+      "episodes": 13,
+      "studios": [
+        "MAPPA"
+      ],
+      "genres": [
+        "Action",
+        "Adventure",
+        "Supernatural"
+      ],
+      "synopsis": "Sentenced to death, ninja Gabimaru the Hollow finds himself apathetic. After leading a blood-soaked life, Gabimaru believes he deserves to die. However, every attempt to execute him inexplicably fails. Finally, Sagiri Yamada Asaemon, a fledgling member of a famed executioner clan, is asked to take Gabimaru's life; yet Sagiri makes no move to kill him as requested.\n\nInsisting that Gabimaru will not die because of his love for his wife, Sagiri instead offers him the chance to obtain a full pardon for his crimes. If he can travel to the island of Shinsekyo and obtain the Elixir of Life—which supposedly grants immortality—and bring it back for the shogun, then his freedom will be assured.\n\nBut of the many who have traveled to Shinsekyo in search of the mythical Elixir, not a single person has returned sound of mind, if at all. Though unaware of the numerous dangers ahead, Gabimaru decides to accept the offer—alongside ten other death row convicts—in hope that he and his wife may finally live in peace.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/hells-paradise.webp",
+      "source": "https://myanimelist.net/anime/46569/Jigokuraku",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "one-punch-man",
+      "title": "One-Punch Man",
+      "titleEnglish": "One-Punch Man",
+      "year": 2015,
+      "episodes": 12,
+      "studios": [
+        "Madhouse"
+      ],
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "synopsis": "The seemingly unimpressive Saitama has a rather unique hobby: being a hero. In order to pursue his childhood dream, Saitama relentlessly trained for three years, losing all of his hair in the process. Now, Saitama is so powerful, he can defeat any enemy with just one punch. However, having no one capable of matching his strength has led Saitama to an unexpected problem—he is no longer able to enjoy the thrill of battling and has become quite bored.\n\nOne day, Saitama catches the attention of 19-year-old cyborg Genos, who witnesses his power and wishes to become Saitama's disciple. Genos proposes that the two join the Hero Association in order to become certified heroes that will be recognized for their positive contributions to society. Saitama, who is shocked that no one knows who he is, quickly agrees. Meeting new allies and taking on new foes, Saitama embarks on a new journey as a member of the Hero Association to experience the excitement of battle he once felt.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/one-punch-man.webp",
+      "source": "https://myanimelist.net/anime/30276/One_Punch_Man",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "record-of-ragnarok",
+      "title": "Record of Ragnarok",
+      "titleEnglish": "Record of Ragnarok",
+      "year": 2021,
+      "episodes": 12,
+      "studios": [
+        "Graphinica"
+      ],
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "synopsis": "Once every millennium, the gods convene the Council of Valhalla to decide the fate of humanity — and this time they vote for extinction. To stay their judgment, the valkyrie Brunhilde invokes Ragnarok: a one-on-one tournament pitting thirteen of history's greatest humans against thirteen gods from the world's mythologies. Humanity must win seven of the thirteen bouts to survive.",
+      "image": "/watchlist/anime/record-of-ragnarok.jpg",
+      "source": "https://myanimelist.net/anime/44880/Shuumatsu_no_Valkyrie",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "my-hero-academia",
+      "title": "My Hero Academia",
+      "titleEnglish": "My Hero Academia",
+      "year": 2016,
+      "episodes": 13,
+      "studios": [
+        "Bones"
+      ],
+      "genres": [
+        "Action"
+      ],
+      "synopsis": "The appearance of \"quirks,\" newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual.\n\nSince he was a child, the ambitious middle schooler has wanted nothing more than to be a hero. Izuku's unfair fate leaves him admiring heroes and taking notes on them whenever he can. But it seems that his persistence has borne some fruit: Izuku meets the number one hero and his personal idol, All Might. All Might's quirk is a unique ability that can be inherited, and he has chosen Izuku to be his successor!\n\nEnduring many months of grueling training, Izuku enrolls in UA High, a prestigious high school famous for its excellent hero training program, and this year's freshmen look especially promising. With his bizarre but talented classmates and the looming threat of a villainous organization, Izuku will soon learn what it really means to be a hero.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/my-hero-academia.webp",
+      "source": "https://myanimelist.net/anime/31964/Boku_no_Hero_Academia",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "demon-slayer",
+      "title": "Demon Slayer: Kimetsu no Yaiba",
+      "titleEnglish": "Demon Slayer: Kimetsu no Yaiba",
+      "year": 2019,
+      "episodes": 26,
+      "studios": [
+        "ufotable"
+      ],
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Supernatural"
+      ],
+      "synopsis": "Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful and happy life. One day, Tanjirou decides to go down to the local village to make a little money selling charcoal. On his way back, night falls, forcing Tanjirou to take shelter in the house of a strange man, who warns him of the existence of flesh-eating demons that lurk in the woods at night.\n\nWhen he finally arrives back home the next day, he is met with a horrifying sight—his whole family has been slaughtered. Worse still, the sole survivor is his sister Nezuko, who has been turned into a bloodthirsty demon. Consumed by rage and hatred, Tanjirou swears to avenge his family and stay by his only remaining sibling. Alongside the mysterious group calling themselves the Demon Slayer Corps, Tanjirou will do whatever it takes to slay the demons and protect the remnants of his beloved sister's humanity.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/demon-slayer.webp",
+      "source": "https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "blue-lock",
+      "title": "Blue Lock",
+      "titleEnglish": "Blue Lock",
+      "year": 2022,
+      "episodes": 24,
+      "studios": [
+        "8bit"
+      ],
+      "genres": [
+        "Sports"
+      ],
+      "synopsis": "Yoichi Isagi was mere moments away from scoring a goal that would have sent his high school soccer team to the nationals, but a split-second decision to pass the ball to his teammate cost him that reality. Bitter, confused, and disappointed, Isagi wonders if the outcome would have been different had he not made the pass. When the young striker returns home, an invitation from the Japan Football Union awaits him. Through an arbitrary and biased decision-making process, Isagi is one of three hundred U-18 strikers selected for a controversial project named Blue Lock. \n\nThe project's ultimate goal is to turn one of the selected players into the star striker for the Japanese national team. To find the best participant, each diamond in the rough must compete against others through a series of solo and team competitions to rise to the top. Putting aside his ethical objections to the project, Isagi feels compelled to fight his way to the top, even if it means ruthlessly crushing the dreams of 299 aspiring young strikers.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/blue-lock.webp",
+      "source": "https://myanimelist.net/anime/49596/Blue_Lock",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "tokyo-revengers",
+      "title": "Tokyo Revengers",
+      "titleEnglish": "Tokyo Revengers",
+      "year": 2021,
+      "episodes": 24,
+      "studios": [
+        "LIDENFILMS"
+      ],
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "synopsis": "Takemichi Hanagaki's second year of middle school was the highest point in his life. He had respect, a gang of friends he could count on, and even a girlfriend. But that was twelve years ago. Today, he's a nobody: a washed-up nonentity made fun of by children and always forced to apologize to his younger boss. A sudden news report on the Tokyo Manji Gang's cruel murder of the only girlfriend he ever had alongside her brother only adds insult to injury. Half a second before a train ends his pitiful life for good, Takemichi flashes back to that same day 12 years ago, when he was still dating Hinata Tachibana.\n\nAfter being forced to relive the very same day that began his downward spiral, Takemichi meets Hinata's younger brother. Without thinking, he admits to his seeming death before flashing back to the past. Takemichi urges him to protect his sister before inexplicably returning to the future. Miraculously, he is not dead. Stranger still, the future has changed. It seems as though Takemichi can alter the flow of time. Given the chance to prevent his ex-girlfriend's tragic death at the hands of the Tokyo Manji Gang, Takemichi decides to fly through time to change the course of the future.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/tokyo-revengers.webp",
+      "source": "https://myanimelist.net/anime/42249/Tokyo_Revengers",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "tokyo-ghoul",
+      "title": "Tokyo Ghoul",
+      "titleEnglish": "Tokyo Ghoul",
+      "year": 2014,
+      "episodes": 12,
+      "studios": [
+        "Studio Pierrot"
+      ],
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Horror",
+        "Suspense"
+      ],
+      "synopsis": "A sinister threat is invading Tokyo: flesh-eating \"ghouls\" who appear identical to humans and blend into their population. Reserved college student Ken Kaneki buries his nose in books and avoids the news of the growing crisis. However, the appearance of an attractive woman named Rize Kamishiro shatters his solitude when she forwardly asks him on a date.\n\nWhile walking Rize home, Kaneki discovers she isn't as kind as she first appeared, and she has led him on with sinister intent. After a tragic struggle, he later awakens in a hospital to learn his life was saved by transplanting the now deceased Rize's organs into his own body.\n\nKaneki's body begins to change in horrifying ways, and he transforms into a human-ghoul hybrid. As he embarks on his new dreadful journey, Kaneki clings to his humanity in the evolving bloody conflict between society's new monsters and the government agents who hunt them.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/tokyo-ghoul.webp",
+      "source": "https://myanimelist.net/anime/22319/Tokyo_Ghoul",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
       "id": "jujutsu-kaisen",
       "title": "Jujutsu Kaisen",
-      "titleEnglish": null,
-      "year": null,
-      "episodes": null,
-      "studios": [],
-      "genres": [],
-      "synopsis": "",
-      "image": null,
-      "source": null,
+      "titleEnglish": "Jujutsu Kaisen",
+      "year": 2020,
+      "episodes": 24,
+      "studios": [
+        "MAPPA"
+      ],
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Supernatural"
+      ],
+      "synopsis": "Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfather. However, this leisurely lifestyle soon takes a turn for the strange when he unknowingly encounters a cursed item. Triggering a chain of supernatural occurrences, Yuuji finds himself suddenly thrust into the world of Curses—dreadful beings formed from human malice and negativity—after swallowing the said item, revealed to be a finger belonging to the demon Sukuna Ryoumen, the King of Curses.\n\nYuuji experiences first-hand the threat these Curses pose to society as he discovers his own newfound powers. Introduced to the Tokyo Prefectural Jujutsu High School, he begins to walk down a path from which he cannot return—the path of a Jujutsu sorcerer.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/jujutsu-kaisen.webp",
+      "source": "https://myanimelist.net/anime/40748/Jujutsu_Kaisen",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "mashle",
+      "title": "Mashle: Magic and Muscles",
+      "titleEnglish": "Mashle: Magic and Muscles",
+      "year": 2023,
+      "episodes": 12,
+      "studios": [
+        "A-1 Pictures"
+      ],
+      "genres": [
+        "Action",
+        "Comedy",
+        "Fantasy"
+      ],
+      "synopsis": "In this magical world, one is easily identified as having magical abilities by a distinctive mark on their face. Those unable to practice magic are swiftly exterminated to maintain the magical integrity of society. However, deep within a forest lies an anomaly in Mash Burnedead, who can be found pumping iron with one arm and lifting a cream puff with the other. This aloof boy with superhuman strength—but no magical abilities—leads a quiet life with his father, far removed from society.\n\nMash's peace is soon disturbed when the authorities discover his lack of magical powers. They issue him an ultimatum: compete to become a Divine Visionary, which would force everyone to accept him, or be persecuted forever. To protect his family, he enrolls in the prestigious Easton Magic Academy, which only the most elite and gifted students are allowed to attend. Now, Mash must overcome his shortcomings as a magic-less being and surpass the other students—relying solely on his muscles.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/mashle.webp",
+      "source": "https://myanimelist.net/anime/52211/Mashle",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "solo-leveling",
+      "title": "Solo Leveling",
+      "titleEnglish": "Solo Leveling",
+      "year": 2024,
+      "episodes": 12,
+      "studios": [
+        "A-1 Pictures"
+      ],
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "synopsis": "Humanity was caught at a precipice a decade ago when the first gates—portals linked with other dimensions that harbor monsters immune to conventional weaponry—emerged around the world. Alongside the appearance of the gates, various humans were transformed into hunters and bestowed superhuman abilities. Responsible for entering the gates and clearing the dungeons within, many hunters chose to form guilds to secure their livelihoods.\n\nSung Jin-Woo is an E-rank hunter dubbed as the weakest hunter of all mankind. While exploring a supposedly safe dungeon, he and his party encounter an unusual tunnel leading to a deeper area. Enticed by the prospect of treasure, the group presses forward, only to be confronted with horrors beyond their imagination. Miraculously, Jin-Woo survives the incident and soon finds that he now has access to an interface visible only to him. This mysterious system promises him the power he has long dreamed of—but everything comes at a price.\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/solo-leveling.webp",
+      "source": "https://myanimelist.net/anime/52299/Ore_dake_Level_Up_na_Ken",
+      "status": "Completed",
+      "rating": null,
+      "favorite": false,
+      "notes": ""
+    },
+    {
+      "id": "black-clover",
+      "title": "Black Clover",
+      "titleEnglish": "Black Clover",
+      "year": 2017,
+      "episodes": 170,
+      "studios": [
+        "Studio Pierrot"
+      ],
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "synopsis": "Asta and Yuno were abandoned at the same church on the same day. Raised together as children, they came to know of the \"Wizard King\"—a title given to the strongest mage in the kingdom—and promised that they would compete against each other for the position of the next Wizard King. However, as they grew up, the stark difference between them became evident. While Yuno is able to wield magic with amazing power and control, Asta cannot use magic at all and desperately tries to awaken his powers by training physically.\n\nWhen they reach the age of 15, Yuno is bestowed a spectacular Grimoire with a four-leaf clover, while Asta receives nothing. However, soon after, Yuno is attacked by a person named Lebuty, whose main purpose is to obtain Yuno's Grimoire. Asta tries to fight Lebuty, but he is outmatched. Though without hope and on the brink of defeat, he finds the strength to continue when he hears Yuno's voice. Unleashing his inner emotions in a rage, Asta receives a five-leaf clover Grimoire, a \"Black Clover\" giving him enough power to defeat Lebuty. A few days later, the two friends head out into the world, both seeking the same goal—to become the Wizard King!\n\n[Written by MAL Rewrite]",
+      "image": "/watchlist/anime/black-clover.webp",
+      "source": "https://myanimelist.net/anime/34572/Black_Clover",
       "status": "Completed",
       "rating": null,
       "favorite": false,
